@@ -1,9 +1,11 @@
 # Data Projects-Portfolio
 
 ### Education
-- BSEE | University of Texas at Arlington
+---
+BSEE | University of Texas at Arlington
 
 ### Work Experience
+---
 **Healthcare @ KPN Health, Inc (_September 2018-Present_)**
 - CMS Care Gap Reporting Module
 - Covid ACO Patient Co-Morbidities Tracking
@@ -12,6 +14,7 @@
 
 
 ### Projects
+---
 **Titanic Survival Analysis**
 
 
