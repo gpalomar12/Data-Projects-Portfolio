@@ -1,6 +1,4 @@
-# Data-Projects-Portfolio
-
-### Gabriel Palomarez
+# Data Projects-Portfolio
 
 ### Education
 BSEE
