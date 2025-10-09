@@ -12,5 +12,5 @@ BSEE
 ### Projects
 **Titanic Survival Analysis**
 
-### Table of Contents
+
 
