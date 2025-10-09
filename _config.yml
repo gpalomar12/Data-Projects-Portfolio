@@ -1,4 +1,10 @@
 # Add the following 
 
 title: Gabriel Palomarez
-theme: jekyll--theme-minimal
+#logo: /assets/img/{head_shot_file.png}
+#description: text below image
+theme: jekyll-theme-minimal
+
+
+
+
