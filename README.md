@@ -13,3 +13,6 @@ BSEE
 
 ### Projects
 **Titanic Survival Analysis**
+
+### Table of Contents
+*[Importing Libraries, Reading the Data In, Previewing Data](#Importing Libraries, Reading the Data In, Previewing Data)
