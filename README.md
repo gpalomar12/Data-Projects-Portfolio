@@ -15,7 +15,7 @@ BSEE | University of Texas at Arlington
 
 ### Projects
 ---
-[**Titanic Survival Analysis**](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/Titanic-Data%20Project.html)
+[**Titanic Survival Analysis**](Titanic-Data Project.ipynb)
 
 
 
