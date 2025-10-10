@@ -1,0 +1,9 @@
+project:
+  type: website  # or "notebook" if you don’t plan to publish it
+  output-dir: _site
+
+execute:
+  freeze: auto
+  cache: false
+  kernel: python3.12.6
+  
