@@ -1,0 +1,3 @@
+# Ignore Jupyter notebooks and checkpoint files during Quarto project discovery
+*.ipynb
+.ipynb_checkpoints/

@@ -1,15 +1,18 @@
 ---
+execute:
+  engine: jupyter
+  python: "C:/Users/gabriel.palomarez/AppData/Local/anaconda3/python.exe"
+
 format:
   html:
     page-layout: full
     embed-resources: true
     grid:
       body-width: 1200px
+
 echo: false
 warning: false
-jupyter: langchain_env
 ---
-
 # Titanic Survival Analysis
 
 This analysis of the Titanic dataset aims to identify the key predictive features and variable interactions that most strongly influenced passenger survival outcomes. Moving beyond basic metrics such as class and gender, the study applies a detailed Exploratory Data Analysis (EDA) to uncover subtle patterns and relationships within the data.
@@ -23,7 +26,7 @@ The result is a data-driven, reproducible framework that blends statistical reas
 
 
 
----
+
 
 ### Exploring the Data
 
@@ -46,7 +49,7 @@ titanic_df.head()
 
 #### Reviewing the Data for Anomalies
 
----
+
 
 ```{python}
 titanic_df.info()
@@ -62,7 +65,7 @@ titanic_df.info()
 
 ### Analyzing the Data
 
----
+
 
 #### Review the Data Male vs Female Distribution by Passenger Class
 ::: {layout-ncol=2}
@@ -91,7 +94,7 @@ This distribution highlights potential demographic and social patterns among pas
 sns.catplot(x='Pclass', data=titanic_df, hue='Sex', kind='count');
 ```
 
----
+
 
 #### Adding the “Person” Column to Distinguish Children from Adults
 
@@ -155,7 +158,7 @@ titanic_df['Age'].mean()
 titanic_df['person'].value_counts()
 ```
 
----
+
 
 #### Age Distribution Analysis using KDE
 
@@ -350,7 +353,7 @@ The second plot, showing the Survival Rate by Age, faceted by Gender (Sex), high
   resulting in a stark disparity in survival based on gender.
 
 ```{python}
-#| Output: false
+#| output: false
 titanic_df.head()
 ```
 
@@ -492,5 +495,6 @@ The second plot highlights the powerful compound effect when the "With Family" f
 - The survival rate for passengers Alone (without family) is significantly lower, at approximately 30%.
 
 This stark disparity reinforces that the highest survival odds were afforded to passengers who satisfied the two most critical social criteria: being female and being part of a family unit. This outcome is a direct result of the strict enforcement of the "women and children first" protocol during the limited and chaotic lifeboat deployment.
+
 
 

@@ -1,9 +1,21 @@
-project:
-  type: website  # or "notebook" if you don’t plan to publish it
-  output-dir: _site
+---
+# Global Document Options
+title: "Titanic Survival Analysis Portfolio"
 
+# Execution Settings
 execute:
-  freeze: auto
-  cache: false
-  kernel: python3.12.6
-  
+  engine: jupyter
+  python: "C:/Users/gabriel.palomarez/AppData/Local/anaconda3/python.exe"
+
+# Output Format Settings
+format:
+  html:
+    page-layout: full
+    embed-resources: true
+    grid:
+      body-width: 1200px
+
+# Chunk Options (Apply to all code blocks unless overridden)
+echo: false
+warning: false
+---
