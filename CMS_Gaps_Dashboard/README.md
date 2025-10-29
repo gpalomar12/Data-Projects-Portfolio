@@ -145,7 +145,7 @@ final_df.to_excel("deidentified_output.xlsx", index=False)
 
 > *Note: All data in these visuals has been de-identified to maintain HIPAA compliance*
 
-<img width="1897" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/558633dc-0c77-4d85-8086-08686341b1ff" />
+<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/558633dc-0c77-4d85-8086-08686341b1ff" />
  
 
 #### Purpose:
