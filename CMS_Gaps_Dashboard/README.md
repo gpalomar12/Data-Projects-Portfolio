@@ -63,13 +63,14 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 ### Dashboard Visuals
 
 > *Note: All data in these visuals has been de-identified to maintain HIPAA compliance*
+
+
+<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
+
 #### Purpose:
 This dashboard provides clinicians and administrators with an interactive view of CMS GAPs in Care performance
 across multiple locations, patient groups, and measures.  It consolidates data from hundreds of Excel reports
 into a single, dynamic workbook.
-
-
-<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
 
 **Insight:**  
 
@@ -79,13 +80,17 @@ Users can quickly identify:
 - Progress toward CMS goals in real time
 - Review their current Quality Scores
 
+This visualization serves as a **command center** for performance tracking, enabling leadership to make data-driven
+decisions and prioritize outreach efforts.
 
-#### Purpose:
-This visualization ranks the Top 20 provider locations (clinician offices) by the number of patients still
-needing to close their CMS Care Gaps.
+---
 
 
 <img width="740" height="375" alt="Top 20 Peformance" src="https://github.com/user-attachments/assets/9b77eb11-d90c-4b93-bb01-5d5c1b6c9732" />  
+
+#### Purpose:
+This visualization ranks the Top 20 provider locations (clinician offices) by the number of patients still
+needing to close their CMS Care Gaps.  
 
 **Insight:**  
 
