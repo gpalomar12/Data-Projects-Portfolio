@@ -72,43 +72,47 @@ To comply with <strong>HIPAA regulations</strong>, all personally identifiable i
 multiple Excel files into a single data set, and the other <strong>anonymizes</strong> the identifiers while maintaining relational
 integrity.</p>
 <h4>📦 Importing Libraries and Defining De-Identifying Function</h4>
-<pre><code>  # Import Python libraries to be used
+<pre>
+    <code>  # Import Python libraries to be used
 
-  import pandas as pd
-  import glob
+    import pandas as pd
+    import glob
 
-  # Import Faker library to generate fake data
-  from faker import Faker
+    # Import Faker library to generate fake data
+    from faker import Faker
 
-  # Initialize Faker
-  fake = Faker()
-  Faker.seed(42) # For reproducibility
-  
-  # Function to map unique values in a pandas Series to fake data
-  def fake_map(series, generator_func):
-      unique_vals = series.dropna().unique()
-      mapping = {val: generator_func() for val in unique_vals}
-      return series.map(mapping)
-</code></pre>
+    # Initialize Faker
+    fake = Faker()
+    Faker.seed(42) # For reproducibility
+    
+    # Function to map unique values in a pandas Series to fake data
+    def fake_map(series, generator_func):
+        unique_vals = series.dropna().unique()
+        mapping = {val: generator_func() for val in unique_vals}
+        return series.map(mapping)
+    </code>
+</pre>
 <h4>🔗 Consolidating Files</h4>
-<pre><code># Define the folder path containing the Excel files
-folder_path = r&quot;C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy&quot;
+<pre>
+    <code># Define the folder path containing the Excel files
+    folder_path = r&quot;C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy&quot;
 
-# Get a list of all Excel files in the folder and its subfolders
-all_files = glob.glob(folder_path + &quot;/**/*.xlsx&quot;, recursive=True)
+    # Get a list of all Excel files in the folder and its subfolders
+    all_files = glob.glob(folder_path + &quot;/**/*.xlsx&quot;, recursive=True)
 
-# Read and concatenate all Excel files into a single DataFrame
-df_list = []
-for f in all_files:
-    try:  # Try-except block to handle potential read errors
-        df = pd.read_excel(f, engine=&quot;openpyxl&quot;)
-        df_list.append(df)
-    except Exception as e: # Handle read errors
-        print(f&quot;⚠️ Skipped {f} due to: {e}&quot;)
+    # Read and concatenate all Excel files into a single DataFrame
+    df_list = []
+    for f in all_files:
+        try:  # Try-except block to handle potential read errors
+            df = pd.read_excel(f, engine=&quot;openpyxl&quot;)
+            df_list.append(df)
+        except Exception as e: # Handle read errors
+            print(f&quot;⚠️ Skipped {f} due to: {e}&quot;)
 
-# Concatenate all DataFrames into one
-final_df = pd.concat(df_list, ignore_index=True)
-</code></pre>
+    # Concatenate all DataFrames into one
+    final_df = pd.concat(df_list, ignore_index=True)
+    </code>
+</pre>
 <h4>🕵️ De-Identification Script (HIPAA Compliance)</h4>
 <pre><code># Define the folder path containing the Excel files
 folder_path = r&quot;C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy&quot;
