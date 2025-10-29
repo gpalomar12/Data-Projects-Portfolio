@@ -17,7 +17,7 @@ BSEE | University of Texas at Arlington
 
 ***
 #### Data Science: [**Titanic Survival Analysis**](https://gpalomar12.github.io/Data-Projects-Portfolio/Titanic-Data%20Project.html)  
-#### Data Analyst: [**CMS Gaps in Care Analytics Dashboard**](https://gpalomar12.github.io/Data-Projects-Portfolio/CMS_Gaps_Dashboard/cms_gaps_in_care.html)
+#### Data Analyst: [**CMS Gaps in Care Analytics Dashboard**](./CMS_Gaps_Dashboard/README.md)
 
 
 
