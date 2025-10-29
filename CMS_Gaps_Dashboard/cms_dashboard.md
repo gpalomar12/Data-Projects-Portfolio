@@ -69,4 +69,21 @@ All personally identifiable information (PII) and protected health information (
 replaced with randomized placeholders.
 The logic, structure, and visual design accurately reflect the original implementation while preserving privacy
 and ethical standards.
+
+***
+
+### Future Enhancements
+- Implement metric threshold and alerting logic for early warnings
+- Expand to include trend forecasting for CMS measure improvement
+
+***
+
+### Key Takeaways
+This project demonstrates how simple automation and dashboarding efforts can transform a time-consuming 
+manual process into a scalable analytics solution that directly supports clinical and operational decision-making.
+
+**Impact:**  From an individual clinician's request to an enterprise-grade reporting tool.
+
+
+
  
