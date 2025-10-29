@@ -235,8 +235,8 @@ in clinical performance within the network.
 It provides an at-a-glance understanding of:
 - Which practices consistently perform at higher levels
 - Where improvement opportunities exist
-- How overall performance is distributed across the network, and the overall distribution of
-  each Patient Group's Performance Level (Star Rating) with the Group.
+- How overall performance is distributed across the network
+
 
 This enables leadership to benchmark providers, recognize high performers, and focus support
 or training on practices needing improvement.
