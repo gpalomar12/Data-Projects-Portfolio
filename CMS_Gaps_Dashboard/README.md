@@ -8,6 +8,7 @@ The CMS Gaps in Care Analytics Dashboard was developed to streamline the midyear
 
 Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers — a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
 
+
 ***
 
 ### 🔎 Background
@@ -57,6 +58,21 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 ✅ Filter by provider, measure, or location  
 ✅ Highlighted top underperforming measures and providers  
 ✅ CMS goal tracking for proactive performance management  
+
+***
+
+## 📊 Data Overview
+
+The dataset represents CMS quality measure performance across practices and patient groups.  
+All data is vintage 2019 and fully de-identified for HIPAA compliance.
+
+| Field | Definition |
+|--------|-------------|
+| **Practice** | The clinical group or organization responsible for the provider. |
+| **Location** | The individual provider office location. |
+| **Patient Group** | The insurance or ACO patient group being measured. |
+| **PNTRG** | *Patients Needed to Reach Goal* — the count of additional patients required for a practice or group to meet the CMS target. |
+| **Performance Level** | The CMS Star Rating (1–5 scale), where 5 indicates the highest performance level and 1 the lowest. |
 
 ***
 
@@ -138,15 +154,17 @@ final_df.to_excel("deidentified_output.xlsx", index=False)
 ```
 > #### Note:
 > All identifiers were replaced with consistent pseudonyms.
-> The resulting dataset retains analytical integrity while ensuring compliance with HIPAA and organizational
-> data policies.
+> The dataset used in this project is **vintage 2019** and has been fully **de-identified** to comply with HIPAA
+> and organizational data protection policies.
+> The resulting dataset retains analytical integrity while ensuring no real patient or provider information is
+> exposed.
 
 ### 📊 Dashboard Visuals
 
 > *Note: All data in these visuals has been de-identified to maintain HIPAA compliance*
 
-
-<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
+<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/558633dc-0c77-4d85-8086-08686341b1ff" />
+ 
 
 #### Purpose:
 This dashboard provides clinicians and administrators with an interactive view of CMS GAPs in Care performance
@@ -210,7 +228,7 @@ partnerships where they will yield the greatest impact toward CMS compliance and
 <img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
 
 #### Purpose:  
-This chart breaks down CMS Performance Levels (1-5) across each practice to illustrate variation
+This chart breaks down CMS Performance Levels (1-5) across each Patient Group/Practice to illustrate variation
 in clinical performance within the network.
 
 **Insight:**  
@@ -218,6 +236,7 @@ It provides an at-a-glance understanding of:
 - Which practices consistently perform at higher levels
 - Where improvement opportunities exist
 - How overall performance is distributed across the network
+
 
 This enables leadership to benchmark providers, recognize high performers, and focus support
 or training on practices needing improvement.
