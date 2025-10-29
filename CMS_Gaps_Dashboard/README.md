@@ -119,11 +119,12 @@ partnerships where they will yield the greatest impact toward CMS compliance and
 
 
 #### Purpose:  
-This chart breaks down CMS Performance Levels (1-5) across each pracie to illustrate variation
+This chart breaks down CMS Performance Levels (1-5) across each practice to illustrate variation
 in clinical performance within the network.
 
  
 <img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
+
 **Insight:**  
 It provides an at-a-glance understanding of:
 - Which practices consistently perform at higher levels
