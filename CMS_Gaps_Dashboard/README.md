@@ -60,6 +60,87 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 ***
 
+### 🧩 Data Preparation and De-Identification
+Before creating the dashboard, the original Excel files contained sensitive healthcare data(patient and
+provider identifiers)
+To comply with **HIPAA regulations**, all personally identifiable information was de-identified before use.
+
+The process included two key Python Scripts, which I have combined into one for this data: One **consolidates** 
+multiple Excel files into a single data set, and the other **anonymizes** the identifiers while maintaining relational
+integrity.
+
+#### 📦 Importing Libraries and Defining De-Identifying Function
+
+```
+  # Import Python libraries to be used
+
+  import pandas as pd
+  import glob
+
+  # Import Faker library to generate fake data
+  from faker import Faker
+
+  # Initialize Faker
+  fake = Faker()
+  Faker.seed(42) # For reproducibility
+  
+  # Function to map unique values in a pandas Series to fake data
+  def fake_map(series, generator_func):
+      unique_vals = series.dropna().unique()
+      mapping = {val: generator_func() for val in unique_vals}
+      return series.map(mapping)
+
+```
+#### 🔗 Consolidating Files
+
+```
+# Define the folder path containing the Excel files
+folder_path = r"C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy"
+
+# Get a list of all Excel files in the folder and its subfolders
+all_files = glob.glob(folder_path + "/**/*.xlsx", recursive=True)
+
+# Read and concatenate all Excel files into a single DataFrame
+df_list = []
+for f in all_files:
+    try:  # Try-except block to handle potential read errors
+        df = pd.read_excel(f, engine="openpyxl")
+        df_list.append(df)
+    except Exception as e: # Handle read errors
+        print(f"⚠️ Skipped {f} due to: {e}")
+
+# Concatenate all DataFrames into one
+final_df = pd.concat(df_list, ignore_index=True)
+
+```
+#### 🕵️ De-Identification Script (HIPAA Compliance)
+
+```
+# Define the folder path containing the Excel files
+folder_path = r"C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy"
+
+# Get a list of all Excel files in the folder and its subfolders
+all_files = glob.glob(folder_path + "/**/*.xlsx", recursive=True)
+
+# Read and concatenate all Excel files into a single DataFrame
+df_list = []
+for f in all_files:
+    try:  # Try-except block to handle potential read errors
+        df = pd.read_excel(f, engine="openpyxl")
+        df_list.append(df)
+    except Exception as e: # Handle read errors
+        print(f"⚠️ Skipped {f} due to: {e}")
+
+# Concatenate all DataFrames into one
+final_df = pd.concat(df_list, ignore_index=True)
+final_df.to_excel("deidentified_output.xlsx", index=False)
+
+```
+> #### Note:
+> All identifiers were replaced with consistent pseudonyms.
+> The resulting dataset retains analytical integrity while ensuring compliance with HIPAA and organizational
+> data policies.
+
 ### 📊 Dashboard Visuals
 
 > *Note: All data in these visuals has been de-identified to maintain HIPAA compliance*
