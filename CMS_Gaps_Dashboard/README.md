@@ -138,8 +138,10 @@ final_df.to_excel("deidentified_output.xlsx", index=False)
 ```
 > #### Note:
 > All identifiers were replaced with consistent pseudonyms.
-> The resulting dataset retains analytical integrity while ensuring compliance with HIPAA and organizational
-> data policies.
+> The dataset used in this project is **vintage 2019** and has been fully **de-identified** to comply with HIPAA
+> and organizational data protection policies.
+> The resulting dataset retains analytical integrity while ensuring no real patient or provider information is
+> exposed.
 
 ### 📊 Dashboard Visuals
 
