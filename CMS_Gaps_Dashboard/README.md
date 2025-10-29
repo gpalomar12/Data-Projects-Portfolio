@@ -145,8 +145,8 @@ final_df.to_excel("deidentified_output.xlsx", index=False)
 
 > *Note: All data in these visuals has been de-identified to maintain HIPAA compliance*
 
-
-<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
+<img width="1897" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/558633dc-0c77-4d85-8086-08686341b1ff" />
+ 
 
 #### Purpose:
 This dashboard provides clinicians and administrators with an interactive view of CMS GAPs in Care performance
