@@ -14,8 +14,11 @@ BSEE | University of Texas at Arlington
 
 
 ### Projects 
+
 ***
-[**Titanic Survival Analysis**](https://gpalomar12.github.io/Data-Projects-Portfolio/Titanic-Data%20Project.html)
+#### Project 1: [**Titanic Survival Analysis**](https://gpalomar12.github.io/Data-Projects-Portfolio/Titanic-Data%20Project.html)  
+#### Project 2: [**CMS Gaps in Care Analytics Dashboard**](CMS_Gaps_Dashboard/README.md)
+
 
 
 
