@@ -66,7 +66,7 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 **Dashboard**  
 
-<img width="1897" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
+<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
 
 
 **Top 20 Locations by Patients Needed to Reach Goal**  
@@ -74,10 +74,10 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 
 **Patients Needed to Reach Goal by Patient Group**
-<img width="742" height="379" alt="Top_20_By_Patient_Grp" src="https://github.com/user-attachments/assets/4f7e1f87-1bc4-44f2-8462-da65def81083" />  
+<img width="740" height="375" alt="Top_20_By_Patient_Grp" src="https://github.com/user-attachments/assets/4f7e1f87-1bc4-44f2-8462-da65def81083" />  
 
 **Performance Level Distribution**  
-<img width="716" height="379" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />
+<img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />
 
 
 
@@ -88,17 +88,6 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 - Provided executive-level visibility into ACO CMS measures.
 - Successfully deployed into production within 5 months, serving as a model for future clinical analytics
   modules.
-
-***
-
-### Technical Highlights
-| Category | Tools/Techniques |
-| :--- | :--- |
-| Data Integration | Excel (Power Query, VBA, Python script for consolidation and de-identification) |
-| Data Visualization | Excel Dashboards |
-| Analytics | CMS Gaps in Care, ACO Quality Metrics |
-| Collaboration | Agile feedback loop with clinical stakeholders |
-| Compliance | Data de-identification (HIPAA) |
 
 ***
 
