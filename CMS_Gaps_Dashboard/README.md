@@ -68,7 +68,6 @@ This dashboard provides clinicians and administrators with an interactive view o
 across multiple locations, patient groups, and measures.  It consolidates data from hundreds of Excel reports
 into a single, dynamic workbook.
 
-**Dashboard**  
 
 <img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
 
@@ -85,7 +84,7 @@ Users can quickly identify:
 This visualization ranks the Top 20 provider locations (clinician offices) by the number of patients still
 needing to close their CMS Care Gaps.
 
-**Top 20 Locations by Patients Needed to Reach Goal**  
+
 <img width="740" height="375" alt="Top 20 Peformance" src="https://github.com/user-attachments/assets/9b77eb11-d90c-4b93-bb01-5d5c1b6c9732" />  
 
 **Insight:**  
@@ -123,7 +122,7 @@ partnerships where they will yield the greatest impact toward CMS compliance and
 This chart breaks down CMS Performance Levels (1-5) across each pracie to illustrate variation
 in clinical performance within the network.
 
-**Performance Level Distribution**  
+ 
 <img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
 **Insight:**  
 It provides an at-a-glance understanding of:
