@@ -13,7 +13,7 @@ BSEE | University of Texas at Arlington
 - Developed Data Ingestion Monitoring Process, reducing data outage time by 60%
 
 
-[### Projects
+### Projects 
 ***
 [**Titanic Survival Analysis**](https://gpalomar12.github.io/Data-Projects-Portfolio/Titanic-Data%20Project.html)
 
