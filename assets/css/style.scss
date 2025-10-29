@@ -1,15 +1,23 @@
-/*
- * This CSS targets common content container classes used by GitHub Pages themes.
- */
+/* Custom CSS to override theme width settings */
 
+/* Target the most common elements that restrict content width */
+.container,
 .wrapper,
-.page-header,
 .page-content,
-.main-content {
-    /* Set a wide maximum width to expand the layout */
-    max-width: 1200px !important; 
+.site-wrapper {
+    /* Set a wide width for the main content area */
+    max-width: 1400px !important; 
     
-    /* Ensure content is still centered within the page */
+    /* Ensure the content remains centered */
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+/* Optional: If the original theme is adding padding that eats space */
+.container,
+.wrapper,
+.page-content,
+.site-wrapper {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
