@@ -1,0 +1,15 @@
+/*
+ * This file is required by GitHub Pages themes like Orderedlist,
+ * which is likely being used by your site.
+ */
+
+.wrapper {
+    /* Set a new maximum width for the main content container. */
+    /* 1200px is wider than the default, but still readable. */
+    max-width: 1200px;
+}
+
+.site-header {
+    /* Apply the same width to the header/navigation bar */
+    max-width: 1200px;
+}
