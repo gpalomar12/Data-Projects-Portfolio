@@ -1,16 +1,16 @@
-# CMS Gaps in Care Dashboard
+# 🩺 CMS Gaps in Care Dashboard
 ## Automating Clinical Performance Reporting for ACOs  
 
 ***
 
-### Project Overview
+### 📑Project Overview
 The CMS Gaps in Care Analytics Dashboard was developed to streamline the midyear reporting process for clinicians participating in an Accountable Care Organization (ACO).
 
 Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers — a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
 
 ***
 
-### Background
+### 🔎 Background
 A clinician collaborator was responsible for identifying performance gaps and underperforming measures to help 
 providers meet their CMS goals. Data was delivered as fragmented Excel files, requiring manual copy-and-paste
 consolidation and extensive filtering.
@@ -29,7 +29,7 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 ***
 
-### Tech Stack 
+### ⚙️ Tech Stack 
 - Python (Data Consolidation and de-identifying data)
 - Microsoft Excel
   - Pivot Tables
@@ -41,7 +41,7 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 ***
 
-### Role & Contribution
+### 👨‍🔬 Role & Contribution
 - Led development of a dashboard that consolidated hundreds of Excel reports into an interactive
   analytics tool for clinicians to monitor **"CMS Gaps in Care"** metrics.
 - Automated manual data aggregation and visualization, reducing reporting time from weeks to hours.
@@ -52,15 +52,15 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 ***
 
 ### Key Features
-- Automated data consolidation from hundreds of Excel files
-- Interactive dashboard for clinicians and administrators
-- Filter by provider, measure, or location
-- Highlighted top underperforming measures and providers
-- CMS goal tracking for proactive performance management
+✅ Automated data consolidation from hundreds of Excel files  
+✅ Interactive dashboard for clinicians and administrators  
+✅ Filter by provider, measure, or location  
+✅ Highlighted top underperforming measures and providers  
+✅ CMS goal tracking for proactive performance management  
 
 ***
 
-### Dashboard Visuals
+### 📊 Dashboard Visuals
 
 > *Note: All data in these visuals has been de-identified to maintain HIPAA compliance*
 
@@ -104,12 +104,14 @@ By focusing on these top-performing opportunities, the team can:
 **Business Value:**
 This chart transformed a reactive, spreadsheet-heavy process into a data-driven prioritization tool, allowing leadership to act proactively on the locations most affecting CMS performance outcomes.
 
+
+---
+
+<img width="740" height="375" alt="Top_20_By_Patient_Grp" src="https://github.com/user-attachments/assets/4f7e1f87-1bc4-44f2-8462-da65def81083" />  
+
 #### Purpose:
 This visualization compares **CMS goal attainment across major Patient Groups**(insurance or ACO entities),
 showing how many patients within each group still need to close their Care GAPs.
-
-
-<img width="740" height="375" alt="Top_20_By_Patient_Grp" src="https://github.com/user-attachments/assets/4f7e1f87-1bc4-44f2-8462-da65def81083" />  
 
 **Insight:**  
 It enables stakeholders to see which payer groups are lagging behind CMS targets, helping clinical and
@@ -122,13 +124,13 @@ operational teams:
 By providing a clear view of performance by payer, leadership can prioritize improvement efforts and
 partnerships where they will yield the greatest impact toward CMS compliance and shared savings goals.
 
+---
+ 
+<img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
 
 #### Purpose:  
 This chart breaks down CMS Performance Levels (1-5) across each practice to illustrate variation
 in clinical performance within the network.
-
- 
-<img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
 
 **Insight:**  
 It provides an at-a-glance understanding of:
@@ -144,9 +146,9 @@ By visualizing performance variation across practices, clinical and operational 
 decisions about resource allocation, quality improvement initiatives, and strategic planning, driving 
 overall compliance with CMS quality measures.
 
-***
+---
 
-### Impact
+### 📈 Impact
 
 - Reduced clinician data preparation time from 3+ weeks to less than a day.
 - Enabled data-driven decision-making on provider performance.
@@ -157,13 +159,13 @@ overall compliance with CMS quality measures.
 
 ***
 
-### Key Takeaways
+### 🔑 Key Takeaways
 This project demonstrates how simple automation and dashboarding efforts can transform a time-consuming 
 manual process into a scalable analytics solution that directly supports clinical and operational decision-making.
 
 ***
 
-### Data Privacy Notice
+### 🔒 Compliance Notice
 All data showcased in this project has been fully de-identified in accordance with HIPAA compliance. No protected health information (PHI) is used or displayed.
 
 
