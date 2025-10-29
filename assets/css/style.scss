@@ -1,23 +1,29 @@
-/* Custom CSS to override theme width settings */
+/* Custom CSS to aggressively override the theme's default max-width */
 
-/* Target the most common elements that restrict content width */
-.container,
-.wrapper,
-.page-content,
-.site-wrapper {
-    /* Set a wide width for the main content area */
-    max-width: 1400px !important; 
+/* 1. Target the main content area wrapper */
+.page-content, 
+.page-header, 
+.wrapper {
+    /* Set a new, wider content limit */
+    max-width: 1400px !important;
     
-    /* Ensure the content remains centered */
+    /* Center the content */
     margin-left: auto !important;
     margin-right: auto !important;
-}
-
-/* Optional: If the original theme is adding padding that eats space */
-.container,
-.wrapper,
-.page-content,
-.site-wrapper {
+    
+    /* Remove padding that contributes to a narrow look */
     padding-left: 10px !important;
     padding-right: 10px !important;
+}
+
+/* 2. Specific override for the 'page-header' element */
+.page-header {
+    /* Ensures the header/title bar also spans the full width of the new container */
+    max-width: 1400px !important;
+}
+
+/* 3. If a very specific container is used for the text block (common in Orderedlist) */
+.page-content > div {
+    /* Ensures any immediate child div of the content area is also wide */
+    max-width: 100% !important;
 }
