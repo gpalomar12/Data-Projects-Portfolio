@@ -8,6 +8,7 @@ The CMS Gaps in Care Analytics Dashboard was developed to streamline the midyear
 
 Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers — a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
 
+
 ***
 
 ### 🔎 Background
@@ -57,6 +58,21 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 ✅ Filter by provider, measure, or location  
 ✅ Highlighted top underperforming measures and providers  
 ✅ CMS goal tracking for proactive performance management  
+
+***
+
+## 📊 Data Overview
+
+The dataset represents CMS quality measure performance across practices and patient groups.  
+All data is vintage 2019 and fully de-identified for HIPAA compliance.
+
+| Field | Definition |
+|--------|-------------|
+| **Practice** | The clinical group or organization responsible for the provider. |
+| **Location** | The individual provider office location. |
+| **Patient Group** | The insurance or ACO patient group being measured. |
+| **PNTRG** | *Patients Needed to Reach Goal* — the count of additional patients required for a practice or group to meet the CMS target. |
+| **Performance Level** | The CMS Star Rating (1–5 scale), where 5 indicates the highest performance level and 1 the lowest. |
 
 ***
 
