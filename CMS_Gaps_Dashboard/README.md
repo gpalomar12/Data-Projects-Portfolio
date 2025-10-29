@@ -29,7 +29,7 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 ***
 
-### Tech Stack
+### Tech Stack 
 - Python (Data Consolidation and de-identifying data)
 - Microsoft Excel
   - Pivot Tables
