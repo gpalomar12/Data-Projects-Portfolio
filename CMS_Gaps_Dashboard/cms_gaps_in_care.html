@@ -1,0 +1,223 @@
+<h1>🩺 CMS Gaps in Care Dashboard</h1>
+<h2>Automating Clinical Performance Reporting for ACOs</h2>
+<hr>
+<h3>📑Project Overview</h3>
+<p>The CMS Gaps in Care Analytics Dashboard was developed to streamline the midyear reporting process for clinicians participating in an Accountable Care Organization (ACO).</p>
+<p>Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers — a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.</p>
+<hr>
+<h3>🔎 Background</h3>
+<p>A clinician collaborator was responsible for identifying performance gaps and underperforming measures to help 
+providers meet their CMS goals. Data was delivered as fragmented Excel files, requiring manual copy-and-paste
+consolidation and extensive filtering.</p>
+<p>I analyzed the workflow, identified key metrics, and built a fully interactive Excel dashboard that delivered
+the same insights in real time.  The dashboard was later integrated into our production analytics platform,
+Optimize, leveraging warhoused data to provide enterprise-level visibility.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Challenges</th>
+<th align="left">Descriptions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Manual Consolidation</td>
+<td align="left">Hundreds of XLS files were merged manually every reporting cycle</td>
+</tr>
+<tr>
+<td align="left">Time Intensive</td>
+<td align="left">The Process took several weeks to complete</td>
+</tr>
+<tr>
+<td align="left">Static Insights</td>
+<td align="left">Clinicians relied on filters and pivot tables with limited interactivity</td>
+</tr>
+<tr>
+<td align="left">Delayed Action</td>
+<td align="left">Leadership lacked timely insights into Measure Performance</td>
+</tr>
+</tbody></table>
+<hr>
+<h3>⚙️ Tech Stack</h3>
+<ul>
+<li>Python (Data Consolidation and de-identifying data)</li>
+<li>Microsoft Excel<ul>
+<li>Pivot Tables</li>
+<li>Vlookup/Index-Match</li>
+<li>Conditional Formatting</li>
+<li>Interactive Filters &amp; Slicers</li>
+<li>Charts &amp; Dashboards</li>
+<li>Power Query</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>👨‍🔬 Role &amp; Contribution</h3>
+<ul>
+<li>Led development of a dashboard that consolidated hundreds of Excel reports into an interactive
+analytics tool for clinicians to monitor <strong>&quot;CMS Gaps in Care&quot;</strong> metrics.</li>
+<li>Automated manual data aggregation and visualization, reducing reporting time from weeks to hours.</li>
+<li>Collaborated with clinicians to refine KPIs through iterative feedback over three weeks.</li>
+<li>Supported the migration of the dashboard into the <strong>&quot;KPN Optimize Platform&quot;</strong>, connecting to our
+warehoused data for real-time insights.</li>
+</ul>
+<hr>
+<h3>Key Features</h3>
+<p>✅ Automated data consolidation from hundreds of Excel files<br>✅ Interactive dashboard for clinicians and administrators<br>✅ Filter by provider, measure, or location<br>✅ Highlighted top underperforming measures and providers<br>✅ CMS goal tracking for proactive performance management  </p>
+<hr>
+<h3>🧩 Data Preparation and De-Identification</h3>
+<p>Before creating the dashboard, the original Excel files contained sensitive healthcare data(patient and
+provider identifiers)
+To comply with <strong>HIPAA regulations</strong>, all personally identifiable information was de-identified before use.</p>
+<p>The process included two key Python Scripts, which I have combined into one for this data: One <strong>consolidates</strong> 
+multiple Excel files into a single data set, and the other <strong>anonymizes</strong> the identifiers while maintaining relational
+integrity.</p>
+<h4>📦 Importing Libraries and Defining De-Identifying Function</h4>
+<pre><code>  # Import Python libraries to be used
+
+  import pandas as pd
+  import glob
+
+  # Import Faker library to generate fake data
+  from faker import Faker
+
+  # Initialize Faker
+  fake = Faker()
+  Faker.seed(42) # For reproducibility
+  
+  # Function to map unique values in a pandas Series to fake data
+  def fake_map(series, generator_func):
+      unique_vals = series.dropna().unique()
+      mapping = {val: generator_func() for val in unique_vals}
+      return series.map(mapping)
+</code></pre>
+<h4>🔗 Consolidating Files</h4>
+<pre><code># Define the folder path containing the Excel files
+folder_path = r&quot;C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy&quot;
+
+# Get a list of all Excel files in the folder and its subfolders
+all_files = glob.glob(folder_path + &quot;/**/*.xlsx&quot;, recursive=True)
+
+# Read and concatenate all Excel files into a single DataFrame
+df_list = []
+for f in all_files:
+    try:  # Try-except block to handle potential read errors
+        df = pd.read_excel(f, engine=&quot;openpyxl&quot;)
+        df_list.append(df)
+    except Exception as e: # Handle read errors
+        print(f&quot;⚠️ Skipped {f} due to: {e}&quot;)
+
+# Concatenate all DataFrames into one
+final_df = pd.concat(df_list, ignore_index=True)
+</code></pre>
+<h4>🕵️ De-Identification Script (HIPAA Compliance)</h4>
+<pre><code># Define the folder path containing the Excel files
+folder_path = r&quot;C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy&quot;
+
+# Get a list of all Excel files in the folder and its subfolders
+all_files = glob.glob(folder_path + &quot;/**/*.xlsx&quot;, recursive=True)
+
+# Read and concatenate all Excel files into a single DataFrame
+df_list = []
+for f in all_files:
+    try:  # Try-except block to handle potential read errors
+        df = pd.read_excel(f, engine=&quot;openpyxl&quot;)
+        df_list.append(df)
+    except Exception as e: # Handle read errors
+        print(f&quot;⚠️ Skipped {f} due to: {e}&quot;)
+
+# Concatenate all DataFrames into one
+final_df = pd.concat(df_list, ignore_index=True)
+final_df.to_excel(&quot;deidentified_output.xlsx&quot;, index=False)
+</code></pre>
+<blockquote>
+<h4>Note:</h4>
+<p>All identifiers were replaced with consistent pseudonyms.
+The resulting dataset retains analytical integrity while ensuring compliance with HIPAA and organizational
+data policies.</p>
+</blockquote>
+<h3>📊 Dashboard Visuals</h3>
+<blockquote>
+<p><em>Note: All data in these visuals has been de-identified to maintain HIPAA compliance</em></p>
+</blockquote>
+<img width="740" height="375" alt="dashboard_overview" src="https://github.com/user-attachments/assets/97a7454b-80cf-46d7-9910-0bf8be7169c4" />  
+
+<h4>Purpose:</h4>
+<p>This dashboard provides clinicians and administrators with an interactive view of CMS GAPs in Care performance
+across multiple locations, patient groups, and measures.  It consolidates data from hundreds of Excel reports
+into a single, dynamic workbook.</p>
+<p><strong>Insight:</strong>  </p>
+<p>Users can quickly identify:</p>
+<ul>
+<li>Underperforming measures that need improvement before CMS Reporting deadlines</li>
+<li>Providers or Locations with the largest gaps in care</li>
+<li>Progress toward CMS goals in real time</li>
+<li>Review their current Quality Scores</li>
+</ul>
+<p>This visualization serves as a <strong>command center</strong> for performance tracking, enabling leadership to make data-driven
+decisions and prioritize outreach efforts.</p>
+<hr>
+<img width="740" height="375" alt="Top 20 Peformance" src="https://github.com/user-attachments/assets/9b77eb11-d90c-4b93-bb01-5d5c1b6c9732" />  
+
+<h4>Purpose:</h4>
+<p>This visualization ranks the Top 20 provider locations (clinician offices) by the number of patients still
+needing to close their CMS Care Gaps.  </p>
+<p><strong>Insight:</strong>  </p>
+<p>It helps care coordinators and clinical leadership quickly identify which providers have the largest remaining patient gaps across all CMS measures.
+By focusing on these top-performing opportunities, the team can:</p>
+<ul>
+<li>Target outreach to underperforming locations</li>
+<li>Allocate resources efficiently to high-impact offices</li>
+<li>Monitor improvement trends as interventions are implemented</li>
+</ul>
+<p><strong>Business Value:</strong>
+This chart transformed a reactive, spreadsheet-heavy process into a data-driven prioritization tool, allowing leadership to act proactively on the locations most affecting CMS performance outcomes.</p>
+<hr>
+<img width="740" height="375" alt="Top_20_By_Patient_Grp" src="https://github.com/user-attachments/assets/4f7e1f87-1bc4-44f2-8462-da65def81083" />  
+
+<h4>Purpose:</h4>
+<p>This visualization compares <strong>CMS goal attainment across major Patient Groups</strong>(insurance or ACO entities),
+showing how many patients within each group still need to close their Care GAPs.</p>
+<p><strong>Insight:</strong><br>It enables stakeholders to see which payer groups are lagging behind CMS targets, helping clinical and
+operational teams:  </p>
+<ul>
+<li>Identify systemic issues within specific ACO or insurance groups</li>
+<li>Develop targeted engagement strategies for underperforming populations</li>
+<li>Support executive reporting by summarizing overall group performance trends</li>
+</ul>
+<p><strong>Business Value:</strong><br>By providing a clear view of performance by payer, leadership can prioritize improvement efforts and
+partnerships where they will yield the greatest impact toward CMS compliance and shared savings goals.</p>
+<hr>
+<img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
+
+<h4>Purpose:</h4>
+<p>This chart breaks down CMS Performance Levels (1-5) across each practice to illustrate variation
+in clinical performance within the network.</p>
+<p><strong>Insight:</strong><br>It provides an at-a-glance understanding of:</p>
+<ul>
+<li>Which practices consistently perform at higher levels</li>
+<li>Where improvement opportunities exist</li>
+<li>How overall performance is distributed across the network</li>
+</ul>
+<p>This enables leadership to benchmark providers, recognize high performers, and focus support
+or training on practices needing improvement.</p>
+<p><strong>Business Value:</strong>
+By visualizing performance variation across practices, clinical and operational leaders can make informed
+decisions about resource allocation, quality improvement initiatives, and strategic planning, driving 
+overall compliance with CMS quality measures.</p>
+<hr>
+<h3>📈 Impact</h3>
+<ul>
+<li>Reduced clinician data preparation time from 3+ weeks to less than a day.</li>
+<li>Enabled data-driven decision-making on provider performance.</li>
+<li>Provided executive-level visibility into ACO CMS measures.</li>
+<li>Successfully deployed into production within 5 months, serving as a model for future clinical analytics
+modules.</li>
+<li><strong>From an individual clinician&#39;s request to an enterprise-grade reporting tool.</strong></li>
+</ul>
+<hr>
+<h3>🔑 Key Takeaways</h3>
+<p>This project demonstrates how simple automation and dashboarding efforts can transform a time-consuming 
+manual process into a scalable analytics solution that directly supports clinical and operational decision-making.</p>
+<hr>
+<h3>🔒 Compliance Notice</h3>
+<p>All data showcased in this project has been fully de-identified in accordance with HIPAA compliance. No protected health information (PHI) is used or displayed.</p>
