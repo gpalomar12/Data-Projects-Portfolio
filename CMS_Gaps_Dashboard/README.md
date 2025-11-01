@@ -71,7 +71,7 @@ All data is vintage 2019 and fully de-identified for HIPAA compliance.
 | **Practice** | The clinical group or organization responsible for the provider. |
 | **Location** | The individual provider office location. |
 | **Patient Group** | The insurance or ACO patient group being measured. |
-| **PNTRG** | *Patients Needed to Reach Goal* — the count of additional patients required for a practice or group to meet the CMS target. |
+| **PNTRG** | *Patients Needed to Reach Goal* - the count of additional patients required for a practice or group to meet the CMS target. |
 | **Performance Level** | The CMS Star Rating (1–5 scale), where 5 indicates the highest performance level and 1 the lowest. |
 
 ***
