@@ -6,7 +6,7 @@
 ### 📑Project Overview
 The CMS Gaps in Care Analytics Dashboard was developed to streamline the midyear reporting process for clinicians participating in an Accountable Care Organization (ACO).
 
-Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers — a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
+Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers, a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
 
 
 ***
