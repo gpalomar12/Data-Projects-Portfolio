@@ -21,12 +21,123 @@ The goal is to:
 
 ***
 
-## Data Preparation & Feature Engineering (Python)
+## Data Overview & Preperation
 
-### Key Steps
-- Cleaned and standardized variables for hours, scores, and boolean fields.
-- Created derived (behavioral) features to capture complex relationships.
-- Scaled, encoded, and categorized data for modeling and visualization.
+The dataset contains simulated information on 5,000 individuals, covering demographics, digital
+behavior, lifestyle habits, and mental health indicators.
+
+Each record represents one individual's daily screen usage patterns, wellness behaviors, and 
+self-reported mental health metrics.
+
+This section provides an overview of the data set's structure, verifies data quality, and prepares
+the features for analysis and modeling.
+
+#### Python Libraries Used in the Analysis
+```
+# Standard Library Imports
+
+import pandas as pd
+import numpy as np
+
+#These are the plotting modules and libraries we'll use
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Scikit learn libraries to be used in model training
+
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.preprocessing import MinMaxScaler
+
+# Initialize encoder
+gender_encoder = LabelEncoder()
+location_encoder = LabelEncoder()
+
+#command so that plots appear inline in the iPython Notebook
+%matplotlib inline
+
+```
+#### Inspecting the Dataset
+
+```
+# Preview the dataset structure
+data_df.info()
+
+# Displaying a few sample rows
+data_df.head()
+
+```
+
+> **Observation:**
+> The dataset includes 25 columns, mixing numerical, categorical, and boolean variables.
+> No missing values were observed, and data types align with expected formats (floats for
+> continuous measures, integers for counts, objects for categorical fields)
+
+#### Data Cleaning & Type Adjustments
+
+```
+# Ensure boolean fields are formatted 
+bool_columns = ['uses_wellness_apps','eats_healthy']
+data_df[bool_columns] = data_df[bool_columns].astype(bool)
+
+# Convert categorical variables
+cat_columns = ['gender', 'location_type']
+data_df[cat_columns] = data_df[cat_columns].astype('category')
+
+```
+
+>**Explanation:**
+>Ensuring correct data types allows for efficient aggregation, proper encoding, and a reduction in potential
+>modeling errors.
+
+#### Creating Age Groups
+
+```
+#defining age bins and labels 
+
+bins= [0, 20, 30, 40, 50, 60, 70, float('inf')]
+labels = ['<20','20-30', '30-40', '40-50', '50-60', '60-70', '70+']
+
+# Create new age group column
+data_df['age_group'] = pd.cut(data_df['age'], bins=bins, labels=labels, right=False)
+
+```
+
+>**Insight:**  
+>Grouping continous variables like *age* into meaningful segments simplifies visualization and helps
+>analyze mental health or digital behaviors by life stage.
+
+#### Encoding Categorical Variables
+
+```
+# Encode gender and location type
+
+data_df['gender_encoded'] = gender_encoder.fit_transform(data_df['gender'])
+data_df['location_encoded'] = gender_encoder.fit_transform(data_df['location_type'])
+
+```
+
+>**Explanation:**
+>Label encoding converts categorical variables into a numeric format, enabling them to be used in
+>regression or machine learning models later in the pipeline.
+
+#### Summary Statistics
+
+```
+# Quick summary transposing the table and rounding decimals to 2 significant figures
+
+data_df.describe().T.round(2)
+
+```
+>**Observation:**
+> Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation,
+>suggesting diverse behavioral patterns across participants.
+>This diversity will be key when analyzing correlations between lifestyle habits and mental health
+>outcomes.
 
 
 ### Creating Features Code
@@ -36,5 +147,4 @@ The goal is to:
 
 
 ***
-
-### 
+ 
