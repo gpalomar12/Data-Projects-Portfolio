@@ -72,6 +72,10 @@ data_df.head()
 
 ```
 
+
+<img width="665" height="600" alt="exploring_data_structure_info" src="https://github.com/user-attachments/assets/2ef82f4a-6c55-40cb-b5e2-6645468e3e94" />
+
+
 > **Observation:**  
 > The dataset includes 25 columns, mixing numerical, categorical, and boolean variables.
 > No missing values were observed, and data types align with expected formats (floats for
@@ -133,6 +137,10 @@ data_df['location_encoded'] = gender_encoder.fit_transform(data_df['location_typ
 data_df.describe().T.round(2)
 
 ```
+
+<img width="780" height="753" alt="descibe_data" src="https://github.com/user-attachments/assets/dc9582a6-a616-45bb-ba74-75331e7321b7" />
+
+
 >**Observation:**  
 > Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation,
 >suggesting diverse behavioral patterns across participants.
