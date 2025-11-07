@@ -1,0 +1,27 @@
+/* Custom CSS to force 95% content width across all major containers */
+
+/* 1. Target the main content wrapper and surrounding containers */
+.page-content, 
+.page-header, 
+.wrapper, 
+#main-content, 
+.inner {
+    /* Set content to nearly fill the screen, leaving a small margin */
+    max-width: 95% !important; 
+    width: 95% !important;
+    
+    /* Center the content */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* Minimize theme-added padding */
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* 2. Target a very broad container, often responsible for the width limit */
+.site-header .wrapper, 
+.site-footer .wrapper,
+.page-content .wrapper {
+    max-width: 95% !important;
+}

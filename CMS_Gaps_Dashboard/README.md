@@ -6,7 +6,7 @@
 ### 📑Project Overview
 The CMS Gaps in Care Analytics Dashboard was developed to streamline the midyear reporting process for clinicians participating in an Accountable Care Organization (ACO).
 
-Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers — a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
+Previously, clinicians manually consolidated hundreds of Excel files provided by database engineers, a process that often took several weeks. This dashboard automates data aggregation and visualization, reducing reporting time to hours while providing interactive insights into CMS performance metrics.
 
 
 ***
@@ -71,7 +71,7 @@ All data is vintage 2019 and fully de-identified for HIPAA compliance.
 | **Practice** | The clinical group or organization responsible for the provider. |
 | **Location** | The individual provider office location. |
 | **Patient Group** | The insurance or ACO patient group being measured. |
-| **PNTRG** | *Patients Needed to Reach Goal* — the count of additional patients required for a practice or group to meet the CMS target. |
+| **PNTRG** | *Patients Needed to Reach Goal* - the count of additional patients required for a practice or group to meet the CMS target. |
 | **Performance Level** | The CMS Star Rating (1–5 scale), where 5 indicates the highest performance level and 1 the lowest. |
 
 ***
@@ -132,23 +132,9 @@ final_df = pd.concat(df_list, ignore_index=True)
 #### 🕵️ De-Identification Script (HIPAA Compliance)
 
 ```
-# Define the folder path containing the Excel files
-folder_path = r"C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy"
-
-# Get a list of all Excel files in the folder and its subfolders
-all_files = glob.glob(folder_path + "/**/*.xlsx", recursive=True)
-
-# Read and concatenate all Excel files into a single DataFrame
-df_list = []
-for f in all_files:
-    try:  # Try-except block to handle potential read errors
-        df = pd.read_excel(f, engine="openpyxl")
-        df_list.append(df)
-    except Exception as e: # Handle read errors
-        print(f"⚠️ Skipped {f} due to: {e}")
-
-# Concatenate all DataFrames into one
-final_df = pd.concat(df_list, ignore_index=True)
+final_df['Patient Group'] = fake_map(final_df['Patient Group'], lambda: fake.unique.lexify(text='Group ???'))
+final_df['Practice'] = fake_map(final_df['Practice'], lambda: fake.unique.company())
+final_df['Location'] = fake_map(final_df['Location'], lambda: fake.unique.company() + " Medical Group")
 final_df.to_excel("deidentified_output.xlsx", index=False)
 
 ```
