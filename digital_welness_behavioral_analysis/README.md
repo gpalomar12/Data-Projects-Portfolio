@@ -27,3 +27,14 @@ The goal is to:
 - Cleaned and standardized variables for hours, scores, and boolean fields.
 - Created derived (behavioral) features to capture complex relationships.
 - Scaled, encoded, and categorized data for modeling and visualization.
+
+
+### Creating Features Code
+
+
+### Composite Health Behavior Score
+
+
+***
+
+### 
