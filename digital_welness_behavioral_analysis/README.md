@@ -72,7 +72,7 @@ data_df.head()
 
 ```
 
-> **Observation:**
+> **Observation:**  
 > The dataset includes 25 columns, mixing numerical, categorical, and boolean variables.
 > No missing values were observed, and data types align with expected formats (floats for
 > continuous measures, integers for counts, objects for categorical fields)
@@ -90,7 +90,7 @@ data_df[cat_columns] = data_df[cat_columns].astype('category')
 
 ```
 
->**Explanation:**
+>**Explanation:**  
 >Ensuring correct data types allows for efficient aggregation, proper encoding, and a reduction in potential
 >modeling errors.
 
@@ -121,7 +121,7 @@ data_df['location_encoded'] = gender_encoder.fit_transform(data_df['location_typ
 
 ```
 
->**Explanation:**
+>**Explanation:**  
 >Label encoding converts categorical variables into a numeric format, enabling them to be used in
 >regression or machine learning models later in the pipeline.
 
@@ -133,7 +133,7 @@ data_df['location_encoded'] = gender_encoder.fit_transform(data_df['location_typ
 data_df.describe().T.round(2)
 
 ```
->**Observation:**
+>**Observation:**  
 > Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation,
 >suggesting diverse behavioral patterns across participants.
 >This diversity will be key when analyzing correlations between lifestyle habits and mental health
