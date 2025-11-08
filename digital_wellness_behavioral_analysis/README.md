@@ -186,6 +186,8 @@ data_df.describe().T.round(2)
 >In the next section, we will explore how digital habits, sleep patterns, and wellness behaviors differ across these demographic
 >groups and how they relate to mental health outcomes.
 
+### 🔍 Exploratory Data Analysis (EDA)
+
 
 
 
