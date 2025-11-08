@@ -448,4 +448,15 @@ rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 >| 0.856|5.071|
 
 
+#### Feature Importance (Coefficient Analysis)
+
+```
+# Check feature importance, will show the strongest positive or negative impact on mental health
+# Store the coefficients for analysis
+importance = pd.DataFrame({
+    'Feature': X.columns,
+    'Coefficient': model.coef_
+}).sort_values(by='Coefficient', ascending=False)
+
+```
 
