@@ -19,6 +19,8 @@ The goal is to:
 - Develop a predictive model for wellness outcomes
 - Visualize actionable insights using an interactive dashboard
 
+#### Data Source:
+https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness
 ***
 
 ## Data Overview & Preperation
