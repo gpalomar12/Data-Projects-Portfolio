@@ -503,3 +503,58 @@ print(f"RMSE: {rmse:.3f}")
 >
 >These results validate the earlier exploratory findings and quantify how lifestyle balance contributes to
 >overall mental health.
+
+### Insights & Discussions
+
+>This section distills the key findings from the analysis into **actionable insights** about how digital behavior,
+>lifestyle, and wellness practices influence mental health outcomes.
+>By interpreting both the statistical relationships and the engineered behavioral metrics, we can uncover
+>the **drivers of psychological well-being** in a connected world.
+
+#### Behavioral Factors and Mental Wellness
+- **Sleep quality** emerged as the **strongest positive predictor** of mental health.
+  Individuals reporting higher-quality, consistent sleep also demonstrated higher overall well-being.
+- **Physical activity** showed a clear beneficial effect, even modest weekly exercise correlated with lower
+  stress and higher mental health scores.  Movement serves as a natural regulator of mood and anxiety.
+- **Mindfulness practices**(minutes per day) and **wellness app usage** had moderate but steady positive
+  impacts, indicating that structured self-care behaviors accumulate small daily benefits over time.
+
+
+#### Stress and Lifestyle Imbalance
+
+- **Stress level** is the most powerful negative influence in the model.
+  Its high negative coefficient quantifies how elevated stress directly undermines mental well-being.
+- **Caffeine intake** also correlated slightly negatively with mental health, likely reflecting overstimulation  
+  and poorer sleep hygiene among high-consumption groups.
+- Users with **unbalanced screen habits** (high total usage but low work-related time) tended to exhibit weaker
+  mental health scores, suggesting that excessive recreational screen time may contribute to fatigue or emotional strain.
+
+
+#### Composite Indicators and Their Value
+- The **Health Behavior Score**, derived from healthy eating, mindfulness, and app-based wellness activity,
+  provided a powerful summary of overall lifestyle quality.
+- When analyzed alongside mental health, this metric revealed a clear upward trend:
+  People with stronger daily wellness habits consistently achieved higher mental health scores.
+- Together with *sleep_efficiency* and *stress_to_activity_ratio*, these composite features
+  demonstrate how feature engineering translates raw behavioral data into interpretable health insights.
+
+#### Demographic and Contextual Insights
+- **Urban participants** tended to have higher screen time but similar mental health averages compared to
+  suburban and rural groups — suggesting adaptation to high digital exposure environments.
+- **Gender differences** in wellness behavior engagement were minimal in this dataset, indicating
+  comparable self-care adoption across groups.
+- **Age group patterns** showed that younger adults (20–30) had the highest stress variability, while older
+  participants maintained steadier mental health scores, possibly due to more consistent routines.
+
+
+**Summary**
+> The analysis quantifies how lifestyle factors interact to shape mental health outcomes:
+> - Restful sleep and regular activity are foundational to wellness
+> - Mindfulness and healthy habits act as reinforcing buffers
+> - Stress, overstimulation, and poor lifestyle balance diminish psychological well-being.
+>
+> These insights provide a **data-driven foundation** for digital wellness strategies, app based behavioral
+> interventions, and public health recommendations.
+>
+> The next section translates these findings into an **interactive dashboard** where users can explore
+> relationships by gender, age group, and location type.
