@@ -189,6 +189,13 @@ data_df.describe().T.round(2)
 ### 🔍 Exploratory Data Analysis (EDA)
 
 
+<img width="863" height="525" alt="Distribution of health behavior score" src="https://github.com/user-attachments/assets/911ebbb8-2c2e-4159-8ea0-288cfb57331c" />
+
+>**Insight:**
+>The **Health Behavior Score**, which combines healthy eating, mindfulness, and wellness app usage, is skewed
+>toward moderate values.
+>This suggests that while some individuals adopt healthy habits consistently, most exhibit moderate
+>wellness engagement, leaving room for behavioral improvement.
 
 
 ### Creating Features Code
