@@ -379,6 +379,21 @@ data_df['mindfulness_effect'] = data_df['mindfulness_minutes_per_day'] / (data_d
 
 ***
 
-#### Validate New Feature Distributions
+#### Validate New Feature Distributions  
+
+
+<img width="617" height="309" alt="engineered_columns_validation" src="https://github.com/user-attachments/assets/edd2f5ae-19bc-4477-ab10-d24b1db42579" />  
+
+
+>**Observation:**
+>The engineered features have been successfully scaled or normalized, ensuring they are suitable for
+>regression analysis and cross-variable comparisons.
+
+
+**Summary**
+>Feature engineering transforms raw behavioral data into interpretable lifestyle metrics that represent
+>how individuals balance technology, sleep, activity, and self-care.
+>These features now serve as inputs for modeling the predictors of mental health outcomes.
+
 
 
