@@ -23,14 +23,14 @@ The goal is to:
 
 ## Data Overview & Preperation
 
-The dataset contains simulated information on 5,000 individuals, covering demographics, digital
-behavior, lifestyle habits, and mental health indicators.
-
-Each record represents one individual's daily screen usage patterns, wellness behaviors, and 
-self-reported mental health metrics.
-
-This section provides an overview of the data set's structure, verifies data quality, and prepares
-the features for analysis and modeling.
+>The dataset contains simulated information on 5,000 individuals, covering demographics, digital
+>behavior, lifestyle habits, and mental health indicators.
+>
+>Each record represents one individual's daily screen usage patterns, wellness behaviors, and 
+>self-reported mental health metrics.
+>
+>This section provides an overview of the data set's structure, verifies data quality, and prepares
+>the features for analysis and modeling.
 
 #### Python Libraries Used in the Analysis
 ```
