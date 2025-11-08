@@ -197,6 +197,22 @@ data_df.describe().T.round(2)
 >This suggests that while some individuals adopt healthy habits consistently, most exhibit moderate
 >wellness engagement, leaving room for behavioral improvement.
 
+#### Relationship Between Sleep Quality and Mental Health
+<img width="838" height="439" alt="sleep_qualityvmental_health_score" src="https://github.com/user-attachments/assets/07bd3a0a-91f1-47c2-b35e-ca3ee00ea916" />
+
+>**Insight:**
+>A clear **positive trend** appears between sleep quality and mental health, with individuals reporting higher-quality
+>sleep tends to be associated with better overall mental wellness.
+>This relationship reinforces the connection between **sleep hygiene** and emotional stability.
+
+
+#### Stress Level vs Physical Activity
+<img width="834" height="426" alt="stress_level_v_physical_activity" src="https://github.com/user-attachments/assets/5e16ffc5-a4a7-443f-82b1-7e9da84027c1" />
+
+
+#### Caffeine Intake and Mental Health
+<img width="851" height="439" alt="caffeine_intake_v_mental_health_score" src="https://github.com/user-attachments/assets/0ff73b1d-2d9a-4d1e-aa99-b293add92100" />
+
 
 ### Creating Features Code
 
