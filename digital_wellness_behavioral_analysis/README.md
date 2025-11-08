@@ -395,5 +395,57 @@ data_df['mindfulness_effect'] = data_df['mindfulness_minutes_per_day'] / (data_d
 >how individuals balance technology, sleep, activity, and self-care.
 >These features now serve as inputs for modeling the predictors of mental health outcomes.
 
+***
+
+### Modeling & Interpretation
+>
+>With our engineered features in place, we can now model how lifestyle, behavioral, and digital habits
+>influence **mental health outcomes**.
+>
+>A **multiple linear regression model** is used here because it provides an interpretable framework for
+>understanding how each predictor contributes to changes in the mental health score.
+
+#### Feature and Model Setup
+
+```
+# Define target and predictors
+X = overall_df[[
+    'health_behavior_score',
+    'sleep_quality',
+    'sleep_duration_hours',
+    'stress_level',
+    'physical_activity_hours_per_week',
+    'caffeine_intake_mg_per_day',
+    'mindfulness_minutes_per_day'
+]]
+
+y = overall_df['mental_health_score']
+
+
+# Split into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X,y, test_size = 0.2, random_state=42
+)
+
+# Initialize and fit model
+
+model = LinearRegression()
+model.fit(X_train,y_train)
+
+# Predictions and evaluation
+y_pred = model.predict(X_test)
+r2 = r2_score(y_test, y_pred)
+rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+
+```
+>**Model Evaluation:**
+>- **R<sup>2</sup> Score:** Measures how much variance in mental health score is explained by the predictors
+>- **RMSE:** Indicated how far, on average, the predictions deviate from actual mental health scores
+>
+>These metrics provide a sense of both explanatory power and predictive accuracy
+>|**R<sup>2</sup> Score**|**RMSE**|
+>|-------------------|----|
+>| 0.856|5.071|
+
 
 
