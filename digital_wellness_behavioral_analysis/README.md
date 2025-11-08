@@ -189,33 +189,166 @@ data_df.describe().T.round(2)
 ### 🔍 Exploratory Data Analysis (EDA)
 
 
-<img width="863" height="525" alt="Distribution of health behavior score" src="https://github.com/user-attachments/assets/911ebbb8-2c2e-4159-8ea0-288cfb57331c" />
+<img width="863" height="525" alt="Distribution of health behavior score" src="https://github.com/user-attachments/assets/911ebbb8-2c2e-4159-8ea0-288cfb57331c" />  
+
 
 >**Insight:**
+>
 >The **Health Behavior Score**, which combines healthy eating, mindfulness, and wellness app usage, is skewed
 >toward moderate values.
 >This suggests that while some individuals adopt healthy habits consistently, most exhibit moderate
 >wellness engagement, leaving room for behavioral improvement.
 
 #### Relationship Between Sleep Quality and Mental Health
-<img width="838" height="439" alt="sleep_qualityvmental_health_score" src="https://github.com/user-attachments/assets/07bd3a0a-91f1-47c2-b35e-ca3ee00ea916" />
+<img width="838" height="439" alt="sleep_qualityvmental_health_score" src="https://github.com/user-attachments/assets/07bd3a0a-91f1-47c2-b35e-ca3ee00ea916" />  
+
 
 >**Insight:**
+>
 >A clear **positive trend** appears between sleep quality and mental health, with individuals reporting higher-quality
 >sleep tends to be associated with better overall mental wellness.
 >This relationship reinforces the connection between **sleep hygiene** and emotional stability.
 
 
 #### Stress Level vs Physical Activity
-<img width="834" height="426" alt="stress_level_v_physical_activity" src="https://github.com/user-attachments/assets/5e16ffc5-a4a7-443f-82b1-7e9da84027c1" />
+<img width="834" height="426" alt="stress_level_v_physical_activity" src="https://github.com/user-attachments/assets/5e16ffc5-a4a7-443f-82b1-7e9da84027c1" />  
+
+>**Insight:**
+>
+>Individuals who engage in **more physical activity** generally report **lower stress levels**.
+>This pattern aligns with established wellness research, regular physical movement is associated with
+>improved mood and reduced perceived stress.
 
 
 #### Caffeine Intake and Mental Health
-<img width="851" height="439" alt="caffeine_intake_v_mental_health_score" src="https://github.com/user-attachments/assets/0ff73b1d-2d9a-4d1e-aa99-b293add92100" />
+<img width="851" height="439" alt="caffeine_intake_v_mental_health_score" src="https://github.com/user-attachments/assets/0ff73b1d-2d9a-4d1e-aa99-b293add92100" />  
 
 
-### Creating Features Code
 
+>**Insight:**
+>
+>There’s a slight negative association between caffeine intake and mental health score.
+>Higher caffeine consumption may correspond to elevated stress or reduced sleep, both of
+>which can negatively impact overall wellness.
+
+
+#### Behavioral Balance: Health Behavior vs Mental Health  
+
+<img width="880" height="546" alt="health_behavior_vs_mental_health" src="https://github.com/user-attachments/assets/ff8c9b4a-3007-4c97-afaa-68728dd2e314" />  
+
+>**Insight:**
+>
+>The strong positive correlation indicates that **healthier daily behaviors**, such as mindfulness, exercise,
+>and balanced routines, are closely related to **better mental health outcomes.**
+>This finding sets the stage for our **feature engineering and modeling**, where we can quantify the relative
+>impact of each behavioral factor.
+
+
+**Summary**
+>The EDA reveals clear behavioral drivers of mental wellness:
+>- Better sleep and more physical activity improve mental health
+>- High stress and excessive caffeine appear detrimental
+>- Holistic wellness behaviors (mindfulness, healthy diet, and app-based self-care) correlate
+>  strongly with higher mental health scores
+>These insights inform which features to engineer and test in predictive models that explain or forecast
+>**mental well-being**.
+
+***
+
+### Feature Engineering  
+
+>After exploring behavioral and wellness trends, the next step is to create new, meaningful features that
+>better represent lifestyle balance and mental health drivers.
+>Feature engineering allows us to summarize complex dialy patterns, such as total screen exposure or
+>lifestyle quality, into measurable predictors that improve model interpretability.
+
+
+#### Deriving Behavioral and Wellness Features
+
+```
+# Total screen time exposure
+data_df['total_screen_hours'] = (
+                                data_df['phone_usage_hours'] +
+                                data_df['laptop_usage_hours'] + 
+                                data_df['tablet_usage_hours'] +
+                                data_df['tv_usage_hours']
+)
+
+# Non-Working screen time
+data_df['non_work_screen_hours'] = data_df['total_screen_hours'] - data_df['work_related_hours']
+
+# Ratios capturing how users spend screen time
+data_df['social_ratio'] = data_df['social_media_hours'] / data_df['total_screen_hours']
+data_df['entertainment_ratio'] = data_df['entertainment_hours'] / data_df['total_screen_hours']
+data_df['gaming_ratio'] = data_df['gaming_hours'] / data_df['total_screen_hours']
+
+```
+
+>**Rationale:**
+>These derived variables capture how much and how purposefully users engage with digital devices.
+>For example, a high social_ratio or entertainment_ratio may indicate excessive leisure usage, while
+>higher work_related_hours reflect structured, productive engagement.
+
+#### Sleep and Activity Balance Indicators
+
+```
+# Sleep efficiency: (quality per hour of rest)
+data_df['sleep_efficiency'] = data_df['sleep_quality']/data_df['sleep_duration_hours']
+
+# Balance between activity and rest
+data_df['activity_sleep_balance'] = data_df['physical_activity_hours_per_week'] / (data_df['sleep_duration_hours'] * 7)
+
+```
+
+>**Rationale:**
+>These metrics assess lifestyle equilibrium.
+>A balanced routine of rest and physical activity supports mental well-being, while low sleep efficiency or
+>poor activity balance often correlates with higher stress and fatigue.
+
+
+#### Stress and Caffeine Relationships
+
+```
+# Caffeine normalized by awake hours
+data_df['caffeine_per_hour_awake'] = (
+    data_df['caffeine_intake_mg_per_day'] / (24- data_df['sleep_duration_hours']
+)
+
+# Stress normalized by activity level
+data_df['stress_to_activity_ratio'] = (
+    data_df['stress_level'] / (data_df['physical_activity_hours_per_week'] + 1)
+)
+
+```
+
+>**Rationale:**
+>These ratios quantify stress and stimulant impact relative to lifestyle context.
+>They help model subtle variations, for instance, someone with high stress but high physical activity
+>may exhibit different outcomes than a sedentary individual with the same stress level.
+
+
+#### Holistic Wellness Metrics
+
+```
+# Normalize mindfulness_minutes per day to 0-1 scale
+scaler = MinMaxScaler()
+overall_df['mindfulness_norm'] =  scaler.fit_transform(overall_df[['mindfulness_minutes_per_day']])
+
+# Compute the composite health behavior score
+overall_df['health_behavior_score'] = (
+    overall_df['eats_healthy'].astype(int) +
+    overall_df['uses_wellness_apps'].astype(int) +
+    overall_df['mindfulness_norm']
+) / 3
+
+```
+
+>**Rationale:**
+>The Health Behavior Score summarizes three key aspects of well-being:
+>- Nutrition habits
+>- Mindfulness engagement
+>- Use of digital wellness tools
+>This composite metric helps quantify lifestyle quality and its contribution to mental health.
 
 ### Composite Health Behavior Score
 
