@@ -348,10 +348,37 @@ overall_df['health_behavior_score'] = (
 >- Nutrition habits
 >- Mindfulness engagement
 >- Use of digital wellness tools
->This composite metric helps quantify lifestyle quality and its contribution to mental health.
+>
+This composite metric helps quantify lifestyle quality and its impact on mental health.
 
-### Composite Health Behavior Score
+#### Emotional Composite Indicators
+
+```
+# Combine mental wellness metrics for a balanced index
+data_df['mental_health_composite'] = (
+    data_df['mental_health_score'] +
+    data_df['weekly_anxiety_score'] +
+    data_df['weekly_depression_score']
+)/3
+
+# Mood vs Stress difference
+data_df['mood_vs_stress_diff'] = data_df['mood_rating'] - data_df['stress_level']
+
+# Mindfulness buffering effect
+data_df['mindfulness_effect'] = data_df['mindfulness_minutes_per_day'] / (data_df['stress_level'] + 1)
+
+```
+
+>**Rationale:**
+>These emotional indicators capture psychological balance:
+>- "mental_health_composite" provides a holistic snapshot of well-being
+>- "mood_vs_stress_diff" reflects resilience
+>- "mindfulness_effect" measures how mindfulness mitigates stress
+>
 
 
 ***
- 
+
+#### Validate New Feature Distributions
+
+
