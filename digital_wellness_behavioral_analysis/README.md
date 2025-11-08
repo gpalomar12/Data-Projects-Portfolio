@@ -504,6 +504,8 @@ print(f"RMSE: {rmse:.3f}")
 >These results validate the earlier exploratory findings and quantify how lifestyle balance contributes to
 >overall mental health.
 
+***
+
 ### Insights & Discussions
 
 >This section distills the key findings from the analysis into **actionable insights** about how digital behavior,
