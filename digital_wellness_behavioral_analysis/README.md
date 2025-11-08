@@ -147,6 +147,47 @@ data_df.describe().T.round(2)
 >This diversity will be key when analyzing correlations between lifestyle habits and mental health
 >outcomes.
 
+**Summary**
+>The dataset is clean, well-structured, and ready for exploration.
+>With demographic grouping and encoding complete, the data can now be analyzed to uncover how
+>digital engagement and wellness behaviors relate to mental health outcomes.
+
+***
+
+### Demographic Overview
+> Understanding the demographic makeup of the dataset helps contextualize behavioral and mental health
+> trends.
+> This section explores how participants are distributed across **age, gender,** and **location type**, providing a
+> foundation for later comparisons in the digital habits and wellness patterns.
+
+#### Demographic Distribution Visualization
+
+
+<img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
+
+**Insights from Demographics**
+>**Age:**
+>The participant pool spans a wide range, with strong representation across all major adult life stages (20-
+>70+).  This balanced distribution enables meaningful comparisons between younger and older populations in terms of
+>stress, screen time, and wellness behavior.
+>
+>**Gender:**
+>The dataset includes a balanced mix of gender categories, ensuring that subsequent analysis of lifestyle
+>and mental health patterns are inclusive and not biased toward a single group.
+>
+>**Location Type:**
+>Respondents are distributed across **urban**, **suburban**, and **rural** environments.  This diversity allows us to
+>explore how environmental context influences digital behavior, stress levels, and overall well-being.
+
+***
+
+**Summary**
+>The dataset’s diverse demographic representation provides a strong foundation for the upcoming Exploratory Data Analysis (EDA).
+>In the next section, we will explore how digital habits, sleep patterns, and wellness behaviors differ across these demographic
+>groups and how they relate to mental health outcomes.
+
+
+
 
 ### Creating Features Code
 
