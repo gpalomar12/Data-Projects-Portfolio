@@ -443,9 +443,7 @@ rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 >- **RMSE:** Indicated how far, on average, the predictions deviate from actual mental health scores
 >
 >These metrics provide a sense of both explanatory power and predictive accuracy
->|**R<sup>2</sup> Score**|**RMSE**|
->|-------------------|----|
->| 0.856|5.071|
+
 
 
 #### Feature Importance (Coefficient Analysis)
@@ -460,3 +458,48 @@ importance = pd.DataFrame({
 
 ```
 
+<img width="1092" height="514" alt="Feature_importance_for_predicting_Mental_Health_Score" src="https://github.com/user-attachments/assets/d7718f95-677f-4359-9bfc-748b5dfce2b5" />  
+
+>**Interpretation:**
+>- Positive coefficients (right side) indicate features that *improve* mental health (e.g. higher sleep,
+>  quality, more activity).
+>- Negative coefficients (left side) indicate features that *reduce* mental health score (e.g. higher
+>  stress or caffeine intake).
+>
+>The visual helps communicate which daily behaviors have the greatest measurable impact on mental
+>well-being.
+
+#### Model Performance Summary
+
+```
+print(f"R² Score: {r2:.3f}")
+print(f"RMSE: {rmse:.3f}")
+```
+
+>**Output:**
+>|**R<sup>2</sup> Score**|**RMSE**|
+>|-------------------|----|
+>| 0.856|5.071|
+>
+>The model explains roughly 86% of the variance in mental health score, suggesting that the behavioral and
+>wellness features are strong predictors of psychological outcomes.
+
+
+#### Insights from Coefficients
+|**Feature**|**Interpretation**|
+|-----------|------------------|
+| sleep_quality |Strongest positive predictor; best rest correlates with improved mental well-being|
+|physical_activity_hours_per_week|Moderate positive relationship; regular exercise supports mental health|
+|mindfulness_minutes_per_day|Slight positive effect; consistent mindfulness practice contributes to emotional stability|
+|stress_level|Strong negative predictor; elevated stress significantly reduces mental health scores|
+|caffeine_intake_mg_per_day|Mild negative relationship; excessive caffeine may worsen anxiety or reduce sleep quality|
+|health_behavior_score| Composite lifestyle indicator; higher scores generally align with improved mental health|
+
+**Summary**
+>The model reveals a clear behavioral hierarchy driving mental wellness:
+>- Sleep quality and physical activity are the strongest positive influences
+>- Stress level has the most detrimental effect
+>- Mindfulness and healthy lifestyle behaviors add measurable but moderate benefits.
+>
+>These results validate the earlier exploratory findings and quantify how lifestyle balance contributes to
+>overall mental health.
