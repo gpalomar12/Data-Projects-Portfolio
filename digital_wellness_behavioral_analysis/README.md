@@ -562,3 +562,23 @@ print(f"RMSE: {rmse:.3f}")
 >
 > The next section translates these findings into an **interactive dashboard** where users can explore
 > relationships by gender, age group, and location type.
+
+***
+
+### Dashboard & Visualization
+To translate the analytical finidngs into actionable insights, an **interactive Looker Studio dashboard** was
+developed.  The dashboard visualizes the mental welness indicators and behavioral patterns accross
+demographics, enabling dynamic exploration of key welness metrics.
+
+### Dashboard Objectives
+- Present a clear overview of digital wellness and mental health trends.
+- Allow the user to interactively explore insights by age groups, gender and location types.
+- Provide intuitive visuals that connect behaviroal data (screen time, activity, sleep) to **mental health
+  outcomes**.
+
+***
+
+#### Key Pages & Visuals
+
+##### Digtial Wellness Overview
+
