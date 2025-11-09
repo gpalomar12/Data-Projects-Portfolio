@@ -580,5 +580,31 @@ demographics, enabling dynamic exploration of key welness metrics.
 
 #### Key Pages & Visuals
 
-##### Digtial Wellness Overview
+#### Digtial Wellness Overview
 
+<img width="821" height="581" alt="overall_dashboard_view_page1" src="https://github.com/user-attachments/assets/8a55ee74-2f10-4275-97f0-3dcb784d7fb1" />  
+
+
+**Stress Level vs Physical Activity**
+
+
+<img width="607" height="317" alt="overview_stress_level_vs_physical_activity_hrs_wk" src="https://github.com/user-attachments/assets/90bde816-f4fa-4152-a4d7-6b6a8fb58971" />  
+
+>A clear inverse pattern emerges between stress and physical activity.  Higher activity levels are generally
+>associated with reduced stress, suggesting regular movement plays a key role in maintaining mental
+>resilience
+
+
+**Caffeine Intake vs Mental Health**
+
+<img width="607" height="317" alt="overview_caffeine_intake_mg_day" src="https://github.com/user-attachments/assets/e53630bd-730c-41d8-bac3-170d4e3f014c" />  
+
+>This scatterplot examines how daily caffeine consumption relates to mental health. Moderate intake shows
+>minimal impact, while excessive caffeine may correlate with slightly lower wellness scores.
+
+**Feature Importance Chart**
+
+<img width="607" height="317" alt="overview_feature_importance" src="https://github.com/user-attachments/assets/6eb42726-e606-4cc3-b36a-16c723d91ba4" />  
+
+>A feature importance bar chart displays which variables most influence mental health scores. Sleep quality, activity level,
+>and stress consistently rank as the strongest predictors, supporting the analytical findings from regression modeling.
