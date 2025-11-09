@@ -608,3 +608,44 @@ demographics, enabling dynamic exploration of key welness metrics.
 
 >A feature importance bar chart displays which variables most influence mental health scores. Sleep quality, activity level,
 >and stress consistently rank as the strongest predictors, supporting the analytical findings from regression modeling.
+>
+
+### Demographic Insights
+
+#### Mindfulness Minutes per Day vs Stress Level
+
+
+<img width="607" height="317" alt="mindfulness_min_per_day_vs_stress_by_gender" src="https://github.com/user-attachments/assets/5634a1e6-438a-4906-aeaf-133bbdabb9b4" />
+
+>A scatterplot showing that individuals practicing longer mindfulness sessions tend to report lower stress levels. The inverse relationship
+>highlights mindfulness as a powerful coping mechanism for managing stress.
+
+
+#### Physical Activity Hours per Week vs Mental Health Score
+
+<img width="607" height="317" alt="Physical_activity_vs_mental_Health_by_sleepquality" src="https://github.com/user-attachments/assets/b7b4165f-b53a-42c6-aed4-d898660a0d97" />
+
+>This bubble chart reveals a clear upward trend—higher activity levels correspond with improved mental health scores.
+>The bubble size represents gender, showing consistent benefits across all demographics.
+
+#### Mood Rating vs Sleep Efficiency
+
+<img width="607" height="317" alt="mood_rating_vs_sleep_efficiency" src="https://github.com/user-attachments/assets/09421cd3-0141-4277-9f98-1a6647b31ea4" />
+>A line chart illustrating a direct correlation between sleep efficiency and overall mood. Better sleep quality leads
+>to higher mood ratings, underscoring the restorative impact of sufficient rest.
+
+
+#### Social Ratio vs Mood Rating
+
+<img width="607" height="317" alt="scoial_ratio_vs_mood_rating" src="https://github.com/user-attachments/assets/d605f336-8083-4469-b39d-c0b93d9271f3" />
+
+>A scatterplot visualizing how social media engagement relates to mood. Excessive social time is associated with lower mood ratings,
+>suggesting diminishing returns from extended digital interaction.
+
+#### Summary: Behavioral Insights & Mental Health Predictors
+This page explores how daily habits and behavioral patterns shape mental well-being. The visuals highlight clear relationships between  
+lifestyle choices—such as mindfulness, physical activity, sleep quality, and screen use; and their influence on stress, mood, and overall  
+mental health. Consistent physical activity and adequate rest are strongly associated with higher mental health scores, while elevated  
+stress and excessive screen engagement show the opposite trend. Differences across gender and age groups remain modest, indicating that  
+healthy routines like mindfulness practice, balanced digital consumption, and good sleep hygiene benefit all demographics. Together, these  
+insights emphasize that small, sustained behavior changes can have a measurable impact on mental wellness.
