@@ -31,6 +31,19 @@ The goal is to:
 
  **Demographics Overview**
  <img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
+ **Insights from Demographics**
+>**Age:**
+>The participant pool spans a wide range, with strong representation across all major adult life stages (20-
+>70+).  This balanced distribution enables meaningful comparisons between younger and older populations in terms of
+>stress, screen time, and wellness behavior.
+>
+>**Gender:**
+>The dataset includes a balanced mix of gender categories, ensuring that subsequent analysis of lifestyle
+>and mental health patterns are inclusive and not biased toward a single group.
+>
+>**Location Type:**
+>Respondents are distributed across **urban**, **suburban**, and **rural** environments.  This diversity allows us to
+>explore how environmental context influences digital behavior, stress levels, and overall well-being.
 
 
 #### Inspecting the Dataset
@@ -123,41 +136,46 @@ data_df.describe().T.round(2)
 
 ***
 
-#### Exploring Findings
-- **Sleep quality** and **physiical activity** show strong positive correlations with mental health
-- **Stress** is the most significant negative factor affecting well-being.
-- **Caffeine intake** and **excessive recreational screen time**
-- **Mindfulness practices** provide measurable, though moderate, emotional stability benefits
+#### Feature Engineering
+New behavioral and lifestyle indicators were created to capture overall wellness balance better:
+
+|**Feature**|**Description**|
+|-----------|---------------|
+|total_screen_hours|Combined device usage (phone, laptop, tablet, TV)|
+|sleep_efficiency|Sleep quality normalized by duration|
+|stress_to_activity_ratio|Stress adjusted by activity hours|
+|health_behavior_score|Composite of mindfulness, healthy eating, and wellness app use|
+|mood_vs_stress_diff|Emotional balance indicator|
+|mindfulness_effect|Mindfulness buffering impact on stress|
+
+**Validate New Feature Distributions**
 
 
-#### Demographic Distribution Visualization
+<img width="617" height="309" alt="engineered_columns_validation" src="https://github.com/user-attachments/assets/edd2f5ae-19bc-4477-ab10-d24b1db42579" />  
 
 
-<img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
+>**Observation:**
+>The engineered features have been successfully scaled or normalized, ensuring they are suitable for
+>regression analysis and cross-variable comparisons.
 
-**Insights from Demographics**
->**Age:**
->The participant pool spans a wide range, with strong representation across all major adult life stages (20-
->70+).  This balanced distribution enables meaningful comparisons between younger and older populations in terms of
->stress, screen time, and wellness behavior.
->
->**Gender:**
->The dataset includes a balanced mix of gender categories, ensuring that subsequent analysis of lifestyle
->and mental health patterns are inclusive and not biased toward a single group.
->
->**Location Type:**
->Respondents are distributed across **urban**, **suburban**, and **rural** environments.  This diversity allows us to
->explore how environmental context influences digital behavior, stress levels, and overall well-being.
+**Summary**
+>Feature engineering transforms raw behavioral data into interpretable lifestyle metrics that represent
+>how individuals balance technology, sleep, activity, and self-care.
+>These features now serve as inputs for modeling the predictors of mental health outcomes.
+
 
 ***
 
-**Summary**
->The dataset’s diverse demographic representation provides a strong foundation for the upcoming Exploratory Data Analysis (EDA).
->In the next section, we will explore how digital habits, sleep patterns, and wellness behaviors differ across these demographic
->groups and how they relate to mental health outcomes.
+### Exploratory Data Analysis
 
-### 🔍 Exploratory Data Analysis (EDA)
+The EDA uncovered clear relationships between digital habits and mental well-being:
+- **Sleep Quality** strongly correlates with higher mental health scores
+- **Physical activity** reduces stress and improves mood
+- **Stress** has the largest negative correlation across all wellness outcomes
+- **Caffeine intake** shows a mild negative relationship with wellness
+- **Mindfulness practice** moderately improves emotional balance
 
+**Health Behavior Score Distribution**
 
 <img width="863" height="525" alt="Distribution of health behavior score" src="https://github.com/user-attachments/assets/911ebbb8-2c2e-4159-8ea0-288cfb57331c" />  
 
@@ -169,40 +187,8 @@ data_df.describe().T.round(2)
 >This suggests that while some individuals adopt healthy habits consistently, most exhibit moderate
 >wellness engagement, leaving room for behavioral improvement.
 
-#### Relationship Between Sleep Quality and Mental Health
-<img width="838" height="439" alt="sleep_qualityvmental_health_score" src="https://github.com/user-attachments/assets/07bd3a0a-91f1-47c2-b35e-ca3ee00ea916" />  
 
-
->**Insight:**
->
->A clear **positive trend** appears between sleep quality and mental health, with individuals reporting higher-quality
->sleep tends to be associated with better overall mental wellness.
->This relationship reinforces the connection between **sleep hygiene** and emotional stability.
-
-
-#### Stress Level vs Physical Activity
-<img width="834" height="426" alt="stress_level_v_physical_activity" src="https://github.com/user-attachments/assets/5e16ffc5-a4a7-443f-82b1-7e9da84027c1" />  
-
->**Insight:**
->
->Individuals who engage in **more physical activity** generally report **lower stress levels**.
->This pattern aligns with established wellness research, regular physical movement is associated with
->improved mood and reduced perceived stress.
-
-
-#### Caffeine Intake and Mental Health
-<img width="851" height="439" alt="caffeine_intake_v_mental_health_score" src="https://github.com/user-attachments/assets/0ff73b1d-2d9a-4d1e-aa99-b293add92100" />  
-
-
-
->**Insight:**
->
->There’s a slight negative association between caffeine intake and mental health score.
->Higher caffeine consumption may correspond to elevated stress or reduced sleep, both of
->which can negatively impact overall wellness.
-
-
-#### Behavioral Balance: Health Behavior vs Mental Health  
+**Behavioral Balance: Health Behavior vs Mental Health**
 
 <img width="880" height="546" alt="health_behavior_vs_mental_health" src="https://github.com/user-attachments/assets/ff8c9b4a-3007-4c97-afaa-68728dd2e314" />  
 
@@ -212,16 +198,6 @@ data_df.describe().T.round(2)
 >and balanced routines, are closely related to **better mental health outcomes.**
 >This finding sets the stage for our **feature engineering and modeling**, where we can quantify the relative
 >impact of each behavioral factor.
-
-
-**Summary**
->The EDA reveals clear behavioral drivers of mental wellness:
->- Better sleep and more physical activity improve mental health
->- High stress and excessive caffeine appear detrimental
->- Holistic wellness behaviors (mindfulness, healthy diet, and app-based self-care) correlate
->  strongly with higher mental health scores
->These insights inform which features to engineer and test in predictive models that explain or forecast
->**mental well-being**.
 
 ***
 
@@ -356,21 +332,6 @@ data_df['mindfulness_effect'] = data_df['mindfulness_minutes_per_day'] / (data_d
 
 ***
 
-#### Validate New Feature Distributions  
-
-
-<img width="617" height="309" alt="engineered_columns_validation" src="https://github.com/user-attachments/assets/edd2f5ae-19bc-4477-ab10-d24b1db42579" />  
-
-
->**Observation:**
->The engineered features have been successfully scaled or normalized, ensuring they are suitable for
->regression analysis and cross-variable comparisons.
-
-
-**Summary**
->Feature engineering transforms raw behavioral data into interpretable lifestyle metrics that represent
->how individuals balance technology, sleep, activity, and self-care.
->These features now serve as inputs for modeling the predictors of mental health outcomes.
 
 ***
 
