@@ -580,7 +580,14 @@ demographics, enabling dynamic exploration of key welness metrics.
 
 #### Key Pages & Visuals
 
-#### Digtial Wellness Overview
+#### Digital Wellness Overview
+
+The overview dashboard provides a high-level perspective of key wellness indicators across the population. It visualizes  
+average mental health scores, sleep quality, stress levels, screen time, and physical activity, offering an immediate snapshot  
+of overall digital well-being. Comparative charts reveal how mental health varies by age, gender, and location type, while highlighting  
+correlations between sleep, stress, and daily screen exposure. Interactive filters allow users to explore how these factors differ across  
+demographic groups, uncovering broad trends that link digital behavior with wellness outcomes. This page serves as an entry point for  
+understanding population-level patterns before deeper behavioral analysis in Page 2.
 
 <img width="821" height="581" alt="overall_dashboard_view_page1" src="https://github.com/user-attachments/assets/8a55ee74-2f10-4275-97f0-3dcb784d7fb1" />  
 
