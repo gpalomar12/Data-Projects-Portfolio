@@ -8,69 +8,36 @@ Python, Pandas, Scikit-learn, Looker Studio, Matplotlib, Seaborn
 
 ***
 
-## Project Overview
-This project explores the relationship between digital behaviors, lifestyle choices, and mental well-being
-using a simulated data set representing daily screen usage, stress, sleep, and wellness habits.
+## Objective
+This project analyzes the relationship between digital habits, lifestyle balance, and mental well-being using a
+simulated dataset of 5,000 participants.
 
 The goal is to:
-
-- Identify patterns between digital engagement and mental health
+- Identify behavioral patterns linked to stress, sleep, and mental health
 - Derive new behavioral metrics that represent lifestyle balance
 - Develop a predictive model for wellness outcomes
 - Visualize actionable insights using an interactive dashboard
 
-#### Data Source:
-https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness
+#### Data Source: [Kaggle-Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness)
+
 ***
 
-## Data Overview & Preperation
+## Data Overview & Preparation
 
->The dataset contains simulated information on 5,000 individuals, covering demographics, digital
->behavior, lifestyle habits, and mental health indicators.
->
->Each record represents one individual's daily screen usage patterns, wellness behaviors, and 
->self-reported mental health metrics.
->
->This section provides an overview of the data set's structure, verifies data quality, and prepares
->the features for analysis and modeling.
+- Encoded categorical variables (gender, location_type)
+- Grouped continuous variables (e.g., age → age_group)
+- Converted boolean fields for efficient computation
+- Scaled numeric fields to normalize behavior metrics
 
-#### Python Libraries Used in the Analysis
-```
-# Standard Library Imports
+ **Demographics Overview**
+ <img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
 
-import pandas as pd
-import numpy as np
 
-#These are the plotting modules and libraries we'll use
-
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Scikit learn libraries to be used in model training
-
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score, mean_squared_error
-from sklearn.preprocessing import MinMaxScaler
-
-# Initialize encoder
-gender_encoder = LabelEncoder()
-location_encoder = LabelEncoder()
-
-#command so that plots appear inline in the iPython Notebook
-%matplotlib inline
-
-```
 #### Inspecting the Dataset
 
 ```
 # Preview the dataset structure
 data_df.info()
-
-# Displaying a few sample rows
-data_df.head()
 
 ```
 
@@ -156,11 +123,12 @@ data_df.describe().T.round(2)
 
 ***
 
-### Demographic Overview
-> Understanding the demographic makeup of the dataset helps contextualize behavioral and mental health
-> trends.
-> This section explores how participants are distributed across **age, gender,** and **location type**, providing a
-> foundation for later comparisons in the digital habits and wellness patterns.
+#### Exploring Findings
+- **Sleep quality** and **physiical activity** show strong positive correlations with mental health
+- **Stress** is the most significant negative factor affecting well-being.
+- **Caffeine intake** and **excessive recreational screen time**
+- **Mindfulness practices** provide measurable, though moderate, emotional stability benefits
+
 
 #### Demographic Distribution Visualization
 
@@ -257,13 +225,20 @@ data_df.describe().T.round(2)
 
 ***
 
-### Feature Engineering  
+### Predictive Modeling
+- Built a multiple linear regression model predicting mental health scores
+- Achieved R<sup>2</sup> = 0.86, indicating strong explanotry power
+- **Top Predictors:**
 
->After exploring behavioral and wellness trends, the next step is to create new, meaningful features that
->better represent lifestyle balance and mental health drivers.
->Feature engineering allows us to summarize complex dialy patterns, such as total screen exposure or
->lifestyle quality, into measurable predictors that improve model interpretability.
+<img width="1092" height="514" alt="Feature_importance_for_predicting_Mental_Health_Score" src="https://github.com/user-attachments/assets/d7718f95-677f-4359-9bfc-748b5dfce2b5" /> 
 
+**Output:**
+|**R<sup>2</sup> Score**|**RMSE**|
+|-------------------|----|
+| 0.856|5.071|
+
+>The model explains roughly 86% of the variance in mental health score, suggesting that the behavioral and
+>wellness features are strong predictors of psychological outcomes.
 
 #### Deriving Behavioral and Wellness Features
 
@@ -460,7 +435,7 @@ importance = pd.DataFrame({
 
 ```
 
-<img width="1092" height="514" alt="Feature_importance_for_predicting_Mental_Health_Score" src="https://github.com/user-attachments/assets/d7718f95-677f-4359-9bfc-748b5dfce2b5" />  
+ 
 
 >**Interpretation:**
 >- Positive coefficients (right side) indicate features that *improve* mental health (e.g. higher sleep,
