@@ -19,7 +19,8 @@ The goal is to:
 - Visualize actionable insights using an interactive dashboard
 
 #### Data Source: [Kaggle-Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness)
-#### Source Code: [Python Jupyter Notebook Code](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/dev/scripts/digital_wellness_behavioral_analysis/scripts/wellness_data_analysis.ipynb)
+#### Source Code: [View Jupyter Notebook on GitHub](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/scripts/digital_wellness_behavioral_analysis/scripts/wellness_data_analysis.ipynb)
+
 
 ***
 
