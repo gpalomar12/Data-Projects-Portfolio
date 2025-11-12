@@ -11,6 +11,8 @@ BSEE | University of Texas at Arlington
 - Covid ACO Patient Co-Morbidities Tracking
 - ACO MSSP CMS Performance Dashboard
 - Developed Data Ingestion Monitoring Process, reducing data outage time by 60%
+- Managed Software Development Teams, Project Scoping, Story Development, Requirements Gathering,
+  and product delivery.
 
 
 ### Projects 
