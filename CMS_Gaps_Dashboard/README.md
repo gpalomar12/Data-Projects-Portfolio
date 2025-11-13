@@ -111,7 +111,7 @@ integrity.
 
 ```
 # Define the folder path containing the Excel files
-folder_path = r"C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\Midyear_01012019_07312019 - Copy"
+folder_path = r"C:\Users\gabriel.palomarez\Documents\MidYearReport\Midyear Data\"
 
 # Get a list of all Excel files in the folder and its subfolders
 all_files = glob.glob(folder_path + "/**/*.xlsx", recursive=True)
