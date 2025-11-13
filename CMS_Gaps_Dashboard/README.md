@@ -123,7 +123,7 @@ for f in all_files:
         df = pd.read_excel(f, engine="openpyxl")
         df_list.append(df)
     except Exception as e: # Handle read errors
-        print(f"⚠️ Skipped {f} due to: {e}")
+        print(f" Skipped {f} due to: {e}")
 
 # Concatenate all DataFrames into one
 final_df = pd.concat(df_list, ignore_index=True)
