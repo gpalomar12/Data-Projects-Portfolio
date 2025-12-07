@@ -34,7 +34,7 @@ Product Data Analyst and former Director of IT with experience in analytics engi
 
 ***
 
-#### Clinical Reporting Automation (Python, Power Query, Excel Dashboard)
+#### 📓 Clinical Reporting Automation (Python, Power Query, Excel Dashboard)
 
 **Impact:** Reduced a three to four-week manual reporting workflow to a matter of hours.
 
@@ -49,11 +49,35 @@ Clinicians previously consolidated hundreds of files into Excel and spent severa
   
 **Skills:** Python, Pandas, Power Query, Excel, Data Modeling, Dashboard Design
 
+**Link to Project**
+👉 CMS Gaps in Care Dashboard  
 [**CMS Gaps in Care Analytics Dashboard**](./CMS_Gaps_Dashboard/README.md)
 
+**Overview:**
+The dataset includes user activity logs, session durations, engagement metrics, and behavioral indicators. I performed data cleaning, transformation, and exploratory analysis to uncover trends that highlight how users interact with digital platforms over time. The analysis focuses on identifying patterns that may correlate with digital fatigue, overuse, or disengagement.
 
+#### 📓 Digital Wellness Behavioral Analysis
 
-- [**Tech Wellness Behavioral Study**](./digital_wellness_behavioral_analysis/README.md)
+**Key Objectives**
+- Analyze user behavior to identify trends in digital engagement
+- Detect potential indicators of unhealthy usage patterns
+- Explore correlations between session duration, frequency, and engagement
+- Provide actionable insights that can inform product design and wellness features
+
+**Tools and Techniques**
+- Python for data cleaning, transformation, and exploratory analysis
+- Pandas and NumPy for data manipulation
+- Seaborn and Matplotlib for visualizations
+- Jupyter Notebook for iterative analysis and documentation
+
+**What You Will Find in This Project**
+- A structured notebook that walks through the full analytical workflow
+- Visualizations that highlight behavioral trends and usage patterns
+- Insights that can support digital wellness initiatives and product decisions
+
+**Link to Project**
+👉 Digital Wellness Behavioral Analysis  
+[**Digital Wellness Behavioral Study**](./digital_wellness_behavioral_analysis/README.md)
 
 
 
