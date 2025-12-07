@@ -9,8 +9,7 @@ Python, Pandas, Scikit-learn, Looker Studio, Matplotlib, Seaborn
 ***
 
 ## Objective
-This project analyzes the relationship between digital habits, lifestyle balance, and mental well-being using a
-simulated dataset of 5,000 participants.
+An exploratory data analysis of smart device usage habits to uncover consumer health trends and identify opportunities for improving engagement and digital wellness.
 
 The goal is to:
 - Identify behavioral patterns linked to stress, sleep, and mental health
