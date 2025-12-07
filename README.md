@@ -81,7 +81,8 @@ The dataset includes user activity logs, session durations, engagement metrics, 
 [**Digital Wellness Behavioral Study**](./digital_wellness_behavioral_analysis/README.md)
 
 
-
+###  🙏 Closing Statement
+Thank you for taking the time to explore my portfolio. I am committed to building data driven solutions that simplify complexity, improve decision making, and create measurable business impact. I welcome opportunities to discuss my work, collaborate on new ideas, or contribute to teams that value thoughtful analysis and continuous improvement.
 
 
 
