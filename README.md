@@ -3,15 +3,15 @@ Welcome to my Data Projects Portfolio. I am a Product Data Analyst with experien
 My work focuses on real business problems, measurable impact, and clean, reproducible analysis. This portfolio highlights projects that demonstrate my technical skills, analytical thinking, and ability to deliver insights that support strategic decisions.
 
 
-### Education
+### 🎓 Education
 ***
 BSEE | University of Texas at Arlington
 
-### Work Experience
+### 💼 Work Experience
 ***
 Product Data Analyst and former Director of IT with experience in analytics engineering, workflow automation, dashboard development, and cross‑functional collaboration. Delivered measurable improvements in reporting efficiency, data quality, and product performance.
 
-### Technical Skills
+### 🛠 Technical Skills
 - Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
 - SQL (PostgreSQL, MySQL, SQL Server)
 - Power Query
@@ -30,11 +30,11 @@ Product Data Analyst and former Director of IT with experience in analytics engi
 - Dashboard design
 - Requirements gathering
 
-### Featured Projects 
+### ⭐ Featured Projects 
 
 ***
 
-#### 📓 Clinical Reporting Automation (Python, Power Query, Excel Dashboard)
+#### 📓  Clinical Reporting Automation (Python, Power Query, Excel Dashboard)
 
 **Impact:** Reduced a three to four-week manual reporting workflow to a matter of hours.
 
@@ -53,10 +53,11 @@ Clinicians previously consolidated hundreds of files into Excel and spent severa
 👉 CMS Gaps in Care Dashboard  
 [**CMS Gaps in Care Analytics Dashboard**](./CMS_Gaps_Dashboard/README.md)
 
+
+#### 📓  Digital Wellness Behavioral Analysis
+
 **Overview:**
 The dataset includes user activity logs, session durations, engagement metrics, and behavioral indicators. I performed data cleaning, transformation, and exploratory analysis to uncover trends that highlight how users interact with digital platforms over time. The analysis focuses on identifying patterns that may correlate with digital fatigue, overuse, or disengagement.
-
-#### 📓 Digital Wellness Behavioral Analysis
 
 **Key Objectives**
 - Analyze user behavior to identify trends in digital engagement
