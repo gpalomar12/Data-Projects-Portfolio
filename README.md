@@ -9,14 +9,26 @@ BSEE | University of Texas at Arlington
 
 ### Work Experience
 ***
-**Healthcare @ KPN Health, Inc (_September 2018-Present_)**
-- CMS Care Gap Reporting Module
-- Covid ACO Patient Co-Morbidities Tracking
-- ACO MSSP CMS Performance Dashboard
-- Developed Data Ingestion Monitoring Process, reducing data outage time by 60%
-- Managed Software Development Teams, Project Scoping, Story Development, Requirements Gathering,
-  and product delivery.
+Product Data Analyst and former Director of IT with experience in analytics engineering, workflow automation, dashboard development, and cross‑functional collaboration. Delivered measurable improvements in reporting efficiency, data quality, and product performance.
 
+### Technical Skills
+- Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
+- SQL (PostgreSQL, MySQL, SQL Server)
+- Power Query
+- Git and GitHub
+
+### Business Intelligence and Visualization
+- Power BI
+- Tableau
+- Excel (Pivot-Tables, Dashboards, Slicers, Power Query)
+- Looker
+
+### Analytics and Modeling
+- Data cleaning and transformation
+- Exploratory data analysis
+- KPI development
+- Dashboard design
+- Requirements gathering
 
 ### Featured Projects 
 
