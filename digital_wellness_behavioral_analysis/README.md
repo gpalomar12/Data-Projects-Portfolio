@@ -17,6 +17,14 @@ The goal is to:
 - Develop a predictive model for wellness outcomes
 - Visualize actionable insights using an interactive dashboard
 
+## What You Will Find in This Project
+- A complete data preparation workflow, including encoding, grouping, and feature creation
+- Exploratory data analysis with visualizations of behavioral and wellness patterns
+- A regression model predicting mental health outcomes
+- A Looker Studio dashboard for interactive exploration
+- Actionable insights for wellness strategy and product design
+
+
 #### Data Source: [Kaggle-Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness)
 #### Source Code: [View Jupyter Notebook](scripts/wellness_data_analysis.ipynb)
 
