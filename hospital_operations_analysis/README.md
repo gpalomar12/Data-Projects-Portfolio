@@ -131,8 +131,9 @@ supports both high-level monitoring and patient-level exploration.
    - Surgery and chemotherapy as major cost drivers
    - Lower satisfaction scores among cardiac patients
 
-[Dashboard Image Placeholder: Executive Summary Page]
-(https://github.com/gpalomar12/Data-Projects-Portfolio/tree/main/hospital_operations_analysis/visuals/Executive_Page_Dashboard.PNG)
+  
+<img width="1331" height="768" alt="Executive_Page_Dashboard" src="https://github.com/user-attachments/assets/18e2f83a-115b-4b56-9aed-f9d88259dab5" />
+
 
 ---
 
@@ -141,8 +142,10 @@ supports both high-level monitoring and patient-level exploration.
 - Readmission probability by condition and procedure
 - Feature importance for readmission prediction
 - Distribution of patient readmission risk
+  
 
-[Dashboard Image Placeholder: Readmissions Analysis Page]
+<img width="1326" height="767" alt="Readmissions_Page_Dashboard" src="https://github.com/user-attachments/assets/4142211c-f764-4ea2-8f02-315b0d4577f7" />
+
 
 ---
 
@@ -152,8 +155,9 @@ supports both high-level monitoring and patient-level exploration.
 - Predicted cost by procedure
 - Cost trends by length of stay
 - Identification of the highest-cost condition and procedure combinations
+  
 
-[Dashboard Image Placeholder: Cost Drivers Page]
+<img width="1329" height="765" alt="Cost_Drivers_Page_Dashboard" src="https://github.com/user-attachments/assets/8e3d47fb-894a-487a-980c-9d1398639882" />
 
 ---
 
@@ -162,8 +166,9 @@ supports both high-level monitoring and patient-level exploration.
 - Predicted satisfaction by age group
 - Satisfaction by condition and procedure
 - Feature importance explaining satisfaction predictions
+  
 
-[Dashboard Image Placeholder: Satisfaction Insights Page]
+<img width="1323" height="762" alt="Satisfaction_Page_Dashboard" src="https://github.com/user-attachments/assets/f9535929-868d-4fa6-ab81-17c13fa03770" />
 
 ---
 
@@ -177,9 +182,10 @@ supports both high-level monitoring and patient-level exploration.
    - Predicted satisfaction
 - Interactive filters for age group, condition, procedure, and LOS
 
-This view enables analysts and care teams to explore individual risk profiles and cost drivers.
+This view enables analysts and care teams to explore individual risk profiles and cost drivers.  
 
-[Dashboard Image Placeholder: Patient Drill-Down Page]
+
+<img width="1325" height="760" alt="Patient_Drill_Down_Page_Dashboard" src="https://github.com/user-attachments/assets/51a136c3-4dd6-40a4-a348-08ecfdeb5980" />
 
 
 ---
