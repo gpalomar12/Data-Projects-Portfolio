@@ -132,6 +132,7 @@ supports both high-level monitoring and patient-level exploration.
    - Lower satisfaction scores among cardiac patients
 
 [Dashboard Image Placeholder: Executive Summary Page]
+(https://github.com/gpalomar12/Data-Projects-Portfolio/tree/main/hospital_operations_analysis/visuals/Executive_Page_Dashboard.PNG)
 
 ---
 
