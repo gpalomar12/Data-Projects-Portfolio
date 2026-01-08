@@ -1,123 +1,118 @@
 # 🏥 Hospital Operations Optimization: Cost, Readmission, and Patient Outcomes Analysis
 
+## Project Overview
+
+This project analyzes hospital operations and patient encounter data to identify the key drivers of cost, length of stay, readmission risk, and patient satisfaction.
+
+Using exploratory analysis, predictive modeling, and an interactive Power BI dashboard, the project demonstrates how healthcare organizations can use data to improve operational efficiency, manage risk, and support patient-centered decision-making.
+
 ## 📋 Project Type
-Descriptive Analytics · Exploratory Data Analysis (EDA) · Predictive Modeling · Dashboard Development
+- Descriptive Analytics
+- Exploratory Data Analysis (EDA)
+- Predictive Modeling
+- Dashboard Development
 
 ## ⚙️ Tools Used
-Python, Pandas, Scikit-learn, Matplotlib, Seaborn, SQL (optional), Tableau or Power BI
+- **Python:** Pandas, Scikit-learn
+- **Visualization:** Matplotlib, Seaborn
+- **BI & Reporting:** Power BI
 
 ---
 
-## 🎯 Objective
+## 🎯 Business Objective
 
-The goal of this project is to analyze hospital operations data to understand how patient characteristics, clinical conditions, and procedures relate to:
+Hospitals face increasing pressure to reduce costs while maintaining quality outcomes. This project focuses  
+on answering operational questions that hospital leadership routinely faces:
 
-- Treatment cost  
-- Length of stay  
-- Readmission likelihood  
-- Patient outcomes and satisfaction  
-
-Using this dataset, I aim to identify operational inefficiencies, cost drivers, and risk factors that can inform hospital management decisions and quality improvement initiatives.
+- Which conditions and procedures drive the highest costs?
+- Which patients are most at risk for readmission?
+- How do cost, outcomes, and patient satisfaction interact?
+- Where should operational and clinical improvement efforts be prioritized?
+- The analysis is designed to support actionable insights, not just retrospective reporting.
 
 ---
 
 ## 🧾 Dataset Overview
 
-**Dataset:** Hospital operations and patient outcomes (synthetic)  
+- **Dataset:** Synthetic hospital operations and patient outcomes data
+- **Grain:** One record per hospital encounter
 
-Each record represents a hospital encounter and includes:
+**Included Data Elements**
+- **Patient demographics:** Age, Gender  
+- **Clinical variables:** Condition, Procedure  
+- **Operational metrics:** Cost, Length of Stay  
+- **Quality metrics:** Readmission, Outcome, Satisfaction  
 
-- Patient demographics (Age, Gender)  
-- Clinical variables (Condition, Procedure)  
-- Operational metrics (Cost, Length of Stay)  
-- Quality metrics (Readmission, Outcome, Satisfaction)  
+This structure enables analysis across operational, clinical, and patient experience dimensions.
+---
 
-This structure makes the dataset ideal for analyzing resource utilization patterns, risk factors, and potential areas for operational optimization.
+## Key Performance Indicators (KPIs)
+- Average cost per encounter
+- Average length of stay (LOS)
+- Readmission rate
+- Outcome distribution (Recovered vs Stable)
+- Average patient satisfaction score
+
+These KPIs are surfaced prominently in the executive dashboard to enable rapid performance assessment.
 
 ---
 
-## ❓ Key Business Questions
+## 🔍 Analytical Approach
 
-1. **Cost and Resource Utilization**
-   - Which conditions and procedures are associated with the highest average cost?
-   - How does length of stay vary by condition, procedure, or age group?
-   - Are high costs always associated with better outcomes?
+### Data Preparation
+- Standardized categorical values for conditions and procedures
+- Created derived features, including:
+   - Age groups
+   - Cost buckets
+   - Length-of-stay categories
 
-2. **Quality and Outcomes**
-   - Which conditions or procedures have the highest readmission rates?
-   - How do outcomes (Recovered vs Stable) vary by condition and age?
-   - What factors appear to influence patient satisfaction scores?
+These features enabled segmentation, trend analysis, and predictive modeling.
 
-3. **Risk and Predictive Insights**
-   - Can we predict the likelihood of readmission based on patient and treatment characteristics?
-   - Which features are most strongly associated with higher cost or longer length of stay?
+### Exploratory Data Analysis (EDA)
+- EDA focused on understanding variation across conditions, procedures, and demographics:
+   - Cost and LOS distributions
+   - Readmission patterns by condition and procedure
+   - Satisfaction trends by outcome and age group
 
----
+These findings informed feature selection for modeling and dashboard design.
 
-## 📌 KPIs (Key Performance Indicators)
-
-- **Average Cost per Patient**  
-  Broken down by condition, procedure, and age group.
-
-- **Average Length of Stay (LOS)**  
-  Overall and segmented by condition and procedure.
-
-- **Readmission Rate**  
-  Percentage of encounters marked as “Yes” for readmission, by condition and procedure.
-
-- **Outcome Distribution**  
-  Proportion of “Recovered” versus “Stable” outcomes for each condition.
-
-- **Average Satisfaction Score**  
-  By condition, procedure, and outcome.
-
-These KPIs will be featured prominently in the dashboard to give stakeholders a quick view of operational performance.
-
----
-
-## 🔍 Analysis and Approach
-
-### 1. Data Cleaning and Preparation
-- Handle any inconsistencies in categorical variables (e.g., condition and procedure labels).
-- Create derived fields such as:
-  - Age bands (e.g., 0–40, 41–60, 61+)
-  - Cost buckets (e.g., low, medium, high)
-  - LOS categories (short, medium, long)
-
-### 2. Exploratory Data Analysis (EDA)
-- Analyze distributions of cost, LOS, and satisfaction.
-- Compare cost and LOS across conditions and procedures.
-- Explore relationships between:
-  - Age and LOS
-  - Condition and readmission
-  - Satisfaction and outcome
-
-### 3. Feature Engineering
+### Feature Engineering
 - Encode categorical variables (Condition, Procedure, Gender).
 - Create combined risk features if appropriate (for example, age × condition group).
 - Prepare modeling datasets for:
   - Readmission prediction (Yes/No)
   - Cost or LOS regression (optional)
 
-### 4. Predictive Modeling
-- **Readmission Model:**  
-  - Target: `Readmission` (Yes/No)  
-  - Algorithms: Logistic Regression, Random Forest, or Gradient Boosting  
-  - Evaluate using accuracy, precision, recall, F1 score.
+### Predictive Modeling
+**Readmission Risk Prediction**
+- **Target Variable:** Readmission (Yes or No)
+- **Models:** Logistic Regression, Random Forest, Gradient Boosting
+- **Evaluation Metrics:** Accuracy, precision, recall, F1 Score, ROC AUC
 
-- **Cost or LOS Model (Optional):**  
-  - Target: `Cost` or `Length_of_Stay`  
-  - Algorithms: Linear Regression or Tree-based models  
-  - Evaluate using R² and RMSE.
+Feature importance analysis highlighted that age, cardiac conditions, procedure type, cost, and length of stay were the strongest predictors of readmission risk.
 
-- Interpret feature importance to understand the main drivers of readmission and cost.
+[Dashboard Image Placeholder: Readmission Feature Importance Chart]
 
-### 5. Dashboard and Visualization
-- Build an interactive Tableau or Power BI dashboard that:
-  - Highlights KPIs
-  - Allows filtering by condition, procedure, gender, and age group
-  - Shows cost, LOS, and readmission patterns
-  - Visualizes feature importance and risk drivers
+ ### **Cost Prediction:**  
+  - **Target Variable:** Predicted cost per encounter
+  - **Models:** Linear Regression, Random Forest, Gradient Boosting
+  - **Evaluation Metrics:** R², RMSE
+
+The models identified surgery combined with chemotherapy, cardiac procedures, and cancer-related  
+treatments as the largest contributors to higher predicted costs.
+
+[Dashboard Image Placeholder: Top Drivers of Predicted Cost]
+
+
+### Patient Satisfaction Modeling
+
+**Target Variable:** Predicted satisfaction Score  
+**Models:** Tree-based regressors and linear baselines  
+
+Analysis showed that age emerged as the dominant driver of satisfaction, while clinical and procedural  
+variables played a secondary role.
+
+[Dashboard Image Placeholder: Satisfaction Feature Importance Chart]
 
 ---
 
