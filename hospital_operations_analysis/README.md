@@ -116,124 +116,92 @@ variables played a secondary role.
 
 ---
 
-## 📊 Dashboard Plan
+## 📊 Power BI Dashboard Overview
 
-The dashboard will be structured to support hospital operations and leadership decisions. Proposed pages:
+The interactive Power BI dashboard is designed for hospital leadership, operations teams, and analysts. It  
+supports both high-level monitoring and patient-level exploration.
 
-### Page 1: Operations Overview
-- High-level KPIs:
-  - Average Cost
-  - Average LOS
-  - Readmission Rate
-  - Average Satisfaction
-- Bar charts:
-  - Cost by Condition
-  - LOS by Condition
-- Filters:
-  - Condition, Procedure, Age Group, Gender
+### Executive Summary Page
 
-### Page 2: Cost and Length of Stay Analysis
-- Box plot or bar chart:
-  - Cost by Procedure
-- Scatterplot:
-  - Length of Stay vs Cost, colored by Condition
-- Table:
-  - Top 10 most expensive condition–procedure combinations
+- High-risk readmission percentage
+- Average predicted cost
+- Average predicted satisfaction
+- Summary insights highlighting:
+   - Cardiac conditions as primary readmission drivers
+   - Surgery and chemotherapy as major cost drivers
+   - Lower satisfaction scores among cardiac patients
 
-### Page 3: Readmission and Outcomes
-- Bar chart:
-  - Readmission Rate by Condition
-- Stacked bar:
-  - Outcome (Recovered vs Stable) by Condition or Age Group
-- Feature importance chart (imported / static):
-  - Top predictors of readmission
-- Filter panel:
-  - Age Group, Gender, Condition
-
-### Page 4: Patient Satisfaction
-- Bar or line chart:
-  - Satisfaction score by Condition and Procedure
-- Comparison:
-  - Satisfaction vs Outcome
-- Highlight:
-  - Conditions with good clinical outcomes but lower satisfaction
+[Dashboard Image Placeholder: Executive Summary Page]
 
 ---
 
-## 🤖 Modeling Plan
+### Readmissions Analysis
 
-### Readmission Prediction Model
+- Readmission probability by condition and procedure
+- Feature importance for readmission prediction
+- Distribution of patient readmission risk
 
-**Objective:**  
-Identify patients at higher risk of readmission based on demographics, condition, procedure, cost, and LOS.
-
-**Target Variable:**  
-`Readmission` (Yes/No)
-
-**Features (examples):**
-- Age (and Age Group)
-- Gender
-- Condition
-- Procedure
-- Cost
-- Length_of_Stay
-- Outcome (if using only predictors available at discharge, exclude any post-discharge values)
-
-**Steps:**
-1. Encode categorical features using one-hot or label encoding.
-2. Split data into training and test sets.
-3. Train baseline logistic regression model.
-4. Compare with tree-based models:
-   - Random Forest
-   - Gradient Boosting (e.g., XGBoost or similar, if available)
-5. Evaluate performance with:
-   - Accuracy
-   - Precision
-   - Recall
-   - F1 Score
-   - Confusion matrix
-6. Extract and visualize feature importance.
-7. Translate model insights into plain language:
-   - For example, “Stroke and Heart Attack patients with longer stays show higher readmission risk.”
-
-### Cost or LOS Regression Model (Optional)
-
-**Objective:**  
-Understand which factors drive higher costs or longer stays.
-
-**Target Variable:**
-- `Cost` or `Length_of_Stay`
-
-**Features (examples):**
-- Age, Gender
-- Condition, Procedure
-- Readmission (if used as an explanatory signal)
-- Outcome
-
-**Steps:**
-1. Handle skewness (log-transform cost if heavily skewed).
-2. Train Linear Regression as a baseline.
-3. Train Random Forest Regressor or Gradient Boosting Regressor.
-4. Evaluate with:
-   - R²
-   - RMSE
-5. Visualize feature importance to show cost drivers.
+[Dashboard Image Placeholder: Readmissions Analysis Page]
 
 ---
 
-## 🧠 Key Deliverables
+### Cost Drivers Analysis
 
-- Cleaned and well-documented dataset  
-- EDA notebook with visualizations and narrative commentary  
-- Predictive model notebooks with evaluation and feature importance  
-- Tableau or Power BI dashboard (with screenshots)  
-- Project README and executive summary highlighting business impact  
+- Predicted cost by condition
+- Predicted cost by procedure
+- Cost trends by length of stay
+- Identification of the highest-cost condition and procedure combinations
 
----
-
-## 🔚 Closing Statement
-
-This project demonstrates how hospital operations data can be transformed into actionable insights that support cost control, quality improvement, and patient-centered care. By combining exploratory analysis, predictive modeling, and interactive dashboards, it showcases the full analytics lifecycle from raw data to strategic recommendations.
+[Dashboard Image Placeholder: Cost Drivers Page]
 
 ---
 
+### Patient Satisfaction Insights
+
+- Predicted satisfaction by age group
+- Satisfaction by condition and procedure
+- Feature importance explaining satisfaction predictions
+
+[Dashboard Image Placeholder: Satisfaction Insights Page]
+
+---
+
+### Patient Drill-Down
+
+- Patient-level table showing:
+   - Age, condition, procedure
+   - Length of stay
+   - Readmission probability
+   - Predicted cost
+   - Predicted satisfaction
+- Interactive filters for age group, condition, procedure, and LOS
+
+This view enables analysts and care teams to explore individual risk profiles and cost drivers.
+
+[Dashboard Image Placeholder: Patient Drill-Down Page]
+
+
+---
+
+### Key Takeaways
+
+- Approximately 37 percent of patients are identified as high risk for readmission, with cardiac conditions
+  driving the majority of risk.
+- A small number of procedures account for a disproportionate share of total cost.
+- Patient satisfaction varies significantly by age and condition, even when clinical outcomes are positive.
+- Predictive modeling combined with interactive dashboards provides decision-makers with both
+  explanatory insight and forward-looking guidance.
+
+---
+
+### Business Impact
+
+This project demonstrates how healthcare operations data can be transformed into actionable insights that
+support:
+- Readmission reduction strategies
+- Cost containment and resource planning
+- Improved patient experience
+- Data-informed clinical and operational decision-making
+
+By combining exploratory analysis, predictive modeling, and executive-level dashboards, the project 
+showcases a full analytics lifecycle aligned with real-world healthcare operations.
