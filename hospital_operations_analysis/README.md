@@ -192,9 +192,13 @@ the shortest stays average around 15 days, longer stays typically extend up to a
 is approximately 40 days. These patterns align with the summary statistics observed in the underlying data.
 
 ## 📔 Jupyter Notebooks
-[Phase 1 Initial Data](hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)
-[Phase 2 Data Exploration ](hospital_operations_analysis/notebooks/eda.ipynb)
-[Phase 3 Data Modeling](hospital_operations_analysis/notebooks/modeling.ipynb)
+Explore each phase of the Python data exploration to modeling code.  Each Phase is separated to 
+different notebooks for simplicity.
+
+[Phase 1 Initial Data](hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)  
+[Phase 2 Data Exploration ](hospital_operations_analysis/notebooks/eda.ipynb)  
+[Phase 3 Data Modeling](hospital_operations_analysis/notebooks/modeling.ipynb)  
+
 
 
 
