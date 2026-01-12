@@ -191,7 +191,10 @@ Length of stay is similar across genders, though females show a slightly higher 
 the shortest stays average around 15 days, longer stays typically extend up to about 60 days, and the mean length of stay  
 is approximately 40 days. These patterns align with the summary statistics observed in the underlying data.
 
-📔 Jupyter Notebooks
+## 📔 Jupyter Notebooks
+[Phase 1]()
+
+
 
 
 ## 🎯 Business Objective
