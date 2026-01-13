@@ -240,8 +240,8 @@ plt.show()
 <img width="1086" height="619" alt="eda_readmission_Plot" src="https://github.com/user-attachments/assets/48f0235c-c06b-4191-8496-bbd13215c76c" />
 
 
-**To review the Phase 2 code, click on the Phase 2 link below**
-
+**To review the Phase 2 code, click on the Phase 2 link below**  
+[Phase 2 EDA](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/eda.ipynb)
 
 
 
