@@ -237,16 +237,17 @@ plt.ylabel('Readmission Rate (%)')
 plt.show()
 ```
 
-<img width="1086" height="619" alt="eda_readmission_Plot" src="https://github.com/user-attachments/assets/48f0235c-c06b-4191-8496-bbd13215c76c" />
+<img width="1086" height="619" alt="eda_readmission_Plot" src="https://github.com/user-attachments/assets/48f0235c-c06b-4191-8496-bbd13215c76c" />  
+
+
+The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
+Python, pandas, and visualization libraries were used to clean, explore, and visualize the data.
 
 
 **To review the Phase 2 code, click on the Phase 2 link below**  
 [Phase 2 EDA](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/eda.ipynb)
 
 
-
-The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
-Python, pandas, and visualization libraries were used to clean, explore, and visualize the data.
 
 ## 📈 Key Insights  
 Here are some representative findings from the analysis:
