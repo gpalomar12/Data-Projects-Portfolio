@@ -192,6 +192,8 @@ hospital_df['los_category'] = pd.cut(hospital_df['length_of_stay'], bins=los_bin
 ```
 
 ### Cost Analysis
+---
+#### Cost by Condition
 ```
 # Create an order list for the condition by cost in descending order
 cond_order = (hospital_df.groupby('condition')['cost'].mean().sort_values(ascending=False).index)
@@ -206,6 +208,36 @@ plt.show()
 ```
 
 <img width="1080" height="584" alt="eda_cost_analysis_plot" src="https://github.com/user-attachments/assets/2036eafe-4628-4163-84ae-d19fb9bfa9a4" />
+
+#### Cost by Procedure
+```
+# Compute the mean cost per procedure and sort descending
+proc_order = (hospital_df.groupby('procedure')['cost'].mean().sort_values(ascending=False).index)
+
+plt.figure(figsize=(12,5))
+sns.barplot(data=hospital_df, x='procedure', y='cost', estimator='mean', errorbar=None, order=proc_order)
+plt.xticks(rotation=45)
+plt.title('Average Cost by Procedure')
+plt.ylabel('Average Cost')
+plt.xlabel('Procedure')
+plt.tight_layout()
+plt.show()
+
+```
+#### Readmission Analysis
+
+```
+readmission_rate = (hospital_df.groupby('condition')['readmission']
+                   .apply(lambda x: (x == 'Yes').mean() * 100)
+                   .sort_values(ascending=False)
+                   )
+
+readmission_rate.plot(kind='bar', figsize=(12,5), title='Readmission Rate by Condition')
+plt.ylabel('Readmission Rate (%)')
+plt.show()
+```
+
+<img width="1086" height="619" alt="eda_readmission_Plot" src="https://github.com/user-attachments/assets/48f0235c-c06b-4191-8496-bbd13215c76c" />
 
 
 The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
@@ -234,7 +266,8 @@ This section outlines the high-level process:
 4. Group and summarize data by department, date, or patient category
 5. Visualize trends and patterns in plots
 
-*You can include a workflow diagram if you like.*
+<img width="1408" height="768" alt="workflow" src="https://github.com/user-attachments/assets/6c13f8ef-0744-42e3-bff8-c592499026c0" />
+
 
 ## 🧰 Tech Stack
 |Component|Tool|
