@@ -142,7 +142,7 @@ Length of stay is similar across genders, though females show a slightly higher 
 the shortest stays average around 15 days, longer stays typically extend up to about 60 days, and the mean length of stay  
 is approximately 40 days. These patterns align with the summary statistics observed in the underlying data.
 
-**The snippets above are only a preview, to review all the Python code refer to the link below**  
+**The snippets above are only a preview; to review all the Python code for the data ingestion and procedures listed in this section see the notebook link below.**  
 [Phase 1 Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)
 
 
