@@ -142,6 +142,10 @@ Length of stay is similar across genders, though females show a slightly higher 
 the shortest stays average around 15 days, longer stays typically extend up to about 60 days, and the mean length of stay  
 is approximately 40 days. These patterns align with the summary statistics observed in the underlying data.
 
+**The snippets above are only a preview, to review all the Python code refer to the link below**  
+[Phase 1 Initial Data](hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)
+
+
 ## 🛠 Methods
 The analysis workflow includes:
 1. Data ingestion and profiling
@@ -201,7 +205,7 @@ This section outlines the high-level process:
 Explore each phase of the Python data exploration to modeling code.  Each Phase is separated to 
 different notebooks for simplicity.
 
-[Phase 1 Initial Data](hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)  
+  
 [Phase 2 Data Exploration ](hospital_operations_analysis/notebooks/eda.ipynb)  
 [Phase 3 Data Modeling](hospital_operations_analysis/notebooks/modeling.ipynb)  
 
