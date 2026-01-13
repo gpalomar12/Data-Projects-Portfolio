@@ -142,7 +142,7 @@ Length of stay is similar across genders, though females show a slightly higher 
 the shortest stays average around 15 days, longer stays typically extend up to about 60 days, and the mean length of stay  
 is approximately 40 days. These patterns align with the summary statistics observed in the underlying data.
 
-**The snippets above are only a preview; to review all the Python code for the data ingestion and procedures listed in this section see the notebook link below.**  
+**The snippets above are only a preview; to review all the Python code for the data ingestion and procedures listed in this section, see the notebook link below.**  
 [Phase 1 Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)
 
 
@@ -154,8 +154,58 @@ The analysis workflow includes:
 4. Metric computation (e.g., readmission rates, avg stay)
 5. Visualizations and reporting
 
+Importing Python Libraries
+```
+import pandas as pd
+import seaborn as sns
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
+```
+Ingesting the cleaned data file in Phase 1
 
+```
+# Read in the cleansed data file from phase 1 into a data frame
+# Then preview the data frame
+
+hospital_df = pd.read_csv('../data/processed/hospital_cleaned.csv')
+hospital_df.head()
+```
+
+<img width="1091" height="237" alt="eda_data_preview" src="https://github.com/user-attachments/assets/2f4242df-db96-419b-910a-b6b5b726b007" />  
+
+### Feature Engineering
+```
+# Creating the LOS Categories
+
+# First define the bins
+# Remember LOS is short for Length of Stay
+los_bins = [0, 10, 40, 80]
+
+# Create Labels that correspond to the bins
+# Note the labels are Number of Bins - 1, always
+los_labels = ['Short Stay', 'Standard Stay', 'Extended Stay']
+
+# Creating the new column in the data frame
+hospital_df['los_category'] = pd.cut(hospital_df['length_of_stay'], bins=los_bins, labels=los_labels, right=False)
+
+```
+
+### Cost Analysis
+```
+# Create an order list for the condition by cost in descending order
+cond_order = (hospital_df.groupby('condition')['cost'].mean().sort_values(ascending=False).index)
+
+plt.figure(figsize=(12,5))
+sns.barplot(data=hospital_df, x='condition', y='cost', estimator='mean',order=cond_order, errorbar=None)
+plt.xticks(rotation=45)
+plt.title('Average Cost by Condition')
+plt.ylabel('Average Cost')
+plt.show()
+
+```
+
+<img width="1080" height="584" alt="eda_cost_analysis_plot" src="https://github.com/user-attachments/assets/2036eafe-4628-4163-84ae-d19fb9bfa9a4" />
 
 
 The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
@@ -196,9 +246,6 @@ This section outlines the high-level process:
 |Version control| Git & GitHub|
 
 ---
-
-## Understanding Data and Initial Exploration
-
 
 
 ## 📔 Jupyter Notebooks
