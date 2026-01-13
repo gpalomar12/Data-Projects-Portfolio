@@ -240,6 +240,11 @@ plt.show()
 <img width="1086" height="619" alt="eda_readmission_Plot" src="https://github.com/user-attachments/assets/48f0235c-c06b-4191-8496-bbd13215c76c" />
 
 
+**To review the Phase 2 code, click on the Phase 2 link below**
+
+
+
+
 The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
 Python, pandas, and visualization libraries were used to clean, explore, and visualize the data.
 
