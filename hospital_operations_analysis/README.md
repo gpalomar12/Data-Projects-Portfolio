@@ -287,18 +287,6 @@ This section outlines the high-level process:
 ---
 
 
-## 📔 Jupyter Notebooks
-Explore each phase of the Python data exploration to modeling code.  Each Phase is separated to 
-different notebooks for simplicity.
-
-  
-[Phase 2 Data Exploration ](hospital_operations_analysis/notebooks/eda.ipynb)  
-[Phase 3 Data Modeling](hospital_operations_analysis/notebooks/modeling.ipynb)  
-
-
-
-
-
 ## 🎯 Business Objective
 
 Hospitals face increasing pressure to reduce costs while maintaining quality outcomes. This project focuses  
