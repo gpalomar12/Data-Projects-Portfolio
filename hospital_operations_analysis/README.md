@@ -58,55 +58,6 @@ discharges, departments, and costs. The raw data includes variables such as:
 - Standardize categorical labels (e.g., admission types)
 - Derive useful fields such as length of stay
 
-## 🛠 Methods
-The analysis workflow includes:
-1. Data ingestion and profiling
-2. Cleaning and transformation
-3. Exploratory data analysis (EDA)
-4. Metric computation (e.g., readmission rates, avg stay)
-5. Visualizations and reporting
-
-The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
-Python, pandas, and visualization libraries were used to clean, explore, and visualize the data.
-
-## 📈 Key Insights  
-Here are some representative findings from the analysis:
-- Average patient length of stay trends and outliers
-- Readmission patterns by department or patient subgroup
-- High-cost services or procedures that impact operations
-- Bottlenecks in specific departments or times of day
-
-(Customize with your actual results and numbers)
-
-## 📸 Visuals
-
-Include charts that show operational patterns:
-[Admissions Over Time](images/admissions_over_time.png)
-Add captions for each visual and what the chart reveals.
-
-## ⚙️ How It Works
-This section outlines the high-level process:
-1. Load raw hospital data into a DataFrame
-2. Clean and standardize columns
-3. Compute derived metrics like length of stay
-4. Group and summarize data by department, date, or patient category
-5. Visualize trends and patterns in plots
-
-*You can include a workflow diagram if you like.*
-
-## 🧰 Tech Stack
-|Component|Tool|
-|---------|---------|
-|Data Processing| Python (Pandas, Numpy)|
-|Visualizations| Matplotlib, Seaborn, Plotly|
-|BI tools| Power BI|
-|Notebook| Jupyter Notebook|
-|Version control| Git & GitHub|
-
----
-
-## Understanding Data and Initial Exploration
-
 ### Standard Python Libraries  
 
 ```
@@ -190,6 +141,61 @@ between ages 30 and 40 and another between 50 and 60.
 Length of stay is similar across genders, though females show a slightly higher frequency overall. Across the population,  
 the shortest stays average around 15 days, longer stays typically extend up to about 60 days, and the mean length of stay  
 is approximately 40 days. These patterns align with the summary statistics observed in the underlying data.
+
+## 🛠 Methods
+The analysis workflow includes:
+1. Data ingestion and profiling
+2. Cleaning and transformation
+3. Exploratory data analysis (EDA)
+4. Metric computation (e.g., readmission rates, avg stay)
+5. Visualizations and reporting
+
+
+
+
+
+The project identifies patterns and anomalies in how hospitals manage patients and resources. Tools such as  
+Python, pandas, and visualization libraries were used to clean, explore, and visualize the data.
+
+## 📈 Key Insights  
+Here are some representative findings from the analysis:
+- Average patient length of stay trends and outliers
+- Readmission patterns by department or patient subgroup
+- High-cost services or procedures that impact operations
+- Bottlenecks in specific departments or times of day
+
+(Customize with your actual results and numbers)
+
+## 📸 Visuals
+
+Include charts that show operational patterns:
+[Admissions Over Time](images/admissions_over_time.png)
+Add captions for each visual and what the chart reveals.
+
+## ⚙️ How It Works
+This section outlines the high-level process:
+1. Load raw hospital data into a DataFrame
+2. Clean and standardize columns
+3. Compute derived metrics like length of stay
+4. Group and summarize data by department, date, or patient category
+5. Visualize trends and patterns in plots
+
+*You can include a workflow diagram if you like.*
+
+## 🧰 Tech Stack
+|Component|Tool|
+|---------|---------|
+|Data Processing| Python (Pandas, Numpy)|
+|Visualizations| Matplotlib, Seaborn, Plotly|
+|BI tools| Power BI|
+|Notebook| Jupyter Notebook|
+|Version control| Git & GitHub|
+
+---
+
+## Understanding Data and Initial Exploration
+
+
 
 ## 📔 Jupyter Notebooks
 Explore each phase of the Python data exploration to modeling code.  Each Phase is separated to 
