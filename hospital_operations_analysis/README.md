@@ -265,12 +265,7 @@ Include charts that show operational patterns:
 Add captions for each visual and what the chart reveals.
 
 ## ⚙️ How It Works
-This section outlines the high-level process:
-1. Load raw hospital data into a DataFrame
-2. Clean and standardize columns
-3. Compute derived metrics like length of stay
-4. Group and summarize data by department, date, or patient category
-5. Visualize trends and patterns in plots
+This section outlines the high-level process:  
 
 <img width="1408" height="768" alt="workflow" src="https://github.com/user-attachments/assets/6c13f8ef-0744-42e3-bff8-c592499026c0" />
 
