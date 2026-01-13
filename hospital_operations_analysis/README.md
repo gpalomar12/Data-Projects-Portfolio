@@ -144,10 +144,10 @@ It supports both high-level monitoring and detailed patient-level exploration.
 ## 📓 Project Notebooks
 - Phase 1. Data Cleaning and Initial EDA
   Covers ingestion, validation, cleaning, and demographic analysis.
-  [Phase 1](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)
+[Phase 1](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb)
 - Phase 2. Advanced EDA and Modeling
   Covers feature engineering, predictive modeling, and insight generation.
-  [Phase 2](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/eda.ipynb)
+[Phase 2](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/eda.ipynb)
 
 Refer to the notebooks for full code, visualizations, and model details.
 
