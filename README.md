@@ -32,7 +32,8 @@ I am seeking data analytics and business analytics roles where I can apply struc
 - Analytics Manager
 
 My experience spans multiple industries, with a focus on developing scalable analytics solutions, fostering cross-functional collaboration, and implementing data-driven strategies.
-  
+
+---
 
 ### ⭐ Featured Projects 
 
