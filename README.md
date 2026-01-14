@@ -57,9 +57,9 @@ My experience spans multiple industries, with a focus on developing scalable ana
 
 #### 🏥 Hospital Operations Analysis
 
-**Problem:** Limited visibility into hospital cost drivers, readmissions, and operational bottlenecks made it difficult for leadership to prioritize improvement efforts.
-**Tools:** Python, Pandas, Power BI, Data Visualization
-**Impact:** Identified high-risk readmissions, key cost drivers, and utilization patterns to support capacity planning and operational decision-making.
+**Problem:** Limited visibility into hospital cost drivers, readmissions, and operational bottlenecks made it difficult for leadership to prioritize improvement efforts.  
+**Tools:** Python, Pandas, Power BI, Data Visualization  
+**Impact:** Identified high-risk readmissions, key cost drivers, and utilization patterns to support capacity planning and operational decision-making.  
 
 
 👉 [**View Project**](./hospital_operations_analysis/README.md)
