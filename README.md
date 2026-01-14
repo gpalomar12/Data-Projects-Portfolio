@@ -84,6 +84,7 @@ My experience spans multiple industries, with a focus on developing scalable ana
 
 If you are interested in discussing analytics, automation, or operational improvement initiatives, please don't hesitate to connect.
 
+📄 [Resume](./resume/Gabriel Palomarez_Analytics_Manager_2026.pdf)
 💼 [LinkedIn](www.linkedin.com/in/gabrielpalomarez)  
 📧 [Email](gpalo23@icloud.com)
 
