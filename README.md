@@ -34,30 +34,43 @@ Product Data Analyst and former Director of IT with experience in analytics engi
 
 ***
 
-#### 📓  Clinical Reporting Automation (Python, Power Query, Excel Dashboard)
+#### 📓  Clinical Reporting Automation 
 
-**Impact:** Reduced a three to four-week manual reporting workflow to a matter of hours.
+**Overview:**  
 
-**Overview:**
-Clinicians previously consolidated hundreds of files into Excel and spent several weeks filtering, cleaning, and preparing data for mid‑year reporting. I automated the entire process using Python for consolidation and Power Query for transformation. I then built an interactive Excel dashboard with slicers, pivot tables, and visualizations.
+This project automated a highly manual clinical reporting workflow that required clinicians to consolidate and prepare hundreds of files for mid-year reporting. The solution replaced weeks of manual effort with a scalable, automated pipeline and an interactive Excel dashboard for rapid analysis and decision support.
 
-**Highlights:**
-- Automated multi‑file ingestion and cleaning
-- Built a dynamic dashboard for real‑time exploration
-- Eliminated more than 90 percent of manual effort
-- Client requested full integration into the software platform
-  
-**Skills:** Python, Pandas, Power Query, Excel, Data Modeling, Dashboard Design
+**Key Objectives:**
+- Eliminate manual file consolidation and repetitive data preparation
+- Improve reporting speed, accuracy, and consistency
+- Enable clinicians to explore results interactively without technical support
+- Deliver a solution scalable for integration into a production software platform
 
-**Link to Project**
-👉 CMS Gaps in Care Dashboard  
+**Tools and Techniques:**  
+- Python and Pandas for multi-file ingestion, cleaning, and consolidation
+- Power Query for data transformation and refresh automation
+- Excel dashboards with pivot tables, slicers, and visualizations
+- Data modeling to support flexible reporting and filtering
+
+**What You Will Find in This Project:**  
+- An automated end-to-end reporting pipeline reducing turnaround time from weeks to hours
+- A dynamic Excel dashboard designed for non-technical clinical users
+- A reusable framework adopted for broader platform integration
+- A demonstrated reduction of over 90 percent in manual reporting effort
+
+**Impact:**
+Reduced a three-to four-week manual reporting workflow to a matter of hours, while improving reliability, usability, and stakeholder confidence in the data.  
+
+**Link to Project**  
+👉 CMS Gaps in Care Dashboard   
 [**CMS Gaps in Care Analytics Dashboard**](./CMS_Gaps_Dashboard/README.md)
 
 ---
 
 #### 📓  Digital Wellness Behavioral Analysis
 
-**Overview:**
+**Overview:**  
+
 The dataset includes user activity logs, session durations, engagement metrics, and behavioral indicators. I performed data cleaning, transformation, and exploratory analysis to uncover trends that highlight how users interact with digital platforms over time. The analysis focuses on identifying patterns that may correlate with digital fatigue, overuse, or disengagement.
 
 **Key Objectives**
@@ -77,7 +90,7 @@ The dataset includes user activity logs, session durations, engagement metrics, 
 - Visualizations that highlight behavioral trends and usage patterns
 - Insights that can support digital wellness initiatives and product decisions
 
-**Link to Project**
+**Link to Project**  
 👉 Digital Wellness Behavioral Analysis  
 [**Digital Wellness Behavioral Study**](./digital_wellness_behavioral_analysis/README.md)
 
@@ -85,7 +98,8 @@ The dataset includes user activity logs, session durations, engagement metrics, 
 
 #### 🏥 Hospital Data Analysis
 
-**Overview:**
+**Overview:**  
+
 This project analyzes hospital operations data to uncover patterns in patient utilization, cost drivers, length of stay, readmissions, and patient satisfaction. The analysis focuses on translating complex operational data into clear, actionable insights that support hospital leadership in improving efficiency, managing risk, and enhancing patient outcomes.
 
 **Key Objectives**
@@ -108,8 +122,8 @@ This project analyzes hospital operations data to uncover patterns in patient ut
 - Executive-ready dashboards designed for operational and business stakeholders
 
 
-**Link to Project**
-👉 Hospital Data Analysis 
+**Link to Project**  
+👉 Hospital Data Analysis  
 [**Hospital Data Analysis**](./hospital_data_analysis/README.md)
 
 ---
