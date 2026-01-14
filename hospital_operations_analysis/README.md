@@ -27,7 +27,8 @@ focuses on answering core operational questions such as:
 - Synthetic hospital operations and patient outcomes data
 - Grain: One record per hospital encounter
 
->Data includes 50,000+ hospital encounters covering multiple conditions and procedures.
+>Data includes 985 hospital encounters covering multiple conditions and procedures.
+
   
 **Key Data Elements**
 - Patient demographics: age, gender
