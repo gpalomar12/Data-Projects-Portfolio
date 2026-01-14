@@ -23,7 +23,7 @@ I transform complex operational data into actionable insights that support decis
 - Requirements gathering
 
 📄 [Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)  
-💼 [LinkedIn](www.linkedin.com/in/gabrielpalomarez)  
+💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
 
 ## 🎯 Career Focus
 I am seeking data analytics and business analytics roles where I can apply structured analysis, automation, and reporting to improve operational performance and financial outcomes.
@@ -88,6 +88,6 @@ My experience spans multiple industries, with a focus on developing scalable ana
 If you are interested in discussing analytics, automation, or operational improvement initiatives, please don't hesitate to connect.
 
 📄 [Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)  
-💼 [LinkedIn](www.linkedin.com/in/gabrielpalomarez)  
+💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
 📧 [Email](gpalo23@icloud.com)
 
