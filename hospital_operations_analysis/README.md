@@ -86,7 +86,7 @@ It supports both high-level monitoring and detailed patient-level exploration.
   
 <img width="1331" height="768" alt="Executive_Page_Dashboard" src="https://github.com/user-attachments/assets/18e2f83a-115b-4b56-9aed-f9d88259dab5" />  
 
-
+  
 Power BI dashboard providing an executive-level view of cost trends, length of stay, and readmission risk,  
 and patient satisfaction to support operational decision-making.
 
@@ -114,6 +114,7 @@ cardiac-related cases and supporting targeted intervention strategies.
 <img width="1329" height="765" alt="Cost_Drivers_Page_Dashboard" src="https://github.com/user-attachments/assets/8e3d47fb-894a-487a-980c-9d1398639882" />  
 
 **Cost Drivers by Condition**  
+
 Total hospital cost distribution by condition, revealing a small number of diagnoses responsible  
 for a disproportionate share of overall spend.
 
@@ -127,7 +128,8 @@ for a disproportionate share of overall spend.
   
 <img width="1323" height="762" alt="Satisfaction_Page_Dashboard" src="https://github.com/user-attachments/assets/f9535929-868d-4fa6-ab81-17c13fa03770" />  
 
-**Patient Satisfaction by Demographics**
+**Patient Satisfaction by Demographics**  
+
 Comparison of patient satisfaction scores by age group and condition, demonstrating variability  
 driven by operational and experience factors rather than clinical outcomes alone.
 
