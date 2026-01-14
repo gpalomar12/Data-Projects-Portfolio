@@ -27,9 +27,9 @@ focuses on answering core operational questions such as:
 - Synthetic hospital operations and patient outcomes data
 - Grain: One record per hospital encounter
 
->Data includes 985 hospital encounters covering multiple conditions and procedures.
+ >Data includes 985 hospital encounters covering multiple conditions and procedures.
 
-**Data Source:** [Kaggle]
+**Data Source:** The data was downloaded from Kaggle.com
   
 **Key Data Elements**
 - Patient demographics: age, gender
@@ -84,16 +84,24 @@ It supports both high-level monitoring and detailed patient-level exploration.
 - Average predicted satisfaction
 - Key insight highlights for leadership review
   
-<img width="1331" height="768" alt="Executive_Page_Dashboard" src="https://github.com/user-attachments/assets/18e2f83a-115b-4b56-9aed-f9d88259dab5" />
+<img width="1331" height="768" alt="Executive_Page_Dashboard" src="https://github.com/user-attachments/assets/18e2f83a-115b-4b56-9aed-f9d88259dab5" />  
 
+
+Power BI dashboard providing an executive-level view of cost trends, length of stay, and readmission risk,  
+and patient satisfaction to support operational decision-making.
 
 ### Readmission Analysis
 - Readmission probability by condition and procedure
 - Feature importance for readmission prediction
 - Distribution of patient risk profiles
 
-<img width="1326" height="767" alt="Readmissions_Page_Dashboard" src="https://github.com/user-attachments/assets/4142211c-f764-4ea2-8f02-315b0d4577f7" />
+<img width="1326" height="767" alt="Readmissions_Page_Dashboard" src="https://github.com/user-attachments/assets/4142211c-f764-4ea2-8f02-315b0d4577f7" />  
 
+
+**Readmission Risk Segmentation**
+  
+Patient segmentation by readmission risk category, showing a high concentration of risk among  
+cardiac-related cases and supporting targeted intervention strategies.
 
 ---
 
@@ -103,7 +111,11 @@ It supports both high-level monitoring and detailed patient-level exploration.
 - Cost trends by length of stay
 - Identification of the highest-cost condition and procedure combinations
 
-<img width="1329" height="765" alt="Cost_Drivers_Page_Dashboard" src="https://github.com/user-attachments/assets/8e3d47fb-894a-487a-980c-9d1398639882" />
+<img width="1329" height="765" alt="Cost_Drivers_Page_Dashboard" src="https://github.com/user-attachments/assets/8e3d47fb-894a-487a-980c-9d1398639882" />  
+
+**Cost Drivers by Condition**  
+Total hospital cost distribution by condition, revealing a small number of diagnoses responsible  
+for a disproportionate share of overall spend.
 
 ---
 
@@ -113,7 +125,12 @@ It supports both high-level monitoring and detailed patient-level exploration.
 - Satisfaction trends by condition and procedure
 - Feature importance explaining satisfaction drivers
   
-<img width="1323" height="762" alt="Satisfaction_Page_Dashboard" src="https://github.com/user-attachments/assets/f9535929-868d-4fa6-ab81-17c13fa03770" />
+<img width="1323" height="762" alt="Satisfaction_Page_Dashboard" src="https://github.com/user-attachments/assets/f9535929-868d-4fa6-ab81-17c13fa03770" />  
+
+**Patient Satisfaction by Demographics**
+Comparison of patient satisfaction scores by age group and condition, demonstrating variability  
+driven by operational and experience factors rather than clinical outcomes alone.
+
 
 ---
 
