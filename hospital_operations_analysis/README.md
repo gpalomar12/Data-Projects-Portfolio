@@ -175,7 +175,7 @@ driven by operational and experience factors rather than clinical outcomes alone
   Covers feature engineering and insight generation.
 [Phase 2](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/eda.ipynb)
 -Phase 3. Predictive Modeling
- [Phase 3]()
+ [Phase 3](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/modeling.ipynb)
 
 Refer to the notebooks for full code, visualizations, and model details.
 
