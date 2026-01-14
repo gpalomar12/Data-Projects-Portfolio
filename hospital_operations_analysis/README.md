@@ -1,5 +1,8 @@
 # 📊 Hospital Operations Analysis  
+>Delivered insights that support cost containment, readmission risk reduction, and operational performance improvements.
+
 An end-to-end analytics project analyzing hospital operations, costs, readmissions, and patient outcomes to support operational and clinical decision-making.  
+
 
 ## 🚀 Overview
 
@@ -23,6 +26,8 @@ focuses on answering core operational questions such as:
 **Dataset**
 - Synthetic hospital operations and patient outcomes data
 - Grain: One record per hospital encounter
+
+>Data includes 50,000+ hospital encounters covering multiple conditions and procedures.
   
 **Key Data Elements**
 - Patient demographics: age, gender
