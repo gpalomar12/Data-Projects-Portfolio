@@ -96,7 +96,7 @@ The dataset includes user activity logs, session durations, engagement metrics, 
 
 ---
 
-#### 🏥 Hospital Data Analysis
+#### 🏥 Hospital Operations Analysis
 
 **Overview:**  
 
@@ -124,7 +124,7 @@ This project analyzes hospital operations data to uncover patterns in patient ut
 
 **Link to Project**  
 👉 Hospital Data Analysis  
-[**Hospital Data Analysis**](./hospital_data_analysis/README.md)
+[**Hospital Data Analysis**](./hospital_operations_analysis/README.md)
 
 ---
 
