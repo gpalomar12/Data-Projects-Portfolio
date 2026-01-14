@@ -53,6 +53,7 @@ Clinicians previously consolidated hundreds of files into Excel and spent severa
 👉 CMS Gaps in Care Dashboard  
 [**CMS Gaps in Care Analytics Dashboard**](./CMS_Gaps_Dashboard/README.md)
 
+---
 
 #### 📓  Digital Wellness Behavioral Analysis
 
@@ -80,6 +81,38 @@ The dataset includes user activity logs, session durations, engagement metrics, 
 👉 Digital Wellness Behavioral Analysis  
 [**Digital Wellness Behavioral Study**](./digital_wellness_behavioral_analysis/README.md)
 
+---
+
+#### 🏥 Hospital Data Analysis
+
+**Overview:**
+This project analyzes hospital operations data to uncover patterns in patient utilization, cost drivers, length of stay, readmissions, and patient satisfaction. The analysis focuses on translating complex operational data into clear, actionable insights that support hospital leadership in improving efficiency, managing risk, and enhancing patient outcomes.
+
+**Key Objectives**
+- Identify operational and financial drivers impacting hospital performance
+- Analyze length of stay and readmission trends to highlight efficiency gaps
+- Surface high-cost conditions and procedures for targeted intervention
+- Support data-driven decision-making through clear metrics and visualizations
+
+**Tools and Techniques**
+- Python for data ingestion, cleaning, and exploratory analysis
+- Pandas and NumPy for data transformation and feature engineering
+- Matplotlib and Seaborn for data visualization
+- Power BI for executive dashboards and KPI reporting
+- Exploratory data analysis, segmentation, and predictive modeling
+
+**What You Will Find in This Project**
+- Cleaned and structured hospital operations datasets
+- Exploratory analyses of cost, utilization, and patient outcomes
+- Predictive insights related to readmission risk, cost, and satisfaction
+- Executive-ready dashboards designed for operational and business stakeholders
+
+
+**Link to Project**
+👉 Hospital Data Analysis 
+[**Hospital Data Analysis**](./hospital_data_analysis/README.md)
+
+---
 
 ###  🙏 Closing Statement
 Thank you for taking the time to explore my portfolio. I am committed to building data driven solutions that simplify complexity, improve decision making, and create measurable business impact. I welcome opportunities to discuss my work, collaborate on new ideas, or contribute to teams that value thoughtful analysis and continuous improvement.
