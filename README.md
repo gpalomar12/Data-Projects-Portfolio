@@ -1,5 +1,5 @@
 # 👋 Hi, I’m Gabriel Palomarez
-## Data Analyst|Business Analyst|Analytics Manager  
+## Data Analyst | Business Analyst | Analytics Manager  
 
 I transform complex operational data into actionable insights that support decision-making, process improvement, and measurable business outcomes. My work focuses on analytics automation, operational reporting, and executive-level dashboards across healthcare and enterprise environments.
 
