@@ -5,10 +5,10 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 
 
 ## 🚀 Overview
+> This project examines key hospital operational metrics, including patient admissions, length of stay, readmissions, cost drivers, and patient satisfaction.  
 
-This project examines key hospital operational metrics, including patient admissions, length of stay, readmissions, cost drivers, and patient satisfaction.  
-The objective is to transform raw hospital encounter data into actionable insights that help healthcare leaders improve efficiency, reduce costs, and enhance  
-quality of care.
+The objective is to transform raw hospital encounter data into actionable insights that help healthcare leaders improve efficiency, reduce costs, and enhance the quality of care.
+
 
 ## 🎯 Business Objective
 
