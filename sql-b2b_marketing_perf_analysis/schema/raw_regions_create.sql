@@ -1,0 +1,5 @@
+CREATE TABLE raw_regions(
+	ID INTEGER PRIMARY KEY,
+	name VARCHAR(25)
+
+)
