@@ -34,7 +34,7 @@ models.
 - Product mix and order composition
 - Web channel engagement and conversion lag
 
-All queries are located in:
+All queries are located in:  
 /sql/core_analysis_queries.sql
 
 ## Repository Structure
