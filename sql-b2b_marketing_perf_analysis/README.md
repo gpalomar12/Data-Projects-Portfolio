@@ -43,6 +43,14 @@ US-based B2B commerce dataset containing accounts, orders, sales representatives
 All queries are located in:  
 [Core Analysis Queries](./sql/core_analysis_queries.sql)
 
+## Key Insights
+
+
+
+## ❓ Why SQL-First
+This project intentionally emphasizes SQL-based analysis and data modeling to demonstrate analytical depth in environments without cloud data warehouses or BI publishing access.
+
+
 ## Repository Structure
 
 ```
