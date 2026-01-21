@@ -1,4 +1,7 @@
+DROP TABLE IF EXISTS dim_regions CASCADE;
+
 CREATE TABLE dim_regions(
 	region_id INTEGER PRIMARY KEY,
-	region_name VARCHAR(75)
-)
+	region_name TEXT NOT NULL
+
+);
