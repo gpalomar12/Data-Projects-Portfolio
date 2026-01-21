@@ -27,6 +27,12 @@ publishing tools.
 The schema was designed to support scalable analytical queries and mirrors real-world enterprise data  
 models.  
 
+## Data Source
+US-based B2B commerce dataset containing accounts, orders, sales representatives, regions, and web engagement events. The data was loaded into PostgreSQL as raw tables and transformed into an analytical schema using SQL.  
+
+[Download Data from Kaggle](https://www.kaggle.com/datasets/yaminh/sales-dataset-of-different-regions?select=accounts.csv)
+
+
 ## Core SQL Analysis
 - Monthly and rolling revenue trends
 - Account lifetime value and order cadence
