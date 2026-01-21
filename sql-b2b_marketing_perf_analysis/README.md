@@ -55,9 +55,8 @@ This project intentionally emphasizes SQL-based analysis and data modeling to de
 
 ```
 .
-├── sql/
-│   ├── core_analysis_queries.sql
-│   └── schema_transformations.sql
+├── schema/
+|   ├── dim_accounts_created.sql
 ├── README.md
 
 ```
