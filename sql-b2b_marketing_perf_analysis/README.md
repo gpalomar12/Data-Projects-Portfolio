@@ -55,12 +55,34 @@ This project intentionally emphasizes SQL-based analysis and data modeling to de
 
 ```
 .
+├── data_load/
+│   ├── accounts_data_load.sql
+│   ├── accounts_data_load_from_raw.sql
+│   ├── orders_data_load.sql
+│   ├── orders_data_load_from_raw.sql
+│   ├── regions_data_load.sql
+│   ├── regions_data_load_from_raw.sql
+│   ├── sales_reps_data_load.sql
+│   ├── sales_reps_data_load_from_raw.sql
+│   ├── web_events_data_load.sql
+│   └── web_events_data_load_from_raw.sql
+│
 ├── schema/
-|   ├── dim_accounts_created.sql
-├── README.md
+│   ├── raw_accounts_create.sql
+│   ├── raw_orders_create.sql
+│   ├── raw_regions_create.sql
+│   ├── raw_sales_reps_create.sql
+│   ├── raw_web_events_create.sql
+│   ├── dim_accounts_create.sql
+│   ├── dim_regions_create.sql
+│   ├── dim_sales_reps_create.sql
+│   ├── fact_orders_create.sql
+│   └── fact_web_events_create.sql
+│
+└── sql/
+    ├── core_analysis_queries.sql
+    └── data_validation_queries.sql
 
 ```
-
-
 
 
