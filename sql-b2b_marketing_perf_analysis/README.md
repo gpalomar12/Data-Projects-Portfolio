@@ -35,7 +35,7 @@ models.
 - Web channel engagement and conversion lag
 
 All queries are located in:  
-/sql/core_analysis_queries.sql
+[Core Analysis Queries](/sql/core_analysis_queries.sql)
 
 ## Repository Structure
 
