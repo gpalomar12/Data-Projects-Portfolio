@@ -89,5 +89,5 @@ If you are interested in discussing analytics, automation, or operational improv
 
 📄 [Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)  
 💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
-📧 gpalo23@icloud.com
+📧 [gpalo23@icloud.com](mailto:gpalo23@icloud.com)
 
