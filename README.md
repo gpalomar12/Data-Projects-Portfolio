@@ -40,13 +40,23 @@ My experience spans multiple industries, with a focus on developing scalable ana
 
 ### ⭐ Featured Projects 
 
-#### 📓  Clinical Reporting Automation 
+#### 📊 Clinical Reporting Automation  
 
-**Problem:** Clinicians manually consolidated hundreds of files, requiring three to four weeks of effort for mid-year reporting.  
-**Tools:** Python, Pandas, Power Query, Excel  
-**Impact:** Reduced reporting turnaround from weeks to hours and eliminated more than 90 percent of manual effort through automation and interactive dashboards.  
+[Dashboard Preview](./CMS_Gaps_Dashboard/images/dashboard_preview.png)  
+*Interactive Power BI dashboard reducing reporting time by 90%*
 
-👉 [**View Project**](./CMS_Gaps_Dashboard/README.md)
+**Problem:** Clinicians manually consolidated hundreds of files, requiring 3-4 weeks per cycle
+
+**Solution:** Python automation pipeline + Power BI dashboards
+
+**Impact:**
+- ⏱️ Reduced reporting from weeks to hours
+- ✅ Eliminated 90%+ manual effort
+- 📈 Enabled real-time performance tracking
+
+**Tech Stack:** Python, Pandas, Power Query, Excel, Power BI
+
+👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/notebooks/) | [**View Dashboard**](./CMS_Gaps_Dashboard/visuals/)
 
 
 
