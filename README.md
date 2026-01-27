@@ -56,7 +56,7 @@ My experience spans multiple industries, with a focus on developing scalable ana
 
 **Tech Stack:** Python, Pandas, Power Query, Excel, Power BI
 
-👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/notebooks/) | [**View Dashboard**](./CMS_Gaps_Dashboard/visuals/)
+👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/Scripts/) | [**View Dashboard**](./CMS_Gaps_Dashboard/visuals/)
 
 
 
