@@ -294,3 +294,4 @@ wellness insights.
 The combination of Python-based modeling and Looker Studio visualization offers a compelling end-to-end
 example of **data-driven mental health analysis**.
 
+[Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
