@@ -11,37 +11,15 @@
 
 ---
 
-### 🛠 Technical Skills
-- Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
-- SQL (PostgreSQL, MySQL, SQL Server)
-- Power Query
-- Git and GitHub
+## 🎯 About This Portfolio
 
-### Business Intelligence and Visualization
-- Power BI
-- Tableau
-- Excel (Pivot-Tables, Dashboards, Slicers, Power Query)
-- Looker
+This portfolio showcases my work in analytics automation, operational reporting, and data-driven decision support across healthcare and enterprise environments. Each project demonstrates end-to-end analytical capability from problem identification through solution deployment.
 
-### Analytics and Modeling
-- Data cleaning and transformation
-- Exploratory data analysis
-- KPI development
-- Dashboard design
-- Requirements gathering
-
-
-
-## 🎯 Career Focus
-I am seeking data analytics and business analytics roles where I can apply structured analysis, automation, and reporting to improve operational performance and financial outcomes.
-
-**Target Roles:**  
-- Data Analyst
-- Senior Data Analyst
-- Business Analyst
-- Analytics Manager
-
-My experience spans multiple industries, with a focus on developing scalable analytics solutions, fostering cross-functional collaboration, and implementing data-driven strategies.
+**What you'll find here:**
+- 📊 **Interactive dashboards** reducing reporting time by 90%+
+- 🐍 **Python automation scripts** eliminating manual workflows
+- 📈 **SQL analytics** uncovering operational insights
+- 💡 **Business impact** with quantified results
 
 ---
 
@@ -89,20 +67,50 @@ My experience spans multiple industries, with a focus on developing scalable ana
 👉 [**View Project**](./hospital_operations_analysis/README.md)
 
 ---
+## 💻 Technical Capabilities
+- Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
+- SQL (PostgreSQL, MySQL, SQL Server)
+- Power Query
+- Git and GitHub
 
-### 🧰 Skills & Capabilities
-### Data Analysis and Automation
-- Python (Pandas, NumPy)
-- SQL
-- Data cleaning, transformation, and feature engineering
-- Automation of recurring reporting workflows
+### Business Intelligence and Visualization
+- Power BI
+- Tableau
+- Excel (Pivot-Tables, Dashboards, Slicers, Power Query)
+- Looker
 
-### Business and Analytics
-- Operational and financial reporting
-- KPI definition and performance tracking
-- Dashboard design for executive and non-technical audiences
-- Stakeholder communication and requirements translation
+### Analytics and Modeling
+- Data cleaning and transformation
+- Exploratory data analysis
+- KPI development
+- Dashboard design
+- Requirements gathering
 
+### What I Build
+- **Automation Pipelines:** Eliminate 90%+ of manual reporting effort
+- **Executive Dashboards:** Power BI/Tableau solutions for C-suite decision-making  
+- **Operational Analytics:** KPI development, performance tracking, process optimization  
+- **Predictive Models:** Readmission risk, cost forecasting, capacity planning
+
+### Domain Expertise
+- Healthcare Analytics (Clinical reporting, operations, quality metrics)
+- Process Automation (ETL pipelines, scheduled reporting, data integration)
+- Stakeholder Communication (Translating technical insights for non-technical audiences)
+
+---
+
+## 🎯 What I'm Looking For
+
+I'm seeking **Data Analyst**, **Senior Data Analyst**, or **Business Analyst** roles where I can:
+- Build scalable analytics solutions that eliminate manual processes
+- Create executive-level dashboards driving strategic decisions
+- Apply healthcare/operational domain expertise
+- Lead cross-functional analytics initiatives
+
+**Work Preferences:** Remote | Hybrid   
+**Availability:** [Immediate]
+
+---
 ### 📫 Let’s Connect
 
 If you are interested in discussing analytics, automation, or operational improvement initiatives, please don't hesitate to connect.
@@ -111,3 +119,12 @@ If you are interested in discussing analytics, automation, or operational improv
 💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
 📧 gpalo23@icloud.com
 
+---
+## 📂 Repository Structure
+```
+Data-Projects-Portfolio/
+├── CMS_Gaps_Dashboard/         # Clinical reporting automation
+├── digital_wellness_behavioral_analysis/  # Behavioral engagement analytics
+├── hospital_operations_analysis/  # Hospital cost & readmission analysis
+├── sql-b2b_marketing_perf_analysis/  # Marketing performance SQL project
+└── README.md                   # This file
