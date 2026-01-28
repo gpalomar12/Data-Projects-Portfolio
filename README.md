@@ -27,7 +27,6 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 #### 📊 Clinical Reporting Automation  
 
-
 <img width="475" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/b042aba2-3053-48b7-ab4e-cf6c455fe3a0" />  
 
   
@@ -48,13 +47,19 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 
 
-#### 📓  Digital Wellness Behavioral Analysis
+#### 🧠 Digital Wellness Behavioral Analysis
 
-**Problem:** Behavioral engagement data lacked structure, limiting insight into usage patterns and trends.  
-**Tools:** Python, Pandas, Looker, Data Visualization  
-**Impact:** Identified behavioral patterns and engagement trends to inform product and wellness strategy decisions.  
+<img width="475" height="794" alt="dashboard_overview" src="https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/digital_wellness_behavioral_analysis/visuals/overall_dashboard_view_page1.png" />
 
-👉 [**View Project**](./digital_wellness_behavioral_analysis/README.md)
+- 📊 Identified key behavioral patterns across 100,000+ user interactions
+- 🎯 Revealed engagement trends to inform product strategy decisions
+- 💡 Provided actionable insights for wellness program optimization
+- 📈 Enabled data-driven product development and feature prioritization
+
+**Tech Stack:** Python, Pandas, Looker, Data Visualization, Statistical Analysis  
+  
+
+👉 [**View Full Project**](./digital_wellness_behavioral_analysis/README.md) | [**See Code**](./digital_wellness_behavioral_analysis/scripts/wellness_data_analysis.ipynb)
 
 
 #### 🏥 Hospital Operations Analysis
