@@ -44,7 +44,6 @@ This portfolio showcases my work in analytics automation, operational reporting,
 **Tech Stack:** Python, Pandas, Power Query, Excel, Power BI
 
 👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/Scripts/cms_report_deid.ipynb) 
-*Looker dashboards revealing user engagement patterns and wellness trends*
 
 
 #### 🧠 Digital Wellness Behavioral Analysis
@@ -79,7 +78,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
   
 **Problem:** Limited visibility into hospital cost drivers, readmissions, and operational bottlenecks made it difficult for leadership to prioritize improvement efforts.  
 
-**Solutions:** Comprehensive data analysis using Python and SQL, with Power BI dashboards to visualize key operational metrics and trends.  
+**Solution:** Comprehensive data analysis using Python and SQL, with Power BI dashboards to visualize key operational metrics and trends.  
 
 **Impact:**
 - 🎯 Identified high-risk readmission patterns representing 35% of total readmissions
@@ -165,11 +164,25 @@ If you are interested in discussing analytics, automation, or operational improv
 📧 gpalo23@icloud.com
 
 ---
+  
 ## 📂 Repository Structure
-```
-Data-Projects-Portfolio/
-├── CMS_Gaps_Dashboard/         # Clinical reporting automation
-├── digital_wellness_behavioral_analysis/  # Behavioral engagement analytics
-├── hospital_operations_analysis/  # Hospital cost & readmission analysis
-├── sql-b2b_marketing_perf_analysis/  # Marketing performance SQL project
-└── README.md                   # This file
+
+- **CMS_Gaps_Dashboard/** - Clinical reporting automation
+- **digital_wellness_behavioral_analysis/** - Behavioral engagement analytics
+- **hospital_operations_analysis/** - Hospital cost & readmission analysis
+- **sql-b2b_marketing_perf_analysis/** - B2B marketing SQL analytics
+- **README.md** - This file
+
+---
+---
+
+<div align="center">
+
+![GitHub last commit](https://img.shields.io/github/last-commit/gpalomar12/Data-Projects-Portfolio?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/gpalomar12/Data-Projects-Portfolio?style=flat-square)
+
+⭐ **Star this repo if you find it helpful!**
+
+*Portfolio last updated: January 2026*
+
+</div>
