@@ -189,5 +189,7 @@ support:
 - Data-informed clinical and operational decision-making
 
 By combining exploratory analysis, predictive modeling, and executive-level dashboards, the project  
-showcases a full analytics lifecycle aligned with real-world healthcare operations.
+showcases a full analytics lifecycle aligned with real-world healthcare operations.  
+
+[Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
 
