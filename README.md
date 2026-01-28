@@ -42,7 +42,10 @@ My experience spans multiple industries, with a focus on developing scalable ana
 
 #### 📊 Clinical Reporting Automation  
 
-[Dashboard Preview](./CMS_Gaps_Dashboard/Visuals/dashboard_overview.png)  
+
+<img width="475" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/b042aba2-3053-48b7-ab4e-cf6c455fe3a0" />  
+
+  
 *Interactive Power BI dashboard reducing reporting time by 90%*
 
 **Problem:** Clinicians manually consolidated hundreds of files, requiring 3-4 weeks per cycle
