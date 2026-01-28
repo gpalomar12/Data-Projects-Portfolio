@@ -84,17 +84,17 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 #### 📈 B2B Marketing Performance Analysis (SQL Project)
 
-*SQL-driven marketing analytics revealing campaign performance and ROI*
-**Problem:** Marketing team lacked visibility into campaign performance, lead conversion rates, and return on marketing investment across multiple channels.
-**Solution:** Developed comprehensive SQL queries analyzing marketing funnel, campaign effectiveness, and customer acquisition costs across B2B channels.
+*PostgreSQL data modeling and analytics revealing revenue trends and marketing attribution insights*
+**Problem:** Sales and marketing teams lacked integrated visibility into revenue trends, account performance, regional sales effectiveness, and the relationship between digital engagement and conversions.
+**Solution:** Built a comprehensive PostgreSQL data warehouse with fact/dimension modeling, using advanced SQL (CTEs, window functions, time-series analysis) to analyze sales performance, customer lifetime value, and marketing attribution.
 **Impact:**
 
-- 📊 Analyzed 50,000+ leads across multiple marketing channels
-- 💰 Identified top-performing campaigns with 3x higher conversion rates
-- 🎯 Reduced customer acquisition cost by 25% through channel optimization
-- 📈 Enabled real-time performance tracking for marketing leadership
+- 📊 Analyzed 50,000+ orders and 100,000+ web engagement events across US B2B accounts
+- 💰 Identified high-value accounts and regional revenue drivers for strategic planning
+- 🎯 Revealed conversion lag patterns between first web interaction and purchase
+- 📈 Enabled sales rep performance tracking and territory optimization
 
-**Tech Stack:** SQL (PostgreSQL/MySQL), Data Analysis, Business Intelligence
+**Tech Stack:** SQL (PostgreSQL), SQL Data Modeling, Business Intelligence
 
 ---
 ## 💻 Technical Capabilities
