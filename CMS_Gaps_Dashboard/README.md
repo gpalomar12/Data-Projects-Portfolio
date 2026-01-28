@@ -254,5 +254,5 @@ manual process into a scalable analytics solution that directly supports clinica
 ### 🔒 Compliance Notice
 All data showcased in this project has been fully de-identified in accordance with HIPAA compliance. No protected health information (PHI) is used or displayed.
 
-
+[Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
  
