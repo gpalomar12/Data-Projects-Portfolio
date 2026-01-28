@@ -1,7 +1,15 @@
-# 👋 Hi, I’m Gabriel Palomarez
-## Data Analyst | Business Analyst | Analytics Manager  
+# 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
+<div align="center">  
 
-I transform complex operational data into actionable insights that support decision-making, process improvement, and measurable business outcomes. My work focuses on analytics automation, operational reporting, and executive-level dashboards across healthcare and enterprise environments.
+**[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **[Email](mailto:gpalo23@icloud.com)** • **[Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)**
+
+
+## Data Analyst | Business Intelligence Specialist | Healthcare Analytics   
+*Transforming complex operational data into automated solutions that drive measurable business value*
+
+</div>
+
+---
 
 ### 🛠 Technical Skills
 - Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
@@ -22,8 +30,7 @@ I transform complex operational data into actionable insights that support decis
 - Dashboard design
 - Requirements gathering
 
-📄 [Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)  
-💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
+
 
 ## 🎯 Career Focus
 I am seeking data analytics and business analytics roles where I can apply structured analysis, automation, and reporting to improve operational performance and financial outcomes.
