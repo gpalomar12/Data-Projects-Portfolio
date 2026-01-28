@@ -27,6 +27,12 @@ publishing tools.
 The schema was designed to support scalable analytical queries and mirrors real-world enterprise data  
 models.  
 
+## Data Source
+US-based B2B commerce dataset containing accounts, orders, sales representatives, regions, and web engagement events. The data was loaded into PostgreSQL as raw tables and transformed into an analytical schema using SQL.  
+
+[Download Data from Kaggle](https://www.kaggle.com/datasets/yaminh/sales-dataset-of-different-regions?select=accounts.csv)
+
+
 ## Core SQL Analysis
 - Monthly and rolling revenue trends
 - Account lifetime value and order cadence
@@ -35,19 +41,48 @@ models.
 - Web channel engagement and conversion lag
 
 All queries are located in:  
-[Core Analysis Queries](/sql/core_analysis_queries.sql)
+[Core Analysis Queries](./sql/core_analysis_queries.sql)
+
+## Key Insights
+
+
+
+## ❓ Why SQL-First
+This project intentionally emphasizes SQL-based analysis and data modeling to demonstrate analytical depth in environments without cloud data warehouses or BI publishing access.
+
 
 ## Repository Structure
 
 ```
 .
-├── sql/
-│   ├── core_analysis_queries.sql
-│   └── schema_transformations.sql
-├── README.md
+├── data_load/
+│   ├── accounts_data_load.sql
+│   ├── accounts_data_load_from_raw.sql
+│   ├── orders_data_load.sql
+│   ├── orders_data_load_from_raw.sql
+│   ├── regions_data_load.sql
+│   ├── regions_data_load_from_raw.sql
+│   ├── sales_reps_data_load.sql
+│   ├── sales_reps_data_load_from_raw.sql
+│   ├── web_events_data_load.sql
+│   └── web_events_data_load_from_raw.sql
+│
+├── schema/
+│   ├── raw_accounts_create.sql
+│   ├── raw_orders_create.sql
+│   ├── raw_regions_create.sql
+│   ├── raw_sales_reps_create.sql
+│   ├── raw_web_events_create.sql
+│   ├── dim_accounts_create.sql
+│   ├── dim_regions_create.sql
+│   ├── dim_sales_reps_create.sql
+│   ├── fact_orders_create.sql
+│   └── fact_web_events_create.sql
+│
+└── sql/
+    ├── core_analysis_queries.sql
+    └── data_validation_queries.sql
 
 ```
-
-
 
 
