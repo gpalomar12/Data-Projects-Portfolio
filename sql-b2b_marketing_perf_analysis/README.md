@@ -85,4 +85,5 @@ This project intentionally emphasizes SQL-based analysis and data modeling to de
 
 ```
 
+[Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
 
