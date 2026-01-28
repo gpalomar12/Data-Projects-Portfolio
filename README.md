@@ -101,7 +101,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 **Tech Stack:** SQL (PostgreSQL), SQL Data Modeling, Business Intelligence
 
-👉 [**View Full Project**](./sql-b2b_marketing_perf_analysis/README.md) | [**See Code**](./sql_b2b_marketing_perf_analysis/sql/core_analysis_queries.sql)
+👉 [**View Full Project**](./sql-b2b_marketing_perf_analysis/README.md) | [**See Code**](./sql-b2b_marketing_perf_analysis/sql/core_analysis_queries.sql)
 
 ---
 ## 💻 Technical Capabilities
