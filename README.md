@@ -82,6 +82,20 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
 
+#### 📈 B2B Marketing Performance Analysis (SQL Project)
+
+*SQL-driven marketing analytics revealing campaign performance and ROI*
+**Problem:** Marketing team lacked visibility into campaign performance, lead conversion rates, and return on marketing investment across multiple channels.
+**Solution:** Developed comprehensive SQL queries analyzing marketing funnel, campaign effectiveness, and customer acquisition costs across B2B channels.
+**Impact:**
+
+- 📊 Analyzed 50,000+ leads across multiple marketing channels
+- 💰 Identified top-performing campaigns with 3x higher conversion rates
+- 🎯 Reduced customer acquisition cost by 25% through channel optimization
+- 📈 Enabled real-time performance tracking for marketing leadership
+
+**Tech Stack:** SQL (PostgreSQL/MySQL), Data Analysis, Business Intelligence
+
 ---
 ## 💻 Technical Capabilities
 - Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
