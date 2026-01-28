@@ -54,6 +54,11 @@ This portfolio showcases my work in analytics automation, operational reporting,
   
 *Looker dashboards revealing user engagement patterns and wellness trends*  
 
+**Problem:** Behavioral engagement data lacked structure, limiting insight into usage patterns and trends across digital wellness programs.
+
+**Solution:** Structured behavioral data pipeline with Python analysis and Looker visualization to identify engagement patterns and user trends.
+
+**Impact:**
   
 - 📊 Identified key behavioral patterns across 100,000+ user interactions
 - 🎯 Revealed engagement trends to inform product strategy decisions
@@ -68,11 +73,14 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 #### 🏥 Hospital Operations Analysis
 
-<img width="475" height="794" alt="dashboard_overview" src="https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/visuals/Executive_Page_Dashboard.PNG" />
-*Power BI dashboard identifying cost drivers and readmission patterns*  
+<img width="475" height="794" alt="dashboard_overview" src="https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/visuals/Executive_Page_Dashboard.PNG" />  
 
-**Problem:** Limited visibility into hospital cost drivers, readmissions, and operational bottlenecks made it difficult for leadership to prioritize improvement efforts.    
+*Power BI dashboard identifying cost drivers and readmission patterns*  
+  
+**Problem:** Limited visibility into hospital cost drivers, readmissions, and operational bottlenecks made it difficult for leadership to prioritize improvement efforts.  
+
 **Solutions:** Comprehensive data analysis using Python and SQL, with Power BI dashboards to visualize key operational metrics and trends.  
+
 **Impact:**
 - 🎯 Identified high-risk readmission patterns representing 35% of total readmissions
 - 💰 Uncovered key cost drivers saving $750K+ annually in operational expenses
