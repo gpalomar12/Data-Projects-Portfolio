@@ -46,6 +46,29 @@ This portfolio showcases my work in analytics automation, operational reporting,
 👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/Scripts/cms_report_deid.ipynb) 
 
 
+
+#### 📈 B2B Marketing Performance Analysis (SQL Project)
+
+<img width="475" height="794" alt="dashboard_overview" src="https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/sql-b2b_marketing_perf_analysis/visuals/db_digram.png" />  
+
+*PostgreSQL data modeling and analytics revealing revenue trends and marketing attribution insights*  
+
+**Problem:** Sales and marketing teams lacked integrated visibility into revenue trends, account performance, regional sales effectiveness, and the relationship between digital engagement and conversions.  
+
+**Solution:** Built a comprehensive PostgreSQL data warehouse with fact/dimension modeling, using advanced SQL (CTEs, window functions, time-series analysis) to analyze sales performance, customer lifetime value, and marketing attribution.  
+
+**Impact:**
+
+- 📊 Analyzed 50,000+ orders and 100,000+ web engagement events across US B2B accounts
+- 💰 Identified high-value accounts and regional revenue drivers for strategic planning
+- 🎯 Revealed conversion lag patterns between first web interaction and purchase
+- 📈 Enabled sales rep performance tracking and territory optimization
+
+**Tech Stack:** SQL (PostgreSQL), SQL Data Modeling, Business Intelligence
+
+👉 [**View Full Project**](./sql-b2b_marketing_perf_analysis/README.md) | [**See Code**](./sql-b2b_marketing_perf_analysis/sql/core_analysis_queries.sql)
+
+
 #### 🧠 Digital Wellness Behavioral Analysis
 
 <img width="475" height="794" alt="dashboard_overview" src="https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/digital_wellness_behavioral_analysis/visuals/overall_dashboard_view_page1.png" />  
@@ -89,26 +112,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
 
-#### 📈 B2B Marketing Performance Analysis (SQL Project)
 
-<img width="475" height="794" alt="dashboard_overview" src="https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/sql-b2b_marketing_perf_analysis/visuals/db_digram.png" />  
-
-*PostgreSQL data modeling and analytics revealing revenue trends and marketing attribution insights*  
-
-**Problem:** Sales and marketing teams lacked integrated visibility into revenue trends, account performance, regional sales effectiveness, and the relationship between digital engagement and conversions.  
-
-**Solution:** Built a comprehensive PostgreSQL data warehouse with fact/dimension modeling, using advanced SQL (CTEs, window functions, time-series analysis) to analyze sales performance, customer lifetime value, and marketing attribution.  
-
-**Impact:**
-
-- 📊 Analyzed 50,000+ orders and 100,000+ web engagement events across US B2B accounts
-- 💰 Identified high-value accounts and regional revenue drivers for strategic planning
-- 🎯 Revealed conversion lag patterns between first web interaction and purchase
-- 📈 Enabled sales rep performance tracking and territory optimization
-
-**Tech Stack:** SQL (PostgreSQL), SQL Data Modeling, Business Intelligence
-
-👉 [**View Full Project**](./sql-b2b_marketing_perf_analysis/README.md) | [**See Code**](./sql-b2b_marketing_perf_analysis/sql/core_analysis_queries.sql)
 
 ---
 ## 💻 Technical Capabilities
