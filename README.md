@@ -1,7 +1,7 @@
 # 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
 <div align="center">  
 
-**[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **[gpalo23@icloud.com]** • **[Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)**
+**[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **gpalo23@icloud.com** • **[Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)**
 
 
 ## Data Analyst | Business Intelligence Specialist | Healthcare Analytics   
