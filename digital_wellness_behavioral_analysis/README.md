@@ -56,7 +56,7 @@ This portfolio piece demonstrates a **complete data science workflow** from busi
 | **Strategic Recommendations** | Translation of technical findings to business action |
 
 
-#### Data Source: [Kaggle-Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness)
+#### Data Source: [Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness) from Kaggle
 #### Source Code: [View Jupyter Notebook](scripts/wellness_data_analysis.ipynb)
 
 
