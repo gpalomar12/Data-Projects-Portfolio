@@ -446,28 +446,6 @@ This project showcases end-to-end data science capabilities:
 └── README.md                                # This file
 ```
 
-### Running the Analysis
-1. **Clone the repository**
-```bash
-   git clone [your-repo-url]
-   cd digital-wellness-analysis
-```
-
-2. **Install dependencies**
-```bash
-   pip install pandas numpy scikit-learn matplotlib seaborn
-```
-
-3. **Run the Jupyter notebook**
-```bash
-   jupyter notebook notebooks/wellness_data_analysis.ipynb
-```
-
-4. **Access the dashboard**
-   [Looker Studio Dashboard Link]
-
-### Reproducing Results
-All analysis steps are documented in the Jupyter notebook with markdown explanations. The notebook is self-contained and can be run end-to-end to reproduce all findings, visualizations, and model outputs.
 
 **Contact:** [https://www.linkedin.com/in/gabrielpalomarez]
 
