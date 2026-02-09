@@ -374,7 +374,7 @@ The dashboard includes dynamic filters enabling users to:
 #### Example Use Case:
 >A product manager notices the dashboard shows 40-50 year-olds have the highest stress levels (avg. 6.1) but lowest physical activity (2.3 hrs/week). Using the activity vs. mental health chart, they estimate that >increasing activity to 5 hrs/week could improve mental health scores by ~4.1 points for this segment. This insight justifies developing age-targeted activity challenges or partnerships with fitness apps that appeal to >middle-aged users.
 
-**Technical Documentation:** Feature engineering logic and coefficient calculations are documented in the [Jupyter Notebook](./scripts) for reproducibility and validation.
+**Technical Documentation:** Feature engineering logic and coefficient calculations are documented in the [Jupyter Notebook](./scripts/wellness_data_analysis.ipynb) for reproducibility and validation.
   
 ### Key Takeaways
 
