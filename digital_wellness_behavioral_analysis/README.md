@@ -41,12 +41,6 @@ Ranked list of behavioral predictors with quantified effects
 Interactive Looker Studio dashboard for dynamic exploration
 Strategic recommendations for wellness product development
 
-The goal is to:
-- Identify behavioral patterns linked to stress, sleep, and mental health
-- Derive new behavioral metrics that represent lifestyle balance
-- Develop a predictive model for wellness outcomes
-- Visualize actionable insights using an interactive dashboard
-
 ## What You Will Find in This Project
 - A complete data preparation workflow, including encoding, grouping, and feature creation
 - Exploratory data analysis with visualizations of behavioral and wellness patterns
@@ -68,6 +62,20 @@ The goal is to:
 - Grouped continuous variables (e.g., age → age_group)
 - Converted boolean fields for efficient computation
 - Scaled numeric fields to normalize behavior metrics
+
+### Data Source & Limitations
+**Dataset:** [Tech Use and Stress Wellness Dataset](link_to_kaggle) from Kaggle  
+**Sample Size:** 5,000 participants  
+**Data Type:** Cross-sectional survey data (self-reported)  
+**Time Period:** Single-point-in-time snapshot (not longitudinal)
+
+**Key Limitations:**
+- **Self-reported data**: Responses subject to recall bias and social desirability bias
+- **Cross-sectional design**: Cannot establish causation—only associations between variables
+- **Synthetic/survey data**: May not fully represent real device telemetry from wearable platforms
+- **Limited demographics**: Dataset includes age, gender, and location type but lacks socioeconomic status, ethnicity, or clinical mental health diagnoses
+
+These limitations are addressed through careful interpretation of findings as correlations rather than causal relationships.
 
  **Demographics Overview**
  <img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
@@ -179,14 +187,15 @@ data_df.describe().T.round(2)
 #### Feature Engineering
 New behavioral and lifestyle indicators were created to capture overall wellness balance better:
 
-|**Feature**|**Description**|
-|-----------|---------------|
-|total_screen_hours|Combined device usage (phone, laptop, tablet, TV)|
-|sleep_efficiency|Sleep quality normalized by duration|
-|stress_to_activity_ratio|Stress adjusted by activity hours|
-|health_behavior_score|Composite of mindfulness, healthy eating, and wellness app use|
-|mood_vs_stress_diff|Emotional balance indicator|
-|mindfulness_effect|Mindfulness buffering impact on stress|
+| Feature | Description | Rationale |
+|---------|-------------|-----------|
+| total_screen_hours | Combined device usage (phone, laptop, tablet, TV) | Aggregates fragmented usage to capture total digital load, as different devices may have cumulative effects |
+| sleep_efficiency | Sleep quality normalized by duration | Separates quality from quantity; addresses hypothesis that restful sleep matters more than total hours |
+| stress_to_activity_ratio | Stress adjusted by activity hours | Identifies individuals with high stress relative to physical outlets, flagging those who may benefit from activity interventions |
+| health_behavior_score | Composite of mindfulness, healthy eating, and wellness app use | Creates a single wellness engagement metric to test if combined healthy behaviors amplify individual effects |
+| mood_vs_stress_diff | Emotional balance indicator | Quantifies emotional stability by comparing mood against stress levels |
+| mindfulness_effect | Mindfulness buffering impact on stress | Tests whether mindfulness moderates stress's negative effects on mental health |
+
 
 **Validate New Feature Distributions**
 
