@@ -306,34 +306,76 @@ Linear regression was chosen for this analysis for three key reasons:
 ***
 
 ### Dashboard & Visualization
-An interactive Looker Studio dashboard was designed to visualize findings and allow dynamic 
-exploration by gender, age, and location.
 
+#### Purpose & Users  
+This interactive Looker Studio dashboard operationalizes the regression findings, translating statistical insights into actionable business intelligence. The dashboard serves three primary user groups:  
+
+#### Primary Users:
+
+- **Product Managers** at wellness apps and wearable device companies to prioritize feature development based on behavioral impact data
+- Wellness Program Coordinators to identify which user segments need targeted interventions and track program effectiveness over time
+- Data Analysts supporting product and health teams to explore behavioral patterns, validate hypotheses, and generate ad-hoc reports for stakeholders
+
+#### Key Use Cases:
+
+1) **User Segmentation:** Identify at-risk populations (high stress, low activity, poor sleep) for proactive outreach
+2) **Intervention Design:** Determine which behavioral levers (sleep hygiene, activity goals, stress management) will yield the highest mental health ROI for specific demographics
+3) **A/B Testing Support:** Establish baseline wellness metrics before launching new features and track changes post-implementation
+4) **Executive Reporting:** Provide leadership with population-level wellness trends and justification for wellness product investments
 
 
 #### Digital Wellness Overview
 
-Provides a population-level snapshot of wellness metrics:
-- Average sleep hours, stress level, and activity by age
-- Feature importance ranking of behavior predictors
-- Caffeine intake vs mental health correlation
+**Purpose:** Population-level wellness metrics for strategic planning and trend identification
 
 <img width="821" height="581" alt="overall_dashboard_view_page1" src="https://github.com/user-attachments/assets/8a55ee74-2f10-4275-97f0-3dcb784d7fb1" />  
 
+#### What This Page Enables:
 
+- **Age-Based Segmentation:** Product managers can identify which age groups have the poorest sleep or highest stress levels, informing age-targeted feature releases (e.g., stress reduction tools for 30-40 year-olds if that segment shows elevated stress)
+- **Feature Prioritization Validation:** The feature importance visualization confirms that stress reduction features should be prioritized over caffeine tracking, given stress's 8.7x standardized coefficient vs. caffeine's -0.14
+- **Baseline Metrics:** Wellness coordinators can establish population averages (e.g., "average user sleeps 6.8 hours with stress level of 5.2") to benchmark individual users against
+- **Resource Allocation:** Leadership can justify investing in stress management content over other wellness features based on quantified impact data
+
+#### Specific Insights Displayed:
+
+- Average sleep hours, stress levels, and physical activity segmented by age group
+- Ranked feature importance showing stress reduction as the highest-value intervention target
+- Caffeine intake vs. mental health correlation demonstrates a minimal direct relationship
 
 #### Behavioral Patterns & Mental Health
 
-Explore detailed behavioral relationships:
-- Mindfulness vs Stress Level ➡️ longer session = lower stress
-- Physical Activity vs Mental Health ➡️ higher activity improves wellness
-- Mood vs Sleep Efficiency ➡️ better sleep leads to improved mood
-- Social Ratio vs Mood Rating ➡️ excessive social media use lowers mood
+**Purpose:** Detailed behavioral relationship exploration for intervention design and user education
+
+<img width="821" height="581" alt="image" src="https://github.com/user-attachments/assets/30cfce00-8e62-409e-b649-af2abee73510" />  
 
 
-<img width="821" height="581" alt="image" src="https://github.com/user-attachments/assets/30cfce00-8e62-409e-b649-af2abee73510" />
+#### What This Page Enables:
 
+- **Personalized Recommendations:** Wellness coaches can use the mindfulness vs. stress visualization to set evidence-based targets (e.g., "Based on your stress level of 7, aim for 15+ daily mindfulness minutes to see measurable stress reduction")
+- **Intervention Effectiveness Tracking:** Program coordinators can monitor whether users who increase physical activity show corresponding mental health score improvements over time
+- **User Education Content:** Product teams can create in-app messaging like "Users who improve sleep efficiency from 0.5 to 0.7 report 2.8-point higher mood ratings on average"
+- **Demographic-Specific Strategies:** Identify whether certain behavioral interventions (e.g., social media reduction) work better for specific age groups or locations (urban vs. rural)
 
+#### Specific Insights Displayed:
+1) **Mindfulness vs. Stress Level** → Longer mindfulness sessions correlate with lower stress, but the effect is modest (β = +0.022). Decision Enabled: Set realistic user expectations—mindfulness helps but isn't a silver bullet; combine with activity and sleep interventions for maximum impact.
+2) **Physical Activity vs. Mental Health** → Strong positive relationship (β = +1.51) confirms that activity tracking features should be prominent. Decision Enabled: Prioritize activity goal-setting features and push notifications encouraging movement, as this is the #2 predictor of mental wellness.
+3) **Mood vs. Sleep Efficiency** → Better sleep quality (not just duration) drives improved mood. Decision Enabled: Develop sleep quality assessment tools (sleep tracking, sleep environment tips) rather than just sleep duration counters.
+4) **Social Media Ratio vs. Mood Rating** → Excessive social media use relative to total screen time correlates with lower mood. Decision Enabled: Create "digital wellness" features that alert users when social media consumption exceeds healthy thresholds, or implement "social media breaks" within the app.
+
+#### Interactive Features & Filters  
+
+The dashboard includes dynamic filters enabling users to:
+
+- **Filter by Demographics:** Isolate patterns for specific age groups, genders, or location types (urban/suburban/rural) to design targeted interventions
+- **Compare Cohorts:** View side-by-side comparisons (e.g., "high activity users vs. low activity users") to quantify behavioral impact
+- **Track Temporal Changes:** Monitor how population wellness metrics shift over time as new features are released (requires dashboard updates with time-series data)
+
+#### Example Use Case:
+>A product manager notices the dashboard shows 40-50 year-olds have the highest stress levels (avg. 6.1) but lowest physical activity (2.3 hrs/week). Using the activity vs. mental health chart, they estimate that >increasing activity to 5 hrs/week could improve mental health scores by ~4.1 points for this segment. This insight justifies developing age-targeted activity challenges or partnerships with fitness apps that appeal to >middle-aged users.
+
+**Technical Documentation:** Feature engineering logic and coefficient calculations are documented in the [Jupyter Notebook](./scripts) for reproducibility and validation.
+  
 ### Key Takeaways
 
 1) **Stress Management is Critical (3x more impactful than any positive factor)**
