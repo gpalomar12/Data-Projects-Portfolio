@@ -42,11 +42,18 @@ Interactive Looker Studio dashboard for dynamic exploration
 Strategic recommendations for wellness product development
 
 ## What You Will Find in This Project
-- A complete data preparation workflow, including encoding, grouping, and feature creation
-- Exploratory data analysis with visualizations of behavioral and wellness patterns
-- A regression model predicting mental health outcomes
-- A Looker Studio dashboard for interactive exploration
-- Actionable insights for wellness strategy and product design
+
+This portfolio piece demonstrates a **complete data science workflow** from business problem to operational dashboard:
+
+| Section | Demonstrates |
+|---------|--------------|
+| **Business Context** | Stakeholder communication and problem framing |
+| **Data Preparation** | Data cleaning, type handling, and encoding strategies |
+| **Feature Engineering** | Domain knowledge application to create meaningful metrics |
+| **Exploratory Analysis** | Statistical insight extraction and visualization |
+| **Predictive Modeling** | Regression analysis with interpretable coefficients |
+| **Dashboard Development** | Operational analytics and decision-support tools |
+| **Strategic Recommendations** | Translation of technical findings to business action |
 
 
 #### Data Source: [Kaggle-Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness)
