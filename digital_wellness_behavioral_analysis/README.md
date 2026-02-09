@@ -270,6 +270,20 @@ print(f"RMSE: {rmse:.3f}")
 >The model explains roughly 86% of the variance in mental health score, suggesting that the behavioral and
 >wellness features are strong predictors of psychological outcomes.
 
+#### Why Linear Regression?
+Linear regression was chosen for this analysis for three key reasons:
+
+1) **Interpretability:** Unlike black-box models, linear regression provides clear, quantifiable coefficients (e.g., "each hour of activity improves mental health by 1.51 points") that stakeholders can understand and act on
+2) **Assumption Validation:** Exploratory analysis revealed approximately linear relationships between predictors and mental health scores, making linear regression appropriate for this use case
+3) **Business Requirements:** Product teams need to understand how much each behavior matters, not just whether it matters, making coefficient interpretation essential
+
+**Model Assumptions & Limitations:**
+
+- Assumes linear relationships between features and outcomes (threshold effects may exist but are not captured)
+- Cross-sectional data prevents causal inference—observed associations may reflect correlation rather than causation
+- Self-reported survey data subject to response bias and measurement error
+- Model trained on available demographic and behavioral features; unmeasured factors (social support, genetics, life events) explain the remaining 14% of variance
+
 
 #### Top predictors of mental health:
 
