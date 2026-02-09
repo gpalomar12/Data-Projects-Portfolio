@@ -13,23 +13,28 @@ An exploratory data analysis of smart device usage habits to uncover consumer he
 
 ### 📊 Business Context & Objective  
 
-The Challenge:
-Wearable device companies and digital wellness platforms need to understand how users' technology habits impact their mental and physical health. Without this understanding, product teams struggle to design features that genuinely improve user well-being or identify which interventions will drive sustained engagement.
-The Opportunity:
-By analyzing the relationship between digital behaviors (screen time, app usage, sleep patterns) and wellness outcomes (stress levels, mental health scores, mood), companies can prioritize high-impact features and create data-driven wellness strategies.
-This Analysis:
+**The Challenge:**
+Wearable device companies and digital wellness platforms need to understand how users' technology habits impact their mental and physical health. Without this understanding, product teams struggle to design features that genuinely improve user well-being or identify which interventions will drive sustained engagement.  
+
+**The Opportunity:**
+By analyzing the relationship between digital behaviors (screen time, app usage, sleep patterns) and wellness outcomes (stress levels, mental health scores, mood), companies can prioritize high-impact features and create data-driven wellness strategies.  
+
+**This Analysis:**
 This project uses smart device usage data to uncover consumer health trends and quantify which behavioral factors most strongly predict wellness outcomes. The analysis provides actionable insights for product design, user segmentation, and targeted intervention strategies.
-Analysis Goals
-Primary Objective:
-Develop a predictive model that identifies which lifestyle and digital behaviors drive mental health outcomes, enabling wellness platforms to prioritize feature development and personalize user experiences.
-Supporting Objectives:
+
+### Analysis Goals  
+
+**Primary Objective:**  
+Develop a predictive model that identifies which lifestyle and digital behaviors drive mental health outcomes, enabling wellness platforms to prioritize feature development and personalize user experiences.  
+
+**Supporting Objectives:**
 
 Identify behavioral patterns linked to stress, sleep quality, and mental health across demographic segments
 Engineer lifestyle metrics that capture overall wellness balance (e.g., stress-to-activity ratio, sleep efficiency)
 Quantify feature importance to guide product teams on where interventions will have the greatest impact
-Create an interactive dashboard for stakeholders to explore wellness patterns by age, gender, and location
+Create an interactive dashboard for stakeholders to explore wellness patterns by age, gender, and location  
 
-Deliverables:
+**Deliverables:**
 
 Predictive model explaining ~86% of mental health variance
 Ranked list of behavioral predictors with quantified effects
