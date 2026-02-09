@@ -11,7 +11,8 @@ Python, Pandas, Scikit-learn, Looker Studio, Matplotlib, Seaborn
 ## Objective
 An exploratory data analysis of smart device usage habits to uncover consumer health trends and identify opportunities for improving engagement and digital wellness.  
 
-📊 Business Context & Objective
+### 📊 Business Context & Objective  
+
 The Challenge:
 Wearable device companies and digital wellness platforms need to understand how users' technology habits impact their mental and physical health. Without this understanding, product teams struggle to design features that genuinely improve user well-being or identify which interventions will drive sustained engagement.
 The Opportunity:
