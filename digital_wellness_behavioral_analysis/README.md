@@ -267,15 +267,16 @@ print(f"RMSE: {rmse:.3f}")
 
 #### Top predictors of mental health:
 
-|**Rank**|**Feature**|**Coefficient**|**Standardized Effect**|**Impact Interpretation**|
-|--------|-----------|----------|-------------|
-|1|Sleep Quality||-2.971|-8.824|Each 1-point stress increase → -3.0 point mental health decline|
-|2|Physical Activity|+1.506|+3.472|Each additional hour/week → +1.5 point improvement|
-|3|Sleep Qualityl|+1.840|+1.195|Each 1-point sleep quality gain → +1.8 point improvement|
-|4|Health Behavior Score|-0.742|-0.185|Composite metric with minor negative effect¹|
-|5|Sleep Duration|+0.214|+0.090|Each additional hour of sleep → +0.2 point improvement|
-|6|Mindfulness Minutes|+0.022|+0.147|Each additional daily minute → +0.02 point improvement|
-|7|Caffeine Intake|-0.002|-0.136|Minimal effect: 100mg caffeine → -0.2 point change|  
+
+| Rank | Feature                | Coefficient | Standardized Effect | Impact Interpretation |
+|------|------------------------|-------------|---------------------|-----------------------|
+| 1    | Stress Level           |  -2.971     |  -8.824             | Each 1-point stress increase → -3.0 point mental health decline |
+| 2    | Physical Activity      | +1.506      | +3.472              | Each additional hour/week → +1.5 point improvement |
+| 3    | Sleep Quality          | +1.840      | +1.195              | Each 1-point sleep quality gain → +1.8 point improvement |
+| 4    | Health Behavior Score  | -0.742      | -0.185              | Composite metric with minor negative effect¹ |
+| 5    | Sleep Duration         | +0.214      | +0.090              | Each additional hour of sleep → +0.2 point improvement |
+| 6    | Mindfulness Minutes    | +0.022      | +0.147              | Each additional daily minute → +0.02 point improvement |
+| 7    | Caffeine Intake        | -0.002      | -0.136              | Minimal effect. 100 mg caffeine → -0.2 point change |
 
   
 
