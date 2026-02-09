@@ -265,7 +265,7 @@ This high R² value indicates that lifestyle and behavioral factors captured in 
 #### Model Performance Summary
 
 ```
-# R**2 and RSME evaluation
+# R**2 and RMSE evaluation
 
 print(f"R² Score: {r2:.3f}")
 print(f"RMSE: {rmse:.3f}")
@@ -289,8 +289,8 @@ Linear regression was chosen for this analysis for three key reasons:
 **Model Assumptions & Limitations:**
 
 - Assumes linear relationships between features and outcomes (threshold effects may exist but are not captured)
-- Cross-sectional data prevents causal inference—observed associations may reflect correlation rather than causation
-- Self-reported survey data subject to response bias and measurement error
+- Cross-sectional data prevent causal inference—observed associations may reflect correlation rather than causation
+- Self-reported survey data sare ubject to response bias and measurement error
 - Model trained on available demographic and behavioral features; unmeasured factors (social support, genetics, life events) explain the remaining 14% of variance
 
 
@@ -381,18 +381,18 @@ The dashboard includes dynamic filters enabling users to:
 - **Track Temporal Changes:** Monitor how population wellness metrics shift over time as new features are released (requires dashboard updates with time-series data)
 
 #### Example Use Case:
->A product manager notices the dashboard shows 40-50 year-olds have the highest stress levels (avg. 6.1) but lowest physical activity (2.3 hrs/week). Using the activity vs. mental health chart, they estimate that >increasing activity to 5 hrs/week could improve mental health scores by ~4.1 points for this segment. This insight justifies developing age-targeted activity challenges or partnerships with fitness apps that appeal to >middle-aged users.
+>A product manager notices the dashboard shows 40-50 year-olds have the highest stress levels (avg. 6.1) but the lowest physical activity (2.3 hrs/week). Using the activity vs. mental health chart, they estimate that >increasing activity to 5 hrs/week could improve mental health scores by ~4.1 points for this segment. This insight justifies developing age-targeted activity challenges or partnerships with fitness apps that appeal to >middle-aged users.
 
 **Technical Documentation:** Feature engineering logic and coefficient calculations are documented in the [Jupyter Notebook](./scripts/wellness_data_analysis.ipynb) for reproducibility and validation.
   
 ### Key Takeaways
 
 1) **Stress Management is Critical (3x more impactful than any positive factor)**
-Stress Level has the strongest effect on mental health (β = -2.97, standardized = -8.72), with impact 2.5x larger than physical activity and 6x larger than sleep quality. Wellness interventions targeting stress reduction offer the highest potential ROI.
+Stress Level has the strongest effect on mental health (β = -2.97, standardized = -8.72), with an impact 2.5x larger than physical activity and 6x larger than sleep quality. Wellness interventions targeting stress reduction offer the highest potential ROI.
 2) **Physical Activity Delivers the Strongest Positive Impact**
 Each additional hour of weekly physical activity improves mental health scores by +1.51 points (standardized = +3.47). A person increasing activity from 2 to 5 hours/week could expect a ~4.5-point mental health improvement, assuming other factors remain constant.
 3) **Sleep Quality Matters More Than Sleep Duration**
-Sleep quality (β = +1.84) has 8.6x greater impact than sleep duration (β = +0.21), suggesting that wellness programs should prioritize sleep hygiene interventions over simply encouraging more hours of sleep.
+Sleep quality (β = +1.84) has an 8.6x greater impact than sleep duration (β = +0.21), suggesting that wellness programs should prioritize sleep hygiene interventions over simply encouraging more hours of sleep.
 4) **Mindfulness and Caffeine Have Minimal Direct Effects**
 Despite popular perception, mindfulness minutes (β = +0.022) and caffeine intake (β = -0.002) show negligible individual impact. However, these may work indirectly through their effects on sleep quality and stress levels.
 5) **Model Enables Predictive Wellness Scoring**
@@ -401,11 +401,74 @@ The regression model (R² = 0.856, RMSE = 5.07) can predict mental health outcom
 The Looker Studio dashboard operationalizes these findings, allowing product teams to segment users by behavioral patterns, track intervention effectiveness, and identify which demographics would benefit most from specific wellness features.
 
 
-### Conclusion
+## Conclusion
 
-This project bridges **data science and human behavior**, transforming raw digital lifestyle data into actionable 
-wellness insights.
-The combination of Python-based modeling and Looker Studio visualization offers a compelling end-to-end
-example of **data-driven mental health analysis**.
+### Project Summary
+This analysis successfully identified and quantified the behavioral drivers of mental wellness using smart device usage data. By engineering lifestyle metrics and training an interpretable regression model (R² = 0.856), the project delivers actionable insights for wellness product development.
+
+### Key Finding
+**Stress management emerges as the single highest-priority intervention area**, with a negative impact (β = -2.97) 2.5x larger than the strongest positive factor (physical activity). This finding suggests that wellness platforms should prioritize stress-reduction features over other interventions to maximize mental health outcomes for users.
+
+### Business Value
+This analysis provides wellness companies and wearable device manufacturers with a **data-driven framework** to:
+- Prioritize feature development based on quantified behavioral impact
+- Segment users by risk profiles (high stress, low activity, poor sleep)
+- Personalize interventions using predictive mental health scoring
+- Justify product investments with evidence-based ROI projections
+
+### Next Steps & Extensions
+Future iterations of this analysis could:
+1. **Incorporate temporal data** to track behavioral changes over time and validate intervention effectiveness
+2. **Add interaction terms** to test whether combining interventions (e.g., activity + mindfulness) produces synergistic effects beyond individual contributions
+3. **Segment modeling** to build demographic-specific models (age-stratified coefficients may reveal that sleep matters more for older adults while activity matters more for younger users)
+4. **Causal inference methods** using propensity score matching or instrumental variables to move beyond correlation and estimate causal effects of behavioral changes
+
+### Portfolio Demonstration
+This project showcases end-to-end data science capabilities:
+- ✅ Business problem framing and stakeholder communication
+- ✅ Feature engineering and domain knowledge application
+- ✅ Statistical modeling with interpretable results
+- ✅ Dashboard development for operational analytics
+- ✅ Translation of technical findings into strategic recommendations
+
+## 🛠️ How to Use This Repository
+
+### Files & Structure
+```
+├── data/
+│   ├── mental_health_features.csv          # Processed dataset with engineered features
+│   └── feature_importance.csv              # Model coefficients and rankings
+├── notebooks/
+│   └── wellness_data_analysis.ipynb        # Full analysis workflow
+├── visualizations/
+│   ├── dashboard_screenshots/              # Looker Studio dashboard images
+│   └── eda_plots/                          # Exploratory analysis charts
+└── README.md                                # This file
+```
+
+### Running the Analysis
+1. **Clone the repository**
+```bash
+   git clone [your-repo-url]
+   cd digital-wellness-analysis
+```
+
+2. **Install dependencies**
+```bash
+   pip install pandas numpy scikit-learn matplotlib seaborn
+```
+
+3. **Run the Jupyter notebook**
+```bash
+   jupyter notebook notebooks/wellness_data_analysis.ipynb
+```
+
+4. **Access the dashboard**
+   [Looker Studio Dashboard Link]
+
+### Reproducing Results
+All analysis steps are documented in the Jupyter notebook with markdown explanations. The notebook is self-contained and can be run end-to-end to reproduce all findings, visualizations, and model outputs.
+
+**Contact:** [https://www.linkedin.com/in/gabrielpalomarez]
 
 [Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
