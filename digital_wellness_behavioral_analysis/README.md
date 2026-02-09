@@ -208,12 +208,14 @@ New behavioral and lifestyle indicators were created to capture overall wellness
 
 ### Exploratory Data Analysis
 
-The EDA uncovered clear relationships between digital habits and mental well-being:
-- **Sleep Quality** strongly correlates with higher mental health scores
-- **Physical activity** reduces stress and improves mood
-- **Stress** has the largest negative correlation across all wellness outcomes
-- **Caffeine intake** shows a mild negative relationship with wellness
-- **Mindfulness practice** moderately improves emotional balance
+The EDA revealed quantifiable relationships between lifestyle behaviors and mental well-being:
+
+- Sleep Quality is the second-strongest positive predictor (β = +1.84, standardized coefficient = +1.20), where each 1-point improvement in sleep quality corresponds to a 1.84-point increase in mental health score
+- Physical Activity is the strongest positive predictor (β = +1.51, standardized coefficient = +3.47), with each additional hour of weekly activity improving mental health scores by 1.5 points
+- Stress Level shows the largest negative impact (β = -2.97, standardized coefficient = -8.72), representing a 2.97-point decrease in mental health for every 1-point increase in stress—2.5x stronger than physical
+  activity's positive effect
+- Caffeine Intake has a negligible impact (β = -0.002, standardized coefficient = -0.14) compared to other behavioral factors
+- Mindfulness Practice shows a small but measurable positive effect (β = +0.022, standardized coefficient = +0.15)
 
 **Health Behavior Score Distribution**
 
@@ -265,13 +267,15 @@ print(f"RMSE: {rmse:.3f}")
 
 #### Top predictors of mental health:
 
-|**Rank**|**Feature**|**Effect**|**Direction**|
+|**Rank**|**Feature**|**Coefficient**|**Standardized Effect**|**Impact Interpretation**|
 |--------|-----------|----------|-------------|
-|1|Sleep Quality|Strong Positive|⬆️ Improves wellness|
-|2|Physical Activity|Moderate Positive|⬆️ Reduces Stress|
-|3|Stress Level|Strong Negative|⬇️ Lowers mental health|
-|4|Mindufulness Minutes|Mild Positive|⬆️ Increase balance|
-|5|Caffeine Intake|Mild Negative|⬇️ Reduces sleep quality|  
+|1|Sleep Quality||-2.971|-8.824|Each 1-point stress increase → -3.0 point mental health decline|
+|2|Physical Activity|+1.506|+3.472|Each additional hour/week → +1.5 point improvement|
+|3|Sleep Qualityl|+1.840|+1.195|Each 1-point sleep quality gain → +1.8 point improvement|
+|4|Health Behavior Score|-0.742|-0.185|Composite metric with minor negative effect¹|
+|5|Sleep Duration|+0.214|+0.090|Each additional hour of sleep → +0.2 point improvement|
+|6|Mindfulness Minutes|+0.022|+0.147|Each additional daily minute → +0.02 point improvement|
+|7|Caffeine Intake|-0.002|-0.136|Minimal effect: 100mg caffeine → -0.2 point change|  
 
   
 
