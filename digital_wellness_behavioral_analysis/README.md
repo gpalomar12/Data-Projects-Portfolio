@@ -149,7 +149,7 @@ data_df['age_group'] = pd.cut(data_df['age'], bins=bins, labels=labels, right=Fa
 ```
 
 >**Insight:**  
->Grouping continous variables like *age* into meaningful segments simplifies visualization and helps
+>Grouping continuous variables like *age* into meaningful segments simplifies visualization and helps
 >analyze mental health or digital behaviors by life stage.
 
 #### Encoding Categorical Variables
@@ -297,7 +297,7 @@ Linear regression was chosen for this analysis for three key reasons:
 
 - Assumes linear relationships between features and outcomes (threshold effects may exist but are not captured)
 - Cross-sectional data prevent causal inference—observed associations may reflect correlation rather than causation
-- Self-reported survey data sare ubject to response bias and measurement error
+- Self-reported survey data are subject to response bias and measurement error
 - Model trained on available demographic and behavioral features; unmeasured factors (social support, genetics, life events) explain the remaining 14% of variance
 
 
@@ -314,7 +314,10 @@ Linear regression was chosen for this analysis for three key reasons:
 | 6    | Mindfulness Minutes    | +0.022      | +0.147              | Each additional daily minute → +0.02 point improvement |
 | 7    | Caffeine Intake        | -0.002      | -0.136              | Minimal effect. 100 mg caffeine → -0.2 point change |
 
-  
+ **Notes:**
+> ¹ Health Behavior Score's unexpected negative coefficient (β = -0.742) likely indicates multicollinearity. This composite metric overlaps with mindfulness_minutes and other features already in the model. When isolated
+> in bivariate analysis, health behaviors show expected positive correlations with mental health. In future iterations, this feature should be excluded from the regression model to avoid redundancy with its component
+> features.
 
 <img width="1092" height="514" alt="Feature_importance_for_predicting_Mental_Health_Score" src="https://github.com/user-attachments/assets/d7718f95-677f-4359-9bfc-748b5dfce2b5" /> 
 
