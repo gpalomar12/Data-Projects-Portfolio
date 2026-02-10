@@ -1,17 +1,14 @@
 # 🧠 Digital Wellness & Lifestyle Behavioral Analysis
 
-### 📋 Project Type:
-Exploratory Data Analysis (EDA) + Predictive Modeling + Dashboard Visualization
+📋 **Project Type:** Exploratory Data Analysis (EDA) + Predictive Modeling
+⚙️ **Tools Used:** Python, Pandas, Scikit-learn, Looker Studio, Matplotlib, Seaborn
 
-### ⚙️ Tools Used:
-Python, Pandas, Scikit-learn, Looker Studio, Matplotlib, Seaborn
-
-***
+---
 
 ## Objective
 An exploratory data analysis of smart device usage habits to uncover consumer health trends and identify opportunities for improving engagement and digital wellness.  
 
-### 📊 Business Context & Objective  
+## 📊 Business Context & Objective  
 
 **The Challenge:**
 Wearable device companies and digital wellness platforms need to understand how users' technology habits impact their mental and physical health. Without this understanding, product teams struggle to design features that genuinely improve user well-being or identify which interventions will drive sustained engagement.  
@@ -34,7 +31,7 @@ Engineer lifestyle metrics that capture overall wellness balance (e.g., stress-t
 Quantify feature importance to guide product teams on where interventions will have the greatest impact
 Create an interactive dashboard for stakeholders to explore wellness patterns by age, gender, and location  
 
-**Deliverables:**
+### Deliverables:
 
 Predictive model explaining ~86% of mental health variance
 Ranked list of behavioral predictors with quantified effects
@@ -84,9 +81,10 @@ This portfolio piece demonstrates a **complete data science workflow** from busi
 
 These limitations are addressed through careful interpretation of findings as correlations rather than causal relationships.
 
- **Demographics Overview**
- <img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
- **Insights from Demographics**
+### Demographics Overview
+<img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
+**Insights from Demographics**  
+
 >**Age:**
 >The participant pool spans a wide range, with strong representation across all major adult life stages (20-
 >70+).  This balanced distribution enables meaningful comparisons between younger and older populations in terms of
@@ -178,18 +176,13 @@ This code generates descriptive statistics to understand the distribution and va
 data_df.describe().T.round(2)
 
 ```
+
+<img width="780" height="753" alt="descibe_data" src="https://github.com/user-attachments/assets/dc9582a6-a616-45bb-ba74-75331e7321b7" />
+
 **Observation:**  
 Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation, suggesting diverse behavioral patterns across participants. This diversity is essential for regression analysis—sufficient variance in predictors enables the model to identify meaningful relationships with mental health outcomes.
 
 
-<img width="780" height="753" alt="descibe_data" src="https://github.com/user-attachments/assets/dc9582a6-a616-45bb-ba74-75331e7321b7" />
-
-
->**Observation:**  
-> Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation,
->suggesting diverse behavioral patterns across participants.
->This diversity will be key when analyzing correlations between lifestyle habits and mental health
->outcomes.
 
 **Summary**
 >The dataset is clean, well-structured, and ready for exploration.
@@ -198,7 +191,7 @@ Continuous variables such as screen time, sleep hours, and physical activity exh
 
 ***
 
-#### Feature Engineering
+## Feature Engineering
 New behavioral and lifestyle indicators were created to capture overall wellness balance better:
 
 | Feature | Description | Rationale |
@@ -229,7 +222,7 @@ New behavioral and lifestyle indicators were created to capture overall wellness
 
 ***
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
 The EDA revealed quantifiable relationships between lifestyle behaviors and mental well-being:
 
@@ -240,7 +233,7 @@ The EDA revealed quantifiable relationships between lifestyle behaviors and ment
 - Caffeine Intake has a negligible impact (β = -0.002, standardized coefficient = -0.14) compared to other behavioral factors
 - Mindfulness Practice shows a small but measurable positive effect (β = +0.022, standardized coefficient = +0.15)
 
-**Health Behavior Score Distribution**
+### Health Behavior Score Distribution
 
 <img width="863" height="525" alt="Distribution of health behavior score" src="https://github.com/user-attachments/assets/911ebbb8-2c2e-4159-8ea0-288cfb57331c" />  
 
@@ -253,7 +246,7 @@ The EDA revealed quantifiable relationships between lifestyle behaviors and ment
 >wellness engagement, leaving room for behavioral improvement.
 
 
-**Behavioral Balance: Health Behavior vs Mental Health**
+### Behavioral Balance: Health Behavior vs Mental Health
 
 <img width="880" height="546" alt="health_behavior_vs_mental_health" src="https://github.com/user-attachments/assets/ff8c9b4a-3007-4c97-afaa-68728dd2e314" />  
 
@@ -266,9 +259,9 @@ The EDA revealed quantifiable relationships between lifestyle behaviors and ment
 
 ***
 
-### Modeling & Insights
+## Modeling & Insights
 A multiple linear regression model was trained to quantify how behavioral and lifestyle variables predict mental health outcomes.  
-**Model Performance Metrics:**  
+### Model Performance Metrics:
 
 - **R² = 0.856:** The model explains 85.6% of the variance in mental health scores
 - **RMSE = 5.071:** Average prediction error of ±5.07 points
@@ -276,7 +269,7 @@ A multiple linear regression model was trained to quantify how behavioral and li
 
 This high R² value indicates that lifestyle and behavioral factors captured in this analysis are highly predictive of mental wellness outcomes. The remaining 14.4% of variance likely stems from unmeasured factors such as social support, genetic predisposition, life events, or measurement error in self-reported data.
 
-#### Model Performance Summary  
+### Model Performance Summary  
 The following code evaluates the model's predictive accuracy using two complementary metrics:
 
 
@@ -296,7 +289,7 @@ print(f"RMSE: {rmse:.3f}")
 **Interpretation:**  
 The model explains 85.6% of the variance in mental health scores (R²), with an average prediction error of ±5.07 points (RMSE). This high R² indicates that the behavioral and wellness features captured in this analysis are strong predictors of psychological outcomes. For context, in social science research, R² > 0.70 is considered an excellent model fit.
 
-#### Why Linear Regression?
+### Why Linear Regression?
 Linear regression was chosen for this analysis for three key reasons:
 
 1) **Interpretability:** Unlike black-box models, linear regression provides clear, quantifiable coefficients (e.g., "each hour of activity improves mental health by 1.51 points") that stakeholders can understand and act on
@@ -311,7 +304,7 @@ Linear regression was chosen for this analysis for three key reasons:
 - Model trained on available demographic and behavioral features; unmeasured factors (social support, genetics, life events) explain the remaining 14% of variance
 
 
-#### Top predictors of mental health:
+### Top predictors of mental health:
 
 
 | Rank | Feature                | Coefficient | Standardized Effect | Impact Interpretation |
@@ -334,9 +327,9 @@ Linear regression was chosen for this analysis for three key reasons:
 
 ***
 
-### Dashboard & Visualization
+## Dashboard & Visualization
 
-#### Purpose & Users  
+### Purpose & Users  
 This interactive Looker Studio dashboard operationalizes the regression findings, translating statistical insights into actionable business intelligence. The dashboard serves three primary user groups:  
 
 #### Primary Users:
@@ -353,7 +346,7 @@ This interactive Looker Studio dashboard operationalizes the regression findings
 4) **Executive Reporting:** Provide leadership with population-level wellness trends and justification for wellness product investments
 
 
-#### Digital Wellness Overview
+### Digital Wellness Overview
 
 **Purpose:** Population-level wellness metrics for strategic planning and trend identification
 
@@ -372,7 +365,7 @@ This interactive Looker Studio dashboard operationalizes the regression findings
 - Ranked feature importance showing stress reduction as the highest-value intervention target
 - Caffeine intake vs. mental health correlation demonstrates a minimal direct relationship
 
-#### Behavioral Patterns & Mental Health
+### Behavioral Patterns & Mental Health
 
 **Purpose:** Detailed behavioral relationship exploration for intervention design and user education
 
@@ -392,7 +385,7 @@ This interactive Looker Studio dashboard operationalizes the regression findings
 3) **Mood vs. Sleep Efficiency** → Better sleep quality (not just duration) drives improved mood. Decision Enabled: Develop sleep quality assessment tools (sleep tracking, sleep environment tips) rather than just sleep duration counters.
 4) **Social Media Ratio vs. Mood Rating** → Excessive social media use relative to total screen time correlates with lower mood. Decision Enabled: Create "digital wellness" features that alert users when social media consumption exceeds healthy thresholds, or implement "social media breaks" within the app.
 
-#### Interactive Features & Filters  
+### Interactive Features & Filters  
 
 The dashboard includes dynamic filters enabling users to:
 
@@ -400,12 +393,12 @@ The dashboard includes dynamic filters enabling users to:
 - **Compare Cohorts:** View side-by-side comparisons (e.g., "high activity users vs. low activity users") to quantify behavioral impact
 - **Track Temporal Changes:** Monitor how population wellness metrics shift over time as new features are released (requires dashboard updates with time-series data)
 
-#### Example Use Case:
+### Example Use Case:
 >A product manager notices the dashboard shows 40-50 year-olds have the highest stress levels (avg. 6.1) but the lowest physical activity (2.3 hrs/week). Using the activity vs. mental health chart, they estimate that >increasing activity to 5 hrs/week could improve mental health scores by ~4.1 points for this segment. This insight justifies developing age-targeted activity challenges or partnerships with fitness apps that appeal to >middle-aged users.
 
 **Technical Documentation:** Feature engineering logic and coefficient calculations are documented in the [Jupyter Notebook](./scripts/wellness_data_analysis.ipynb) for reproducibility and validation.
   
-### Key Takeaways
+## Key Takeaways
 
 1) **Stress Management is Critical (3x more impactful than any positive factor)**
 Stress Level has the strongest effect on mental health (β = -2.97, standardized = -8.72), with an impact 2.5x larger than physical activity and 6x larger than sleep quality. Wellness interventions targeting stress reduction offer the highest potential ROI.
@@ -423,7 +416,7 @@ The Looker Studio dashboard operationalizes these findings, allowing product tea
 
 ## Conclusion
 
-### Project Summary
+## Project Summary
 This analysis successfully identified and quantified the behavioral drivers of mental wellness using smart device usage data. By engineering lifestyle metrics and training an interpretable regression model (R² = 0.856), the project delivers actionable insights for wellness product development.
 
 ### Key Finding
