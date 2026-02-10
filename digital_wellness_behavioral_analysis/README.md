@@ -291,7 +291,7 @@ print(f"RMSE: {rmse:.3f}")
 ```
 
 **Output:**
-]Metric|Value|
+|Metric|Value|
 |-------------------|----|
 |**R<sup>2</sup> Score**|**RMSE**|
 | 0.856|5.071|
