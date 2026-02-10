@@ -32,12 +32,12 @@ Engineer lifestyle metrics that capture overall wellness balance (e.g., stress-t
 Quantify feature importance to guide product teams on where interventions will have the greatest impact
 Create an interactive dashboard for stakeholders to explore wellness patterns by age, gender, and location  
 
-### Deliverables:
+### Deliverables
 
-Predictive model explaining ~86% of mental health variance
-Ranked list of behavioral predictors with quantified effects
-Interactive Looker Studio dashboard for dynamic exploration
-Strategic recommendations for wellness product development
+- Predictive model explaining ~86% of mental health variance
+- Ranked list of behavioral predictors with quantified effects
+- Interactive Looker Studio dashboard for dynamic exploration
+- Strategic recommendations for wellness product development
 
 ## What You Will Find in This Project
 
