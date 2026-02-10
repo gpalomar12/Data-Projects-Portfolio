@@ -470,6 +470,6 @@ This project showcases end-to-end data science capabilities:
 ```
 
 
-**Contact:** [https://www.linkedin.com/in/gabrielpalomarez]
+[**Contact**](https://www.linkedin.com/in/gabrielpalomarez)
 
 [Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
