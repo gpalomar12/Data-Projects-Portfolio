@@ -82,8 +82,9 @@ This portfolio piece demonstrates a **complete data science workflow** from busi
 These limitations are addressed through careful interpretation of findings as correlations rather than causal relationships.
 
 ### Demographics Overview
-<img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />
-**Insights from Demographics**  
+<img width="1225" height="334" alt="data_demographic_distribution_overview" src="https://github.com/user-attachments/assets/89f20a4f-a02a-4c4f-bd8b-ed5dd7079173" />  
+
+**Insights from Demographics**
 
 >**Age:**
 >The participant pool spans a wide range, with strong representation across all major adult life stages (20-
