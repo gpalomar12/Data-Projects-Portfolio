@@ -1,6 +1,7 @@
 # 🧠 Digital Wellness & Lifestyle Behavioral Analysis
 
-📋 **Project Type:** Exploratory Data Analysis (EDA) + Predictive Modeling
+📋 **Project Type:** Exploratory Data Analysis (EDA) + Predictive Modeling  
+
 ⚙️ **Tools Used:** Python, Pandas, Scikit-learn, Looker Studio, Matplotlib, Seaborn
 
 ---
