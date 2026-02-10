@@ -111,16 +111,12 @@ The following code provides an initial assessment of data structure, types, and 
 data_df.info()
 
 ```
-**Observation:**  
-The dataset includes 25 columns, mixing numerical, categorical, and boolean variables. No missing values were observed, and data types align with expected formats (floats for continuous measures, integers for counts, objects for categorical fields).
 
 <img width="665" height="600" alt="exploring_data_structure_info" src="https://github.com/user-attachments/assets/2ef82f4a-6c55-40cb-b5e2-6645468e3e94" />
 
+**Observation:**  
+The dataset includes 25 columns, mixing numerical, categorical, and boolean variables. No missing values were observed, and data types align with expected formats (floats for continuous measures, integers for counts, objects for categorical fields).
 
-> **Observation:**  
-> The dataset includes 25 columns, mixing numerical, categorical, and boolean variables.
-> No missing values were observed, and data types align with expected formats (floats for
-> continuous measures, integers for counts, objects for categorical fields)
 
 ### Data Cleaning & Type Adjustments  
 The following code ensures proper data types for efficient processing and to prevent type-related errors during modeling:
