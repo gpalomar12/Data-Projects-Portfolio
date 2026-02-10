@@ -101,9 +101,12 @@ These limitations are addressed through careful interpretation of findings as co
 >explore how environmental context influences digital behavior, stress levels, and overall well-being.
 
 
-#### Inspecting the Dataset
+### Inspecting the Dataset  
+
+The following code provides an initial assessment of data structure, types, and completeness:
 
 ```
+
 # Preview the dataset structure
 data_df.info()
 
@@ -118,7 +121,8 @@ data_df.info()
 > No missing values were observed, and data types align with expected formats (floats for
 > continuous measures, integers for counts, objects for categorical fields)
 
-#### Data Cleaning & Type Adjustments
+### Data Cleaning & Type Adjustments  
+The following code ensures proper data types for efficient processing and to prevent type-related errors during modeling:
 
 ```
 # Ensure boolean fields are formatted 
@@ -131,14 +135,14 @@ data_df[cat_columns] = data_df[cat_columns].astype('category')
 
 ```
 
->**Explanation:**  
->Ensuring correct data types allows for efficient aggregation, proper encoding, and a reduction in potential
->modeling errors.
+**Why This Matters:**  
+Correct data types enable efficient aggregation operations, ensure proper encoding for machine learning models, and reduce memory usage. Boolean types allow for faster filtering, while categorical types optimize storage and enable appropriate statistical operations.
 
-#### Creating Age Groups
+### Creating Age Groups  
+This code transforms continuous age data into discrete life-stage segments for demographic analysis:
 
 ```
-#defining age bins and labels 
+# Define age bins and labels for life-stage segmentation
 
 bins= [0, 20, 30, 40, 50, 60, 70, float('inf')]
 labels = ['<20','20-30', '30-40', '40-50', '50-60', '60-70', '70+']
@@ -148,25 +152,28 @@ data_df['age_group'] = pd.cut(data_df['age'], bins=bins, labels=labels, right=Fa
 
 ```
 
->**Insight:**  
->Grouping continuous variables like *age* into meaningful segments simplifies visualization and helps
->analyze mental health or digital behaviors by life stage.
+**Insight:**  
+Grouping continuous variables like age into meaningful segments simplifies visualization and enables life-stage analysis of mental health and digital behaviors. This segmentation allows product teams to identify age-specific patterns (e.g., "stress peaks in the 40-50 age group") and design targeted interventions.
 
-#### Encoding Categorical Variables
+
+### Encoding Categorical Variables  
+The following code converts categorical variables to a numeric format, making them compatible with regression algorithms:
 
 ```
-# Encode gender and location type
+# Encode gender and location type for modeling
 
 data_df['gender_encoded'] = gender_encoder.fit_transform(data_df['gender'])
 data_df['location_encoded'] = gender_encoder.fit_transform(data_df['location_type'])
 
 ```
 
->**Explanation:**  
->Label encoding converts categorical variables into a numeric format, enabling them to be used in
->regression or machine learning models later in the pipeline.
+**Why This Matters:**  
+Label encoding transforms categorical text values (e.g., "Male", "Female", "Urban") into numeric representations that regression models can process. This preprocessing step is essential for including demographic factors as predictors in the mental health model.
 
-#### Summary Statistics
+
+### Summary Statistics  
+This code generates descriptive statistics to understand the distribution and variability of key behavioral metrics:
+
 
 ```
 # Quick summary transposing the table and rounding decimals to 2 significant figures
@@ -174,6 +181,9 @@ data_df['location_encoded'] = gender_encoder.fit_transform(data_df['location_typ
 data_df.describe().T.round(2)
 
 ```
+**Observation:**  
+Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation, suggesting diverse behavioral patterns across participants. This diversity is essential for regression analysis—sufficient variance in predictors enables the model to identify meaningful relationships with mental health outcomes.
+
 
 <img width="780" height="753" alt="descibe_data" src="https://github.com/user-attachments/assets/dc9582a6-a616-45bb-ba74-75331e7321b7" />
 
@@ -269,7 +279,9 @@ A multiple linear regression model was trained to quantify how behavioral and li
 
 This high R² value indicates that lifestyle and behavioral factors captured in this analysis are highly predictive of mental wellness outcomes. The remaining 14.4% of variance likely stems from unmeasured factors such as social support, genetic predisposition, life events, or measurement error in self-reported data.
 
-#### Model Performance Summary
+#### Model Performance Summary  
+The following code evaluates the model's predictive accuracy using two complementary metrics:
+
 
 ```
 # R**2 and RMSE evaluation
@@ -279,12 +291,13 @@ print(f"RMSE: {rmse:.3f}")
 ```
 
 **Output:**
-|**R<sup>2</sup> Score**|**RMSE**|
+]Metric|Value|
 |-------------------|----|
+|**R<sup>2</sup> Score**|**RMSE**|
 | 0.856|5.071|
 
->The model explains roughly 86% of the variance in mental health score, suggesting that the behavioral and
->wellness features are strong predictors of psychological outcomes.
+**Interpretation:**  
+The model explains 85.6% of the variance in mental health scores (R²), with an average prediction error of ±5.07 points (RMSE). This high R² indicates that the behavioral and wellness features captured in this analysis are strong predictors of psychological outcomes. For context, in social science research, R² > 0.70 is considered an excellent model fit.
 
 #### Why Linear Regression?
 Linear regression was chosen for this analysis for three key reasons:
