@@ -625,7 +625,7 @@ hospital-operations-analysis/
 ```
 
 ### Quick Links to Key Files
-- [📊 Power BI Dashboard](dashboards/hospital_operations.pbix) - Download and open in Power BI Desktop
+- [📊 Power BI Dashboard](reports/Phase4-Clinical Outcomes & Cost Prediction Dashboard.pbix) - Download and open in Power BI Desktop
 - [📓 Phase 1 Notebook - Data Cleaning](notebooks/hospital_operations_optimization.ipynb)
 - [📓 Phase 2 Notebook - EDA](notebooks/eda.ipynb)
 - [📓 Phase 3 Notebook - Modeling](notebooks/modeling.ipynb)
