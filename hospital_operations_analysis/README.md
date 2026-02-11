@@ -648,7 +648,7 @@ hospital-operations-analysis/
 - Data quality report (98% validity rate)
 - Initial statistical summaries
 
-[📓 View Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/01_data_cleaning.ipynb) | **Runtime:** ~5 minutes
+[📓 View Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/hospital_operations_optimization.ipynb) | **Runtime:** ~5 minutes
 
 ---
 
@@ -673,7 +673,7 @@ hospital-operations-analysis/
 - 15+ exploratory visualizations
 - Statistical hypothesis tests (ANOVA, Chi-square)
 
-[📓 View Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/02_eda.ipynb) | **Runtime:** ~8 minutes
+[📓 View Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/eda.ipynb) | **Runtime:** ~8 minutes
 
 ---
 
@@ -709,7 +709,7 @@ hospital-operations-analysis/
 - Model performance comparison charts
 - Feature importance rankings
 
-[📓 View Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/03_modeling.ipynb) | **Runtime:** ~12 minutes
+[📓 View Notebook](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/hospital_operations_analysis/notebooks/modeling.ipynb) | **Runtime:** ~12 minutes
 
 ---
 
