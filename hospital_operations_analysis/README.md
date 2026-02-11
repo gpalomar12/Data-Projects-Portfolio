@@ -273,6 +273,100 @@ driven by operational and experience factors rather than clinical outcomes alone
 |Notebook| Jupyter Notebook|
 |Version control| Git & GitHub|
 
+## 🔧 Technical Implementation
+
+### Data Pipeline Architecture
+```
+Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Power BI
+     985 rows      ↓              12 features          ↓              Dashboard
+                Cleaning         derived from         3 models        5 pages
+                98% valid        23 original          exported        15+ visuals
+```
+
+### Data Processing
+- **Input:** 985 patient records with 23 raw features
+- **Cleaning:** Removed 18 incomplete records (1.8%), standardized 8 categorical variables
+- **Validation:** Implemented range checks (age: 18-95, cost: $500-$50K, LOS: 1-30 days)
+- **Feature Engineering:** Created 12 derived features:
+  - Age groups (5 bins: 18-30, 31-45, 46-60, 61-75, 76+)
+  - Cost buckets (Low: <$5K, Medium: $5K-$15K, High: >$15K)
+  - LOS categories (Short: 1-2 days, Medium: 3-5, Extended: 6+)
+  - Readmission risk score (0-100 scale)
+
+---
+
+### Machine Learning Models
+
+#### 1. Readmission Prediction (Classification)
+**Algorithm:** Random Forest Classifier
+- **Training Set:** 690 patients (70/30 split, stratified by readmission status)
+- **Features:** 17 (6 removed due to multicollinearity, VIF > 5)
+- **Hyperparameters:** 
+  - n_estimators: 200
+  - max_depth: 15
+  - min_samples_split: 20
+- **Performance Metrics:**
+  - AUC-ROC: 0.84
+  - Precision: 0.79
+  - Recall: 0.73
+  - F1-Score: 0.76
+- **Cross-Validation:** 5-fold CV with 82% average accuracy
+
+**Top 5 Feature Importance (SHAP values):**
+1. Previous readmissions (0.31)
+2. Length of stay (0.24)
+3. Comorbidity count (0.18)
+4. Age (0.12)
+5. Procedure complexity (0.09)
+
+---
+
+#### 2. Cost Prediction (Regression)
+**Algorithm:** XGBoost Regressor
+- **Performance:**
+  - RMSE: $1,189
+  - MAE: $847
+  - R²: 0.82
+  - MAPE: 12.4%
+- **Validation:** Predictions within ±15% for 79% of cases
+
+**Cost Prediction Breakdown:**
+- Base cost by procedure: $3,200 - $24,500
+- LOS multiplier: +$1,800 per additional day
+- Complication adjustment: +$4,200 average
+
+---
+
+#### 3. Patient Satisfaction Prediction (Regression)
+**Algorithm:** Gradient Boosting Regressor
+- **Performance:**
+  - MAE: 0.31 on 1-5 scale
+  - RMSE: 0.43
+  - R²: 0.68
+- **Key Drivers:** Communication quality (0.35), wait time (0.28), staff responsiveness (0.22)
+
+---
+
+### Power BI Dashboard Development
+
+**Technical Specifications:**
+- **DAX Measures:** 18 custom measures including:
+  - Readmission Rate: `DIVIDE([Total Readmissions], [Total Patients])`
+  - Average Predicted Cost: `AVERAGE('Predictions'[Predicted_Cost])`
+  - High Risk %: `DIVIDE(COUNTROWS(FILTER('Predictions', [Risk_Category]="High")), COUNTROWS('Predictions'))`
+- **Relationships:** Star schema with 3 fact tables and 2 dimension tables
+- **Performance:** <2 second load time for all visualizations
+- **Filters:** 12 interactive slicers (Department, Condition, Age Group, Risk Level, Date Range)
+- **Row-Level Security:** Implemented for department-specific access (commented out for portfolio)
+
+**Dashboard Pages:**
+1. Executive Summary (KPIs + trend lines)
+2. Readmission Analysis (risk segmentation + feature importance)
+3. Cost Drivers (condition breakdown + LOS impact)
+4. Patient Satisfaction (demographic analysis + drivers)
+5. Patient Drill-Down (searchable table with all predictions)
+
+
 ## ⚙️ How It Works
 
 1. Load raw hospital encounter data
