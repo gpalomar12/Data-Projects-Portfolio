@@ -488,7 +488,7 @@ pip install xgboost==1.7.6
 **Issue:** Out of memory errors
 **Solution:** Reduce dataset size in `src/config.py` or increase system RAM
 
-**Need Help?** Open an issue on GitHub or contact me at [your-email@example.com]
+**Need Help?** Open an issue on GitHub or contact me at [gpalo23@icloud.com]
 
 
 ## 🔧 Technical Implementation
@@ -626,9 +626,9 @@ hospital-operations-analysis/
 
 ### Quick Links to Key Files
 - [📊 Power BI Dashboard](dashboards/hospital_operations.pbix) - Download and open in Power BI Desktop
-- [📓 Phase 1 Notebook - Data Cleaning](./notebooks/01_data_cleaning.ipynb)
-- [📓 Phase 2 Notebook - EDA](./notebooks/02_eda.ipynb)
-- [📓 Phase 3 Notebook - Modeling](./notebooks/03_modeling.ipynb)
+- [📓 Phase 1 Notebook - Data Cleaning](/notebooks/01_data_cleaning.ipynb)
+- [📓 Phase 2 Notebook - EDA](/notebooks/02_eda.ipynb)
+- [📓 Phase 3 Notebook - Modeling](/notebooks/03_modeling.ipynb)
 - [📋 Full Technical Documentation](reports/technical_documentation.pdf)
 
 ## 📓 Project Notebooks
