@@ -629,7 +629,7 @@ hospital-operations-analysis/
 - [📓 Phase 1 Notebook - Data Cleaning](notebooks/hospital_operations_optimization.ipynb)
 - [📓 Phase 2 Notebook - EDA](notebooks/eda.ipynb)
 - [📓 Phase 3 Notebook - Modeling](notebooks/modeling.ipynb)
-- [📋 Full Technical Documentation](reports/technical_documentation.pdf)
+
 
 ## 📓 Project Notebooks
 
