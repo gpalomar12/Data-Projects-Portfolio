@@ -277,6 +277,7 @@ cms-gaps-dashboard/
 ```
 
 ### Quick Links to Key Files
+- 📊 **Excel Dashboard** - Not publicly available (enterprise deployment, contains proprietary methods)
 - [🕵️ De-identification Script](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/CMS_Gaps_Dashboard/Scripts/cms_report_deid.ipynb) - HIPAA compliance automation
 - [📋 Data Dictionary](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/CMS_Gaps_Dashboard/Data/Documentation/CMS_Dashboard_Data_Dictionary.md) - Field definitions
 
