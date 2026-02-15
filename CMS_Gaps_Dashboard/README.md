@@ -257,7 +257,7 @@ cms-gaps-dashboard/
 ├── scripts/
 │   └── cms_report_deid.ipynb           # HIPAA de-identification notebook
 │
-├── Visuals/
+└── Visuals/
     └── dashboard_screenshots/          # PNG exports for portfolio
   
 
