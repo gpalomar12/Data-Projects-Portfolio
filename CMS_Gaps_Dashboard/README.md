@@ -255,7 +255,7 @@ cms-gaps-dashboard/
 │       └── CMS_Dashboard_Data_Dictionary.md   # Field definitions & CMS measure descriptions
 │
 ├── scripts/
-│   └── cms_report_deid.ipynb           # HIPAA de-identification notebook
+│   └── cms_report_deid.ipynb            # Complete ETL pipeline: consolidation, de-identification, validation
 │
 └── Visuals/
     └── dashboard_screenshots/          # PNG exports for portfolio
@@ -362,14 +362,17 @@ To replicate this pipeline with your own CMS data:
 
 2. **Update Configuration:**
 ```python
-   # In scripts/cms_report_deid.ipynb, update:
+   # In Scripts/cms_report_deid.ipynb (first code cell), update:
    folder_path = r"path/to/your/excel/files"
 ```
 
 3. **Run Pipeline:**
 ```bash
-   # Run the de-identification notebook
-   jupyter notebook scripts/cms_report_deid.ipynb
+   # Launch Jupyter and run the notebook
+   jupyter notebook Scripts/cms_report_deid.ipynb
+   
+   # Or execute from command line
+   jupyter nbconvert --to notebook --execute Scripts/cms_report_deid.ipynb
 ```
 
 4. **Create Your Dashboard:**
