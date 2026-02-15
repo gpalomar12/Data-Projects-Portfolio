@@ -280,7 +280,7 @@ cms-gaps-dashboard/
 ### Quick Links to Key Files
 - [📊 Excel Dashboard](dashboard/CMS_Gaps_Dashboard.xlsx) - Download and open in Excel (Office 2016+)
 - [🕵️ De-identification Script](scripts/cms_report_deid.ipynb) - HIPAA compliance automation
-- [📋 Data Dictionary](data/documentation/data_dictionary.xlsx) - Field definitions
+- [📋 Data Dictionary](data/documentation/CMS_Dashboard_Data_Dictionary.md) - Field definitions
 
 
 ***
