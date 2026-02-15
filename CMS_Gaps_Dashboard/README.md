@@ -483,7 +483,7 @@ HEDIS  | Group fno     | ★Adult BMI Assessment (ABA)   | Walter, Ed... | Smith
 | Patient Groups | 12 | 862 records |
 | Measures | 34 | 304 records |
 
-**For complete field definitions and business rules, see the [CMS Dashboard Data Dictionary](link-to-data-dictionary).**
+**For complete field definitions and business rules, see the [CMS Dashboard Data Dictionary](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/CMS_Gaps_Dashboard/Data/Documentation/CMS_Dashboard_Data_Dictionary.md).**
 ***
 
 ## 🧩 Data Preparation and De-Identification
