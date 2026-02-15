@@ -387,9 +387,6 @@ To use this dashboard with your own CMS data:
 **Issue:** Slicers not working  
 **Solution:** Enable macros (File > Options > Trust Center > Macro Settings)
 
-**Need Help?** [Open an issue](https://github.com/gpalomar12/cms-gaps-dashboard/issues)
-
-
 
 ### 👨‍🔬 Role & Contribution
 - Led development of a dashboard that consolidated hundreds of Excel reports into an interactive
@@ -466,7 +463,7 @@ HEDIS  | Group fno     | ★Adult BMI Assessment (ABA)   | Walter, Ed... | Smith
 | 9 | ★Medication Adherence for Oral Diabetes Meds | 517 | 81.6% | Medication Adherence |
 | 10 | ★Medication Adherence for Cholesterol (Statins) | 401 | 83.0% | Medication Adherence |
 
-**Note:** ★ indicates high-priority HEDIS measure. See [Data Dictionary](./Data/Documentation/CMS_Dashboard_Dictionary.md) for a complete list of all 34 measures.
+**Note:** ★ indicates high-priority HEDIS measure. See [Data Dictionary](/Data/Documentation/CMS_Dashboard_Dictionary.md) for a complete list of all 34 measures.
 
 ### Measure Categories (34 Total)
 - **Cancer Screening** (3 measures): Colorectal, Breast, Cervical
