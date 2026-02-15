@@ -98,7 +98,7 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 Raw Excel Files (450+) → Python ETL → De-identification → Master Dataset → Excel Dashboard → Power Query Refresh
      ↓                      ↓              ↓                  ↓                ↓                    ↓
 Database engineers    Consolidation   HIPAA compliance   Single source    Interactive UI    Enterprise platform
-                      (Pandas)        (Faker library)     (125K records)   (Pivot tables)    (KPN Optimize)
+                      (Pandas)        (Faker library)     (125K records)   (Pivot tables)    (Software Platform)
 ```
 
 ---
