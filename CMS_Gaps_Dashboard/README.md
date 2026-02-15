@@ -279,8 +279,7 @@ cms-gaps-dashboard/
 
 ### Quick Links to Key Files
 - [📊 Excel Dashboard](dashboard/CMS_Gaps_Dashboard.xlsx) - Download and open in Excel (Office 2016+)
-- [🐍 Consolidation Script](scripts/01_consolidate_files.py) - Python ETL pipeline
-- [🕵️ De-identification Script](scripts/02_deidentify_data.py) - HIPAA compliance automation
+- [🐍 Consolidation Script](scripts/cms_gaps_in_care.py) - Python ETL pipeline
 - [📋 Data Dictionary](data/documentation/data_dictionary.xlsx) - Field definitions
 
 
