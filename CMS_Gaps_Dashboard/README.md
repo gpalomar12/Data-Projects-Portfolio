@@ -19,17 +19,17 @@
 
 ### Quantified Results
 - ✅ **98% time reduction** - reporting cycle from 21 days → 4 hours
-- ✅ **Processed 450+ Excel files** containing 125,000+ patient records per cycle
+- ✅ **Processed 450+ Excel files** containing 10,347 practice-measure records per cycle
 - ✅ **$75K annual savings** in clinician time (equivalent to 520 hours at $145/hr)
-- ✅ **12 providers** gained real-time visibility into 18 CMS quality measures
+- ✅ **85 practices with 271 provider locations** gained real-time visibility into 34 CMS quality measures
 - ✅ **5-month deployment** from proof-of-concept to enterprise production
 - ✅ **100% HIPAA compliance** through automated de-identification
 
 ### Project Complexity Indicators
 - 450+ fragmented Excel files consolidated per reporting cycle
-- 125,000+ patient records processed across 12 provider locations
-- 18 CMS quality measures tracked (Diabetes, Hypertension, Colorectal Screening, etc.)
-- 3 patient groups (ACO entities) monitored
+- 10,347 practice-measure records processed across 85 practices and 271 provider locations
+- 34 CMS quality measures tracked (Diabetes, Hypertension, Cancer Screening, Medication Adherence, etc.)
+- 12 patient groups (ACO entities) monitored
 - 5-star CMS performance level tracking
 - End-to-end automation: data consolidation → de-identification → visualization
 
@@ -89,7 +89,7 @@ Database engineers    Consolidation   HIPAA compliance   Single source    Intera
   - Try-except error handling for corrupt/locked files
   - Schema validation and column standardization
   - Duplicate record detection and removal
-- **Output:** Single consolidated dataset (125,000+ records, 8 columns)
+- **Output:** Single consolidated dataset (10,347 records, 16 columns)
 - **Performance:** 450 files processed in 3.5 minutes on standard laptop
 
 **Code Highlights:**
@@ -145,9 +145,9 @@ def fake_map(series, generator_func):
 **Technical Components:**
 
 **A) Data Model**
-- Single master data table (125,000 rows × 8 columns)
-- Pivot cache size: ~18 MB (optimized through data types)
-- Refresh time: <30 seconds for full dataset
+- Single master data table (10,347 rows × 16 columns)
+- Pivot cache size: ~2.1 MB (optimized through data types)
+- Refresh time: <10 seconds for full dataset
 - No external data connections (portable workbook)
 
 **B) Interactive Elements**
@@ -160,12 +160,10 @@ def fake_map(series, generator_func):
   6. Trend analysis by measure
   
 - **8 Slicers** for dynamic filtering:
-  - Practice (12 options)
-  - Location (45 options)
-  - Patient Group (3 options)
-  - Measure Name (18 CMS measures)
-  - Performance Level (1-5 stars)
-  - Date Range (quarterly)
+  - Practice (85 options)
+  - Location (271 options)
+  - Patient Group (12 options)
+  - Measure Name (34 CMS measures)
   
 - **12 Linked Charts:**
   - Bar charts (top performers/underperformers)
@@ -199,24 +197,25 @@ def fake_map(series, generator_func):
 ### Data Quality Metrics
 
 **Validation Results:**
-- ✅ **98.7% file success rate** (445 of 450 files read successfully)
-- ✅ **0.3% duplicate records** (342 duplicates removed from 125,342 total)
-- ✅ **99.2% data completeness** (missing values only in non-critical fields)
+- ✅ **98.9% file success rate** (445 of 450 files read successfully)
+- ✅ **99.3% data completeness** (missing values in only 2 fields: Practice 0.1%, Program Level 12.0%)
+- ✅ **98.2% rate calculation accuracy** (calculated vs. reported rates match)
 - ✅ **100% schema consistency** after standardization
 - ✅ **Zero PHI leakage** (validated via automated PHI detection script)
 
 **Data Profiling:**
 | Metric | Value |
 |--------|-------|
-| Total Records | 125,000 |
-| Unique Patients | 87,450 |
-| Unique Providers | 12 |
-| Unique Locations | 45 |
-| CMS Measures | 18 |
-| Patient Groups | 3 |
-| Date Range | Q1-Q4 2019 |
-| Average PNTRG per Provider | 2,083 patients |
-
+| Total Records | 10,347 |
+| Unique Practices | 85 |
+| Unique Locations | 271 |
+| CMS Measures | 34 |
+| Patient Groups | 12 |
+| Date Range | Q3-Q4 2019 |
+| Total Patients Needing Gaps Closed | 64,631 |
+| Records Meeting Goal | 4,368 (42.2%) |
+| Records with Gaps | 5,979 (57.8%) |
+| Average PNTRG per Record | 6.2 patients |
 ---
 
 ### Deployment & Migration
@@ -426,70 +425,80 @@ To use this dashboard with your own CMS data:
 ## 📊 Data Overview
 
 ### Dataset Specifications
-- **Records:** 125,000 patient-measure combinations
-- **Unique Patients:** 87,450
-- **Provider Organizations:** 12 practices
-- **Provider Locations:** 45 individual offices
-- **CMS Quality Measures:** 18 (Diabetes HbA1c, Blood Pressure Control, Colorectal Screening, etc.)
-- **Patient Groups:** 3 ACO entities
-- **Time Period:** Full year 2019 (vintage data)
+- **Records:** 10,347 practice-measure combinations
+- **Provider Organizations:** 85 practices
+- **Provider Locations:** 271 individual offices
+- **CMS Quality Measures:** 34 (Diabetes, Cardiovascular, Cancer Screening, Medication Adherence, Preventive Care)
+- **Patient Groups:** 12 ACO entities
+- **Time Period:** Q3-Q4 2019 (vintage data)
 - **Data Sources:** 450+ Excel files from database engineering team
+- **Total Patients Needing Gap Closure:** 64,631 patients
 
-### Data Dictionary
+### Key Fields in Dataset
 
 | Field | Definition | Example Values | Data Type |
 |-------|------------|----------------|-----------|
-| **Practice** | The clinical organization responsible for the provider | "Johnson Medical Associates", "Smith Healthcare" | Text |
-| **Location** | The individual provider office location | "Johnson Medical - Downtown", "Smith Healthcare - West" | Text |
-| **Patient Group** | The insurance or ACO patient group being measured | "Group ABC", "Group XYZ", "Group QRS" | Text |
-| **Measure Name** | The specific CMS quality measure being tracked | "Diabetes HbA1c Control", "Blood Pressure <140/90" | Text |
-| **PNTRG** | **P**atients **N**eeded **T**o **R**each **G**oal - the number of additional patients required to meet CMS target | 15, 42, 0 | Integer |
-| **Performance Level** | CMS Star Rating (1-5 scale), where 5 = highest performance, 1 = lowest | 1, 2, 3, 4, 5 | Integer |
-| **Goal** | The CMS target percentage for the measure | 75%, 80%, 90% | Percentage |
-| **Current %** | The practice's current performance percentage | 68%, 85%, 72% | Percentage |
+| **Source** | Data source program | "HEDIS", "GPRO" | Text |
+| **Patient Group** | The ACO patient group being measured | "Group Ohb", "Group fno", "Group gRV" | Text |
+| **Measure Name** | The specific CMS quality measure being tracked | "★Colorectal Cancer Screening (COL)", "★Breast Cancer Screening (BCS)" | Text |
+| **Practice** | The clinical organization responsible for patient care | "Walter, Edwards and Rios", "Morales-Jones" | Text |
+| **Location** | The individual provider office location | "Smith-Bell Medical Group", "Gibson Ltd Medical Group" | Text |
+| **Met** | Number of patients meeting the measure criteria | 5, 87, 142 | Integer |
+| **Not Met** | Number of patients with care gaps | 2, 28, 169 | Integer |
+| **Denominator** | Total eligible patients (Met + Not Met) | 7, 115, 311 | Integer |
+| **Exclusions** | Patients excluded from measure | 0, 2, 8 | Integer |
+| **Exceptions** | Patients with valid exceptions | 0, 0, 20 | Integer |
+| **Rate** | Performance percentage (Met / Denominator) | 0.71429 (71.4%), 0.75652 (75.7%) | Decimal |
+| **Performance Level** | CMS performance tier (0-5 for HEDIS, 30-90 for GPRO) | 1, 2, 3, 4, 5, 70, 90 | Integer |
+| **Program Goal** | The CMS target percentage for the measure | 0.78 (78%), 0.82 (82%), 0.90 (90%) | Decimal |
+| **Program Level** | Performance benchmark tier | "5 STAR", "90th" | Text |
+| **Patients To Reach Program Goal (PNTRG)** | Number of additional patients needed to meet CMS target | 2, 17, 138 | Integer |
+| **Export Timestamp** | Date and time of data extraction | 2019-09-10 10:52:55.051 | DateTime |
 
 ### Sample Data Structure
 ```
-Practice                | Location           | Patient Group | Measure Name          | PNTRG | Performance Level | Goal | Current %
-------------------------|--------------------|--------------|-----------------------|-------|-------------------|------|----------
-Johnson Medical Assoc.  | Downtown Clinic    | Group ABC    | Diabetes HbA1c <8%    | 42    | 3                 | 80%  | 72%
-Smith Healthcare        | West Office        | Group XYZ    | BP Control <140/90    | 15    | 4                 | 75%  | 78%
-Anderson Primary Care   | Main Campus        | Group ABC    | Colorectal Screening  | 0     | 5                 | 70%  | 85%
+Source | Patient Group | Measure Name                  | Practice      | Location                | Met | Not Met | Denominator | Rate   | Performance Level | Program Goal | PNTRG
+-------|---------------|-------------------------------|---------------|-------------------------|-----|---------|-------------|--------|-------------------|--------------|------
+GPRO   | Group Ohb     | Breast Cancer Screening       | Blake & Sons  | Garcia, Humphrey... MG  | 5   | 2       | 7           | 71.4%  | 70                | 90%          | 2
+GPRO   | Group Ohb     | Breast Cancer Screening       | Garcia-James  | Campbell-Clark MG       | 87  | 28      | 115         | 75.7%  | 70                | 90%          | 17
+HEDIS  | Group fno     | ★Adult BMI Assessment (ABA)   | Walter, Ed... | Smith-Bell MG           | 132 | 45      | 177         | 74.6%  | 3                 | 97%          | 40
 ```
 
-### CMS Measures Tracked (18 Total)
-**Diabetes Management:**
-- HbA1c Control (<8%)
-- Blood Pressure Control
-- Eye Exam Completion
-- Nephropathy Screening
+### Top 10 CMS Measures by Record Count
+| Rank | Measure Name | Records | Avg Rate | Category |
+|------|--------------|---------|----------|----------|
+| 1 | ★Colorectal Cancer Screening (COL) | 931 | 55.0% | Cancer Screening |
+| 2 | ★Adult BMI Assessment (ABA) | 912 | 78.5% | Preventive Care |
+| 3 | ★Breast Cancer Screening (BCS) | 845 | 63.1% | Cancer Screening |
+| 4 | ★Diabetes: Eye exam (retinal) performed | 691 | 68.4% | Diabetes |
+| 5 | ★Diabetes: Medical attention for nephropathy | 691 | 90.0% | Diabetes |
+| 6 | ★Controlling High Blood Pressure (CBP) | 689 | 80.5% | Cardiovascular |
+| 7 | ★Diabetes: HbA1c control <8.0% | 615 | 65.7% | Diabetes |
+| 8 | ★Medication Adherence for Hypertension | 575 | 83.5% | Medication Adherence |
+| 9 | ★Medication Adherence for Oral Diabetes Meds | 517 | 81.6% | Medication Adherence |
+| 10 | ★Medication Adherence for Cholesterol (Statins) | 401 | 83.0% | Medication Adherence |
 
-**Preventive Care:**
-- Colorectal Cancer Screening
-- Breast Cancer Screening
-- Cervical Cancer Screening
-- Immunizations (Flu, Pneumonia)
+**Note:** ★ indicates high-priority HEDIS measure. See [Data Dictionary](link-to-data-dictionary) for complete list of all 34 measures.
 
-**Cardiovascular:**
-- Blood Pressure <140/90
-- Statin Therapy Adherence
-- Aspirin Use
-
-**Chronic Disease Management:**
-- COPD Management
-- Depression Screening
-- Falls Risk Assessment
-- Medication Reconciliation
-
-**And 4 additional measures...**
+### Measure Categories (34 Total)
+- **Cancer Screening** (3 measures): Colorectal, Breast, Cervical
+- **Diabetes Management** (6 measures): HbA1c control, Eye exams, Nephropathy, Blood pressure
+- **Cardiovascular Health** (4 measures): Blood pressure control, Statin therapy, Aspirin use
+- **Medication Adherence** (4 measures): Diabetes meds, Hypertension meds, Cholesterol meds
+- **Preventive Care & Screening** (8 measures): BMI assessment, Tobacco screening, Depression screening, Immunizations
+- **Chronic Disease Management** (5 measures): Rheumatoid arthritis, Osteoporosis, COPD, Depression remission
+- **Care for Older Adults** (3 measures): Functional status, Medication review, Pain assessment
+- **Wellness & Visits** (4 measures): Annual wellness visits, PCP visits
 
 ### Data Volume by Entity
 | Entity Type | Count | Avg Records per Entity |
-|-------------|-------|----------------------|
-| Practices | 12 | 10,417 records |
-| Locations | 45 | 2,778 records |
-| Patient Groups | 3 | 41,667 records |
-| Measures | 18 | 6,944 records |
+|-------------|-------|------------------------|
+| Practices | 85 | 122 records |
+| Locations | 271 | 38 records |
+| Patient Groups | 12 | 862 records |
+| Measures | 34 | 304 records |
+
+**For complete field definitions and business rules, see the [CMS Dashboard Data Dictionary](link-to-data-dictionary).**
 ***
 
 ## 🧩 Data Preparation and De-Identification
@@ -604,8 +613,8 @@ Processed 450/450 files...
 
 ✅ Consolidation Complete!
    - Files processed: 445/450 (98.9%)
-   - Total records: 125,342
-   - Columns: 8
+   - Total records: 10,347
+   - Columns: 16
    - Errors: 5
    - Processing time: 3.5 minutes
 ```
@@ -661,19 +670,18 @@ print(f"   - File size: {os.path.getsize(output_file) / (1024*1024):.1f} MB")
 
 **Output:**
 ```
-Starting de-identification process...
-  - Anonymizing Patient Groups...
-     Created 3 unique fake group names
+- Anonymizing Patient Groups...
+     Created 12 unique fake group names
   - Anonymizing Practices...
-     Created 12 unique fake practice names
+     Created 85 unique fake practice names
   - Anonymizing Locations...
-     Created 45 unique fake location names
+     Created 271 unique fake location names
 
 Validating de-identification...
 ✅ No PHI detected - data is safe to use
 
 ✅ De-identified data saved to: data/consolidated/deidentified_output.xlsx
-   - File size: 18.2 MB
+   - File size: 2.1 MB
 ```
 
 ---
@@ -683,9 +691,9 @@ To illustrate the consistency of anonymization:
 
 | Original Value (Before) | Anonymized Value (After) | Appears in Records |
 |------------------------|-------------------------|-------------------|
-| "Acme Primary Care" | "Johnson Medical Associates" | 8,420 times |
-| "Downtown Clinic" | "Smith Healthcare Medical Group" | 3,842 times |
-| "Medicare ACO East" | "Group ABC" | 41,250 times |
+| "[Redacted Practice]" | "Walter, Edwards and Rios" | 1,761 times |
+| "[Redacted Location]" | "Smith-Bell Medical Group" | 133 times |
+| "[Redacted ACO]" | "Group Ohb" | 1,681 times |
 
 **Key Point:** Every occurrence of "Acme Primary Care" across all 125K records becomes "Johnson Medical Associates" - maintaining analytical relationships while protecting privacy.
 
@@ -701,7 +709,7 @@ To illustrate the consistency of anonymization:
 **Validation Results:**
 - Zero PHI detected via regex pattern matching
 - 100% anonymization consistency (one-to-one mapping)
-- Referential integrity maintained across 125K records
+- Referential integrity maintained across 10,347 records
 - Dataset passes HIPAA de-identification guidelines
 
 > **Note:**
@@ -720,11 +728,13 @@ To illustrate the consistency of anonymization:
 Command center providing at-a-glance visibility into CMS performance across 12 practices, 45 locations, and 18 quality measures.
 
 **Key Metrics Displayed:**
-- **Total PNTRG:** 47,235 patients still needing care gap closure
-- **Average Performance Level:** 3.2 stars (out of 5)
-- **Measures Below Goal:** 11 of 18 (61% need improvement)
-- **Top Priority Practice:** Johnson Medical Associates (8,420 gaps)
-- **Highest Risk Measure:** Colorectal Cancer Screening (12,450 patients behind)
+- **Total PNTRG:** 64,631 patients still needing care gap closure
+- **Average Rate:** 61.0% across all measures
+- **Measures Tracked:** 34 CMS quality measures
+- **Records Meeting Goal:** 4,368 (42.2%)
+- **Records with Gaps:** 5,979 (57.8%)
+- **Top Priority Practice:** Walter, Edwards and Rios (1,761 measure records)
+- **Highest Volume Measure:** Colorectal Cancer Screening (931 records)
 
 **Interactive Capabilities:**
 - Filter by any combination of Practice, Location, Patient Group, or Measure
