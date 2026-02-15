@@ -686,6 +686,7 @@ To illustrate the consistency of anonymization:
 **Key Point:**   
 
 Every occurrence of the same original practice across all 10,347 records is consistently mapped to the same anonymized name (e.g., all instances of "[Redacted Practice A]" become "Walter, Edwards and Rios" in 1,761 records), maintaining analytical relationships while protecting privacy.
+
 ---
 ### Compliance Verification
 
