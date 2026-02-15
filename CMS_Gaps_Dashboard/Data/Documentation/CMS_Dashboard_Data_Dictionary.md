@@ -129,7 +129,7 @@ The specific CMS quality measure being tracked for performance and gap closure.
 | 11 | ★Disease-Modifying Anti-Rheumatic Drug Therapy for Rheumatoid Arthritis (ART) | 396 | 68.9% |
 | 12 | ★Osteoporosis Management in Women Who Had a Fracture (OMW) | 366 | 44.5% |
 | 13 | ★Unhealthy Alcohol Use Screening and Follow-Up (ASF) | 218 | 52.6% |
-| 14 | Annual Wellness Bundle (THN) | 218 | 60.2% |
+| 14 | Annual Wellness Bundle | 218 | 60.2% |
 | 15 | ★Care for Older Adults (COA): Functional Status Assessment | 174 | 71.5% |
 
 **Measure Categories:**
@@ -144,7 +144,7 @@ The specific CMS quality measure being tracked for performance and gap closure.
 **Naming Conventions:**
 - ★ prefix indicates high-priority HEDIS measure
 - (COL), (BCS), (ABA) = Standard HEDIS measure abbreviations
-- (THN) suffix = Trinity Health Network custom measures
+- (NNN) suffix = Trinity Health Network custom measures
 
 **See Appendix A for complete list of all 34 measures with detailed definitions**
 
@@ -1040,17 +1040,17 @@ WHERE Export_Timestamp = (
 - **Typical Goal:** 90%
 - **Definition:** Urine protein test or ACE/ARB medication
 
-**9. Diabetes: Hemoglobin A1c Control (< 8.0%) (THN)**
+**9. Diabetes: Hemoglobin A1c Control (< 8.0%) (NNN)**
 - **Records:** 90
 - **Average Rate:** 67.8%
 - **Typical Goal:** 80%
 
-**10. Diabetes: Hemoglobin A1c Control (< 9.0%) (THN)**
+**10. Diabetes: Hemoglobin A1c Control (< 9.0%) (NNN)**
 - **Records:** 90
 - **Average Rate:** 79.4%
 - **Typical Goal:** 85%
 
-**11. Diabetes: Medical Attention for Nephropathy (THN)**
+**11. Diabetes: Medical Attention for Nephropathy (NNN)**
 - **Records:** 90
 - **Average Rate:** 89.3%
 - **Typical Goal:** 90%
@@ -1163,22 +1163,22 @@ WHERE Export_Timestamp = (
 
 #### Wellness & Visits (4)
 
-**31. Annual Wellness Bundle (THN)**
+**31. Annual Wellness Bundle (NNN)**
 - **Records:** 218
 - **Average Rate:** 60.2%
 - **Typical Goal:** 85%
 
-**32. Visits: Annual Wellness Visit (THN)**
+**32. Visits: Annual Wellness Visit (NNN)**
 - **Records:** 123
 - **Average Rate:** 54.7%
 - **Typical Goal:** 80%
 
-**33. Visits: Visit at PCP Location (THN)**
+**33. Visits: Visit at PCP Location ()**
 - **Records:** 123
 - **Average Rate:** 68.3%
 - **Typical Goal:** 85%
 
-**34. Visits: Wellness Bundle (THN)**
+**34. Visits: Wellness Bundle ()**
 - **Records:** 123
 - **Average Rate:** 58.9%
 - **Typical Goal:** 85%
