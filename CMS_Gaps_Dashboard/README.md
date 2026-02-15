@@ -41,26 +41,7 @@
 - [Python Code](#-data-preparation-and-de-identification)
 - [Business Impact](#-impact)
 
-
-### 📋 Project Overview
-
-**The Challenge:**  
-A clinical team managing CMS quality reporting for an Accountable Care Organization (ACO) spent **21 days per reporting cycle** manually consolidating **450+ Excel files** (125,000+ patient records) from database engineers. This labor-intensive process involved copy-pasting data across hundreds of spreadsheets, creating pivot tables, and filtering for performance gaps.
-
-**The Solution:**  
-I developed an automated data pipeline and interactive Excel dashboard that:
-- Consolidates 450+ files in **4 hours** (98% time reduction)
-- Provides real-time visibility into 18 CMS quality measures
-- Tracks performance across 12 provider locations and 3 patient groups
-- Enables filtering by provider, measure, location, or patient group
-- Highlights top underperforming measures and providers for targeted intervention
-
-**The Outcome:**  
-The dashboard was deployed to **50+ users** (clinicians, care coordinators, executives) and later migrated to the enterprise **KPN Optimize Platform** for organization-wide access, serving as the foundation for ongoing clinical analytics reporting.
-
-**Business Value:** $75K annual savings in clinician time + proactive CMS compliance management
-
-***
+*** 
 
 ### 🔎 Background
 A clinician collaborator was responsible for identifying performance gaps and underperforming measures to help 
@@ -81,15 +62,18 @@ Optimize, leveraging warhoused data to provide enterprise-level visibility.
 
 ***
 
-### ⚙️ Tech Stack 
-- Python (Data Consolidation and de-identifying data)
-- Microsoft Excel
-  - Pivot Tables
-  - Vlookup/Index-Match
-  - Conditional Formatting
-  - Interactive Filters & Slicers
-  - Charts & Dashboards
-  - Power Query
+## 🧰 Tech Stack
+
+| Component | Tool | Purpose |
+|-----------|------|---------|
+| **Data Engineering** | Python (Pandas, Glob, Faker) | ETL pipeline, consolidation, de-identification |
+| **Dashboard** | Microsoft Excel (Office 2016+) | Pivot tables, slicers, Power Query, conditional formatting |
+| **Data Validation** | Python (Regex, NumPy) | Quality checks, PHI detection |
+| **Version Control** | Git, GitHub | Code management and collaboration |
+
+**Total Development:** 120 hours over 8 weeks | **Languages:** Python, VBA/Excel formulas | **Lines of Code:** ~500 Python + 15 VBA functions
+
+---
 
 ## 🔧 Technical Implementation
 
@@ -815,7 +799,7 @@ Users can filter by specific patient groups or measures to see top locations for
 
 <img width="740" height="375" alt="Top_20_By_Patient_Grp" src="https://github.com/user-attachments/assets/4f7e1f87-1bc4-44f2-8462-da65def81083" />  
 
-#### Purpose:
+#### Patient Group Performance Comparison  
 This visualization compares **CMS goal attainment across major Patient Groups**(insurance or ACO entities),
 showing how many patients within each group still need to close their Care GAPs.
 
@@ -834,7 +818,7 @@ partnerships where they will yield the greatest impact toward CMS compliance and
  
 <img width="740" height="375" alt="Distribution_By_Performance_Level" src="https://github.com/user-attachments/assets/269a4e90-4060-4da8-be1e-4d94ffd76a29" />  
 
-#### Purpose:  
+#### Performance Level Distribution  
 This chart breaks down CMS Performance Levels (1-5) across each Patient Group/Practice to illustrate variation
 in clinical performance within the network.
 
@@ -954,11 +938,6 @@ overall compliance with CMS quality measures.
 - Established in-house analytics capability (reducing vendor dependence)
 - Created a foundation for an enterprise analytics platform serving 200+ users
 
-***
-
-### 🔑 Key Takeaways
-This project demonstrates how simple automation and dashboarding efforts can transform a time-consuming 
-manual process into a scalable analytics solution that directly supports clinical and operational decision-making.
 
 ***
 
