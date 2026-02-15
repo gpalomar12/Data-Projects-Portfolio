@@ -249,29 +249,19 @@ def fake_map(series, generator_func):
 cms-gaps-dashboard/
 │
 ├── data/
-│   ├── consolidated/
-│   │   └── consolidated_data.xlsx      # Master dataset (13,347 records)
+│   ├── Consolidated/
+│   │   └── deidentified_output.xlsx    # Master dataset (13,347 records)
 │   └── documentation/
 │       └── CMS_Dashboard_Data_Dictionary.md   # Field definitions & CMS measure descriptions
 │
 ├── scripts/
-│   ├── 01_consolidate_files.py         # ETL pipeline for Excel consolidation
-│   ├── 02_deidentify_data.py           # HIPAA de-identification script
-│   ├── 03_validate_quality.py          # Data quality checks & profiling
-│   └── utils.py                        # Helper functions
+│   └── cms_report_deid.ipynb           # HIPAA de-identification notebook
 │
-├── dashboard/
-│   ├── CMS_Gaps_Dashboard.xlsx         # Main interactive Excel dashboard
-│   ├── dashboard_screenshots/          # PNG exports for portfolio
-│   └── user_guide.pdf                  # End-user documentation
-│
-├── reports/
-│   ├── executive_summary.pdf           # Project overview for leadership
-│   └── technical_documentation.pdf     # Full technical specs
-│
-├── requirements.txt                     # Python dependencies
-├── README.md                           # This file
-└── LICENSE                             # MIT License
+├── Visuals/
+    └── dashboard_screenshots/          # PNG exports for portfolio
+  
+
+
 ```
 
 ### Quick Links to Key Files
