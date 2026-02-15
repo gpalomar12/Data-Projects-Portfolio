@@ -249,12 +249,10 @@ def fake_map(series, generator_func):
 cms-gaps-dashboard/
 │
 ├── data/
-│   ├── raw/
-│   │   └── sample_files/              # 10 sample Excel files (de-identified)
 │   ├── consolidated/
 │   │   └── consolidated_data.xlsx      # Master dataset (13,347 records)
 │   └── documentation/
-│       └── data_dictionary.xlsx        # Field definitions & CMS measure descriptions
+│       └── CMS_Dashboard_Data_Dictionary.md   # Field definitions & CMS measure descriptions
 │
 ├── scripts/
 │   ├── 01_consolidate_files.py         # ETL pipeline for Excel consolidation
