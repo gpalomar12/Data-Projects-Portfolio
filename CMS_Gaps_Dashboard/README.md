@@ -680,9 +680,12 @@ To illustrate the consistency of anonymization:
 |------------------------|-------------------------|-------------------|
 | "[Redacted Practice]" | "Walter, Edwards and Rios" | 1,761 times |
 | "[Redacted Location]" | "Smith-Bell Medical Group" | 133 times |
-| "[Redacted ACO]" | "Group Ohb" | 1,681 times |
+| "[Redacted ACO]" | "Group Ohb" | 1,681 times |  
 
-**Key Point:** Every occurrence of the same original practice across all 10,347 records is consistently mapped to the same anonymized name (e.g., all instances of "[Redacted Practice A]" become "Walter, Edwards and Rios" in 1,761 records) - maintaining analytical relationships while protecting privacy.
+
+**Key Point:**   
+
+Every occurrence of the same original practice across all 10,347 records is consistently mapped to the same anonymized name (e.g., all instances of "[Redacted Practice A]" become "Walter, Edwards and Rios" in 1,761 records), maintaining analytical relationships while protecting privacy.
 ---
 ### Compliance Verification
 
