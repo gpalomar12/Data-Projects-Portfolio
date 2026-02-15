@@ -319,26 +319,35 @@ python -c "import pandas, openpyxl, faker; print('Setup complete!')"
 
 ### Running the Scripts
 
-#### Option 1: Full Pipeline (Recommended)
+This project uses a single Jupyter notebook (`Scripts/cms_report_deid.ipynb`) that performs the entire ETL pipeline:
+1. ✅ Consolidates 450+ Excel files
+2. ✅ De-identifies sensitive data (HIPAA compliance)
+3. ✅ Validates data quality
+4. ✅ Exports consolidated dataset
+
+**To Run:**
+
+**Option 1: Using Jupyter Interface**
 ```bash
-# Consolidate Excel files
-python scripts/01_consolidate_files.py
+# Start Jupyter
+jupyter notebook
 
-# De-identify sensitive data
-python scripts/02_deidentify_data.py
-
-# Validate data quality
-python scripts/03_validate_quality.py
+# In browser:
+# 1. Navigate to Scripts/cms_report_deid.ipynb
+# 2. Click Cell > Run All
+# 3. Wait ~5 minutes for completion
 ```
 
-**Expected Runtime:**
-- Consolidation: ~3-5 minutes for 450 files
-- De-identification: ~30 seconds
-- Validation: ~1 minute
-- **Total: ~5 minutes**
+**Option 2: Command Line Execution**
+```bash
+# Execute notebook directly
+jupyter nbconvert --to notebook --execute Scripts/cms_report_deid.ipynb --ExecutePreprocessor.timeout=600
+```
 
-#### Option 2: View Dashboard Screenshots
-Dashboard screenshots are available throughout this README to demonstrate the final product's capabilities and design.
+**Expected Output:**
+- Consolidated dataset: `data/Consolidated/deidentified_output.xlsx`
+- Processing time: ~5 minutes (450 files → 10,347 records)
+- Console logs with validation metrics and data quality results
 
 ---
 
