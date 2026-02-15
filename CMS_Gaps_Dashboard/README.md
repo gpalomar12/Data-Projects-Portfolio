@@ -250,7 +250,7 @@ cms-gaps-dashboard/
 │
 ├── data/
 │   ├── Consolidated/
-│   │   └── deidentified_output.xlsx    # Master dataset (13,347 records)
+│   │   └── deidentified_output.xlsx    # Master dataset (10,347 records)
 │   └── documentation/
 │       └── CMS_Dashboard_Data_Dictionary.md   # Field definitions & CMS measure descriptions
 │
@@ -337,39 +337,40 @@ python scripts/03_validate_quality.py
 - Validation: ~1 minute
 - **Total: ~5 minutes**
 
-#### Option 2: View Dashboard Only
-1. Open `dashboard/CMS_Gaps_Dashboard.xlsx` in Excel
-2. Enable macros if prompted (dashboard uses VBA for slicer interactions)
-3. Click "Refresh All" to update pivot tables
-4. Interact with slicers to filter data
+#### Option 2: View Dashboard Screenshots
+Dashboard screenshots are available throughout this README to demonstrate the final product's capabilities and design.
 
 ---
 
 ### Working with Your Own Data
 
-To use this dashboard with your own CMS data:
+To replicate this pipeline with your own CMS data:
 
 1. **Prepare Your Excel Files:**
-   - Ensure files have columns: Practice, Location, Patient Group, Measure Name, PNTRG, Performance Level
+   - Ensure files have the 16 required columns (see Data Dictionary)
+   - Minimum required fields: Practice, Location, Patient Group, Measure Name, Met, Not Met, Rate, Program Goal
    - Place files in `data/raw/` directory
 
 2. **Update Configuration:**
 ```python
-   # In scripts/01_consolidate_files.py, update:
+   # In scripts/cms_report_deid.ipynb, update:
    folder_path = r"path/to/your/excel/files"
 ```
 
 3. **Run Pipeline:**
 ```bash
-   python scripts/01_consolidate_files.py
-   python scripts/02_deidentify_data.py  # Skip if data already de-identified
+   # Run the de-identification notebook
+   jupyter notebook scripts/cms_report_deid.ipynb
 ```
 
-4. **Load into Dashboard:**
-   - Open `dashboard/CMS_Gaps_Dashboard.xlsx`
-   - Go to Data > Queries & Connections > Edit
-   - Update source path to `data/consolidated/consolidated_data.xlsx`
-   - Click "Refresh All"
+4. **Create Your Dashboard:**
+   - Open Excel and create a new workbook
+   - Import consolidated data: Data > Get Data > From File > From Workbook
+   - Select `data/consolidated/deidentified_output.xlsx`
+   - Create pivot tables using the dashboard architecture documented in lines 141-194
+   - Create slicers for: Practice (85), Location (271), Patient Group (12), Measure Name (34)
+   - Apply conditional formatting based on Performance Level (Red: 1-2, Yellow: 3, Green: 4-5)
+   - Reference the dashboard screenshots in this README for visualization design
 
 ---
 
@@ -381,8 +382,9 @@ To use this dashboard with your own CMS data:
 **Issue:** `ModuleNotFoundError: No module named 'openpyxl'`  
 **Solution:** `pip install openpyxl==3.1.2`
 
-**Issue:** Dashboard not updating  
-**Solution:** Data > Refresh All, or Ctrl+Alt+F5
+**Issue:** Need dashboard design reference  
+**Solution:** Dashboard structure and visualizations are documented throughout this README with screenshots and technical specifications. The dashboard architecture section (lines 141-194) provides complete implementation details.
+
 
 **Issue:** Slicers not working  
 **Solution:** Enable macros (File > Options > Trust Center > Macro Settings)
