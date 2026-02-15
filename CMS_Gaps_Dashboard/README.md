@@ -39,19 +39,9 @@
 - [Dashboard Screenshots](#-dashboard-visuals)
 - [Technical Implementation](#-technical-implementation)
 - [Python Code](#-data-preparation-and-de-identification)
-- [Business Impact](#-impact)
+- [Business Impact](#-business-impact--roi)
 
 *** 
-
-### 🔎 Background
-A clinician collaborator was responsible for identifying performance gaps and underperforming measures to help 
-providers meet their CMS goals. Data was delivered as fragmented Excel files, requiring manual copy-and-paste
-consolidation and extensive filtering.
-
-I analyzed the workflow, identified key metrics, and built a fully interactive Excel dashboard that delivered
-the same insights in real time.  The dashboard was later integrated into our production analytics platform,
-Optimize, leveraging warhoused data to provide enterprise-level visibility.
-
 
 | Challenges | Descriptions |
 | :--- | :--- |
@@ -750,7 +740,9 @@ Clinicians can identify their highest-priority gaps in <2 minutes, compared to 4
 Leadership can immediately see which practices need support, enabling targeted resource allocation and intervention planning before CMS reporting deadlines.
  
 
-#### Purpose:
+#### Dashboard Overview - CMS Performance Command Center
+
+**Purpose:**  
 This dashboard provides clinicians and administrators with an interactive view of CMS GAPs in Care performance
 across multiple locations, patient groups, and measures.  It consolidates data from hundreds of Excel reports
 into a single, dynamic workbook.
