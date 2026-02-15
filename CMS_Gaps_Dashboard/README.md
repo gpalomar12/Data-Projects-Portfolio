@@ -72,7 +72,7 @@
 Raw Excel Files (450+) → Python ETL → De-identification → Master Dataset → Excel Dashboard → Power Query Refresh
      ↓                      ↓              ↓                  ↓                ↓                    ↓
 Database engineers    Consolidation   HIPAA compliance   Single source    Interactive UI    Enterprise platform
-                      (Pandas)        (Faker library)     (125K records)   (Pivot tables)    (Software Platform)
+                      (Pandas)        (Faker library)     (10.3K records)   (Pivot tables)    (Software Platform)
 ```
 
 ---
@@ -83,7 +83,7 @@ Database engineers    Consolidation   HIPAA compliance   Single source    Intera
 **Challenge:** 450+ Excel files across multiple folder structures, varying schemas, and encoding issues
 
 **Solution:** Python ETL pipeline using Pandas + Glob
-- **Input:** 450 Excel files (XLSX format) averaging 280 records each
+- **Input:** 450 Excel files (XLSX format) averaging 23 records each
 - **Processing:**
   - Recursive directory traversal using `glob.glob()`
   - Try-except error handling for corrupt/locked files
@@ -133,7 +133,7 @@ def fake_map(series, generator_func):
     mapping = {val: generator_func() for val in unique_vals}
     return series.map(mapping)
 
-# Result: 45 unique practices → 45 unique fake names (consistent across 125K records)
+# Result: 85 unique practices → 85 unique fake names (consistent across 10,347 records)
 ```
 
 ---
@@ -252,7 +252,7 @@ cms-gaps-dashboard/
 │   ├── raw/
 │   │   └── sample_files/              # 10 sample Excel files (de-identified)
 │   ├── consolidated/
-│   │   └── consolidated_data.xlsx      # Master dataset (125K records)
+│   │   └── consolidated_data.xlsx      # Master dataset (13,347 records)
 │   └── documentation/
 │       └── data_dictionary.xlsx        # Field definitions & CMS measure descriptions
 │
@@ -511,7 +511,7 @@ Before creating the dashboard, the original Excel files contained sensitive heal
 - 450+ files across 15 subdirectories
 - Inconsistent naming conventions
 - Varying file formats (some XLS, some XLSX)
-- Files ranged from 50 to 8,000 records
+- Files ranged from 5 to 133 records
 - Total combined size: ~485 MB
 
 **De-identification Requirements:**
@@ -695,8 +695,7 @@ To illustrate the consistency of anonymization:
 | "[Redacted Location]" | "Smith-Bell Medical Group" | 133 times |
 | "[Redacted ACO]" | "Group Ohb" | 1,681 times |
 
-**Key Point:** Every occurrence of "Acme Primary Care" across all 125K records becomes "Johnson Medical Associates" - maintaining analytical relationships while protecting privacy.
-
+**Key Point:** Every occurrence of the same original practice across all 10,347 records is consistently mapped to the same anonymized name (e.g., all instances of "[Redacted Practice A]" become "Walter, Edwards and Rios" in 1,761 records) - maintaining analytical relationships while protecting privacy.
 ---
 ### Compliance Verification
 
@@ -725,7 +724,7 @@ To illustrate the consistency of anonymization:
 #### Dashboard Overview Page
 
 **Purpose:**  
-Command center providing at-a-glance visibility into CMS performance across 12 practices, 45 locations, and 18 quality measures.
+Command center providing at-a-glance visibility into CMS performance across 85 practices, 271 locations, and 34 quality measures.
 
 **Key Metrics Displayed:**
 - **Total PNTRG:** 64,631 patients still needing care gap closure
