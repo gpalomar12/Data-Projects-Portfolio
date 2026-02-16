@@ -1,0 +1,160 @@
+{
+  "project_metadata": {
+    "project_name": "Hospital Operations Analysis",
+    "analysis_date": "2026-01",
+    "objective": "Predict patient readmissions, costs, and satisfaction to support operational decision-making",
+    "note": "Metrics documented from project README. Validation pending notebook re-execution."
+  },
+  "data_quality": {
+    "total_records": 985,
+    "incomplete_records_removed": 18,
+    "removal_percentage": 0.018,
+    "data_quality_percentage": 0.98,
+    "source": "hospital_operations_optimization.ipynb - data cleaning section"
+  },
+  "readmission_prediction_model": {
+    "algorithm": "Random Forest Classifier",
+    "training_approach": "70/30 stratified train-test split with 5-fold cross-validation",
+    "performance_metrics": {
+      "auc_roc": 0.84,
+      "precision": 0.79,
+      "recall": 0.73,
+      "f1_score": 0.76,
+      "cross_validation_accuracy": 0.82
+    },
+    "risk_segmentation": {
+      "high_risk_count": 365,
+      "total_patients": 985,
+      "high_risk_percentage": 0.3706,
+      "high_risk_percentage_display": "37%",
+      "note": "Landing page shows 37% (365÷985=37.06%), previously incorrectly stated as 35%"
+    },
+    "hyperparameters": {
+      "n_estimators": 200,
+      "max_depth": 15,
+      "min_samples_split": 20
+    },
+    "feature_importance_top_5": [
+      {
+        "rank": 1,
+        "feature": "Previous readmissions",
+        "importance": 0.31
+      },
+      {
+        "rank": 2,
+        "feature": "Length of stay",
+        "importance": 0.24
+      },
+      {
+        "rank": 3,
+        "feature": "Comorbidity count",
+        "importance": 0.18
+      },
+      {
+        "rank": 4,
+        "feature": "Age",
+        "importance": 0.12
+      },
+      {
+        "rank": 5,
+        "feature": "Procedure complexity",
+        "importance": 0.09
+      }
+    ],
+    "source": "modeling.ipynb - readmission prediction section"
+  },
+  "cost_prediction_model": {
+    "algorithm": "XGBoost Regressor",
+    "performance_metrics": {
+      "rmse": 1189,
+      "mae": 847,
+      "r_squared": 0.82,
+      "mape": 12.4,
+      "prediction_accuracy": "79% of predictions within ±15%"
+    },
+    "cost_breakdown": {
+      "base_cost_range": {
+        "min": 3200,
+        "max": 24500,
+        "note": "Base cost varies by procedure type"
+      },
+      "los_multiplier": 1800,
+      "los_multiplier_note": "+$1,800 per additional day",
+      "complication_adjustment": 4200,
+      "complication_note": "+$4,200 average for complications"
+    },
+    "source": "modeling.ipynb - cost prediction section"
+  },
+  "satisfaction_prediction_model": {
+    "algorithm": "Gradient Boosting Regressor",
+    "performance_metrics": {
+      "mae": 0.31,
+      "mae_note": "0.31 on 1-5 scale",
+      "rmse": 0.43,
+      "r_squared": 0.68
+    },
+    "key_drivers": [
+      {
+        "rank": 1,
+        "driver": "Communication quality",
+        "importance": 0.35
+      },
+      {
+        "rank": 2,
+        "driver": "Wait time",
+        "importance": 0.28
+      },
+      {
+        "rank": 3,
+        "driver": "Staff responsiveness",
+        "importance": 0.22
+      }
+    ],
+    "source": "modeling.ipynb - satisfaction prediction section"
+  },
+  "business_impact_calculations": {
+    "total_annual_savings": 1200000,
+    "breakdown": {
+      "readmission_reduction": {
+        "amount": 687500,
+        "calculation": "75 prevented readmissions × $7,500 avg cost + $125K CMS penalty avoidance",
+        "components": {
+          "direct_savings": 562500,
+          "cms_penalty_avoidance": 125000
+        }
+      },
+      "los_optimization": {
+        "amount": 520000,
+        "calculation": "15 freed beds × 85% occupancy × 365 days × $4,000 revenue/day",
+        "freed_beds": 15,
+        "current_avg_los": 4.2,
+        "target_avg_los": 3.8,
+        "reduction": "9.5%"
+      },
+      "cost_management": {
+        "amount": 400000,
+        "calculation": "8-12% cost reduction on $4.2M (3 high-cost conditions)",
+        "target_conditions": ["Cardiac Arrest", "Pneumonia", "Sepsis"],
+        "cost_concentration": "62% of total costs ($4.2M of $6.8M)"
+      },
+      "resource_optimization": {
+        "amount": 150000,
+        "calculation": "12% overtime reduction in labor costs"
+      }
+    }
+  },
+  "key_findings": {
+    "cost_concentration": "3 conditions account for 62% of total hospital costs ($4.2M of $6.8M)",
+    "readmission_risk": "365 patients (37%) classified as high-risk",
+    "cardiac_readmission_rate": "42% vs 18% average (2.3x higher)",
+    "los_variation": "23% of patients exceed expected LOS by 2+ days",
+    "satisfaction_age_gap": "18% variation across age groups (65+ at 3.8/5 vs 18-44 at 4.5/5)"
+  },
+  "validation_status": {
+    "metrics_source": "Project README and documentation",
+    "notebook_outputs": "Not re-executed for this validation",
+    "verification_approach": "Documented claims from comprehensive project analysis",
+    "recommendation": "Re-run notebooks to regenerate outputs for full verification",
+    "audit_date": "February 2026"
+  }
+}
