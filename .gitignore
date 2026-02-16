@@ -210,3 +210,11 @@ __marimo__/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Portfolio validation exception - allow results folders
+!*/results/
+!*/results/*.csv
+!*/results/*.json
+!*/results/*.md
+!*/results/*.xlsx
+
