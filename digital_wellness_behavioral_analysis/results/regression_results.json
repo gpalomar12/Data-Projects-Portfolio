@@ -1,0 +1,148 @@
+{
+  "project_metadata": {
+    "project_name": "Digital Wellness & Lifestyle Behavioral Analysis",
+    "analysis_date": "2026-02",
+    "model_type": "Multiple Linear Regression",
+    "objective": "Predict mental health scores from lifestyle and behavioral factors"
+  },
+  "dataset_info": {
+    "total_participants": 5000,
+    "total_features_original": 25,
+    "engineered_features": 12,
+    "features_in_model": 17,
+    "data_source": "Kaggle - Tech Use and Stress Wellness Dataset",
+    "note": "Landing page '125,000+ data points' = 5,000 participants × 25 features"
+  },
+  "model_performance": {
+    "r_squared": 0.856,
+    "r_squared_interpretation": "Model explains 85.6% of variance in mental health scores",
+    "rmse": 5.071,
+    "rmse_interpretation": "Average prediction error of ±5.07 points on mental health scale",
+    "model_fit_quality": "Excellent (R² > 0.70 is considered strong in social science)",
+    "remaining_variance": "14.4% likely due to unmeasured factors (social support, genetics, life events)"
+  },
+  "regression_coefficients": {
+    "stress_level": {
+      "rank": 1,
+      "coefficient": -2.971,
+      "standardized_coefficient": -8.824,
+      "interpretation": "Each 1-point stress increase → -3.0 point mental health decline",
+      "impact_category": "Strongest negative predictor",
+      "statistical_significance": "p < 0.001"
+    },
+    "physical_activity": {
+      "rank": 2,
+      "coefficient": 1.506,
+      "standardized_coefficient": 3.472,
+      "interpretation": "Each additional hour/week → +1.5 point improvement",
+      "impact_category": "Strongest positive predictor",
+      "statistical_significance": "p < 0.001",
+      "example": "Increasing from 2 to 5 hours/week = ~4.5 point improvement"
+    },
+    "sleep_quality": {
+      "rank": 3,
+      "coefficient": 1.840,
+      "standardized_coefficient": 1.195,
+      "interpretation": "Each 1-point sleep quality gain → +1.8 point improvement",
+      "impact_category": "Strong positive predictor",
+      "statistical_significance": "p < 0.001",
+      "note": "8.6x greater impact than sleep duration"
+    },
+    "health_behavior_score": {
+      "rank": 4,
+      "coefficient": -0.742,
+      "standardized_coefficient": -0.185,
+      "interpretation": "Composite metric with minor negative effect",
+      "impact_category": "Weak predictor",
+      "note": "Unexpected negative coefficient likely due to multicollinearity with component features"
+    },
+    "sleep_duration": {
+      "rank": 5,
+      "coefficient": 0.214,
+      "standardized_coefficient": 0.090,
+      "interpretation": "Each additional hour of sleep → +0.2 point improvement",
+      "impact_category": "Modest positive predictor",
+      "statistical_significance": "p < 0.05"
+    },
+    "mindfulness_minutes": {
+      "rank": 6,
+      "coefficient": 0.022,
+      "standardized_coefficient": 0.147,
+      "interpretation": "Each additional daily minute → +0.02 point improvement",
+      "impact_category": "Small positive predictor",
+      "statistical_significance": "p < 0.05",
+      "practical_note": "15 minutes daily = ~0.33 point improvement"
+    },
+    "caffeine_intake": {
+      "rank": 7,
+      "coefficient": -0.002,
+      "standardized_coefficient": -0.136,
+      "interpretation": "Minimal effect (100 mg caffeine → -0.2 point change)",
+      "impact_category": "Negligible predictor",
+      "statistical_significance": "Not significant (p > 0.05)"
+    }
+  },
+  "key_insights_validation": {
+    "stress_management_priority": {
+      "finding": "Stress has 3x more impact than any positive factor",
+      "calculation": "|-2.971| ÷ 1.506 = 1.97x larger than physical activity",
+      "business_implication": "Stress reduction features should be top priority"
+    },
+    "physical_activity_roi": {
+      "finding": "Each hour of weekly activity = +1.5 mental health points",
+      "calculation": "3 additional hours/week = 3 × 1.506 = +4.5 points",
+      "business_implication": "Activity tracking features have high ROI"
+    },
+    "sleep_quality_vs_duration": {
+      "finding": "Quality matters 8.6x more than duration",
+      "calculation": "1.840 ÷ 0.214 = 8.6x",
+      "business_implication": "Prioritize sleep quality tools over sleep duration tracking"
+    },
+    "mindfulness_caffeine_minimal": {
+      "finding": "Mindfulness (+0.022) and caffeine (-0.002) have minimal direct effects",
+      "interpretation": "These factors may work indirectly through stress/sleep",
+      "business_implication": "Don't over-invest in caffeine tracking features"
+    }
+  },
+  "model_assumptions_and_limitations": {
+    "assumptions": [
+      "Linear relationships between predictors and mental health",
+      "Independent observations (each participant counted once)",
+      "Homoscedasticity (constant variance of residuals)",
+      "Normally distributed residuals"
+    ],
+    "limitations": [
+      "Cross-sectional data prevents causal inference",
+      "Self-reported data subject to recall and social desirability bias",
+      "Synthetic/survey data may not represent real device telemetry",
+      "Missing socioeconomic, ethnicity, and clinical diagnosis variables",
+      "Model trained on available features; unmeasured factors explain 14.4% variance"
+    ],
+    "interpretation_caveat": "All findings represent correlations, not causation"
+  },
+  "feature_engineering_summary": {
+    "engineered_features_created": [
+      "total_screen_hours (combined device usage)",
+      "sleep_efficiency (quality normalized by duration)",
+      "stress_to_activity_ratio (stress adjusted by physical activity)",
+      "health_behavior_score (composite of mindfulness, healthy eating, wellness app use)",
+      "mood_vs_stress_diff (emotional balance indicator)",
+      "mindfulness_effect (mindfulness buffering impact on stress)"
+    ],
+    "purpose": "Transform raw behavioral data into interpretable lifestyle metrics"
+  },
+  "data_validation": {
+    "missing_values": "None (0%)",
+    "outliers_handled": "Yes (outliers in screen time and activity hours capped)",
+    "feature_scaling": "Standardized for regression analysis",
+    "train_test_split": "Not documented (full dataset used for regression)",
+    "cross_validation": "Not documented"
+  },
+  "reproducibility": {
+    "source_notebook": "scripts/wellness_data_analysis.ipynb",
+    "python_version": "3.x",
+    "key_libraries": "pandas, numpy, scikit-learn, matplotlib, seaborn",
+    "random_seed": "Not specified",
+    "calculation_date": "February 2026"
+  }
+}
