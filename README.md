@@ -83,7 +83,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 **Impact:**
   
-- 📊 Identified key behavioral patterns across 100,000+ user interactions
+- 📊 Analyzed behavioral patterns from 5,000 participants (125,000+ data points across 25 variables)
 - 🎯 Revealed engagement trends to inform product strategy decisions
 - 💡 Provided actionable insights for wellness program optimization
 - 📈 Enabled data-driven product development and feature prioritization
