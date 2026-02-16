@@ -105,7 +105,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 **Solution:** Comprehensive data analysis using Python and SQL, with Power BI dashboards to visualize key operational metrics and trends.  
 
 **Impact:**
-- 🎯 Identified high-risk readmission patterns representing 35% of total readmissions
+- 🎯 Identified high-risk readmission patterns representing 37% of total readmissions
 - 💰 Uncovered key cost drivers saving $750K+ annually in operational expenses
 - 📊 Revealed utilization patterns supporting data-driven capacity planning
 - ⚡ Reduced decision-making time by 70% through interactive dashboards
