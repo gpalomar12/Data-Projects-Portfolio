@@ -342,6 +342,24 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
 4. Age (0.12)
 5. Procedure complexity (0.09)
 
+**Understanding Perfect Performance:**
+- Perfect scores (1.0) reflect deterministic patterns in synthetic data
+- Real-world readmission has inherent unpredictability (patient behavior, social factors)
+- Production deployment would expect AUC: 0.70-0.85, which is still strong
+
+**Production Deployment Strategy:**
+- **Model Retraining:** Quarterly retraining recommended (healthcare patterns evolve)
+- **Performance Monitoring:** Track AUC, precision, recall weekly; alert if drops >5%
+- **Bias Auditing:** Monthly fairness checks across demographic groups
+- **A/B Testing:** Shadow deployment for 2-4 weeks before full rollout
+- **Expected Degradation:** Plan for 5-10% performance decrease over 6-12 months
+- **Regularization:** Apply L1/L2 regularization to prevent overfitting in production
+
+**Risk Management:**
+- Clinical review required for all high-risk classifications
+- Model serves as decision support, not a replacement for medical judgment
+- Continuous validation against actual readmission outcomes
+
 ---
 
 #### 2. Cost Prediction (Regression)
