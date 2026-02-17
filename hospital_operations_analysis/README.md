@@ -638,40 +638,33 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
 
 ## 📁 Repository Structure
 ```
-hospital-operations-analysis/
+hospital_operations_analysis/
 │
 ├── data/
-│   ├── raw/
-│   │   └── hospital_data.csv           # Original Kaggle dataset (985 records)
-│   ├── processed/
-│   │   ├── cleaned_data.csv            # After validation & cleaning
-│   │   └── engineered_features.csv     # With derived features
-│   └── predictions/
-│       ├── readmission_predictions.csv  # Model outputs
-│       ├── cost_predictions.csv
-│       └── satisfaction_predictions.csv
+│   └── outputs/
+│       └── model_outputs.xlsx          # Model predictions exported for Power BI
 │
 ├── notebooks/
-│   ├── 01_data_cleaning.ipynb          # Phase 1: Data validation & cleaning
-│   ├── 02_eda.ipynb                    # Phase 2: Exploratory analysis
-│   └── 03_modeling.ipynb               # Phase 3: ML model development
-│
-├── src/
-│   ├── preprocessing.py                # Data cleaning functions
-│   ├── feature_engineering.py          # Derived feature creation
-│   ├── modeling.py                     # Model training & evaluation
-│   └── utils.py                        # Helper functions
+│   ├── hospital_operations_optimization.ipynb  # Phase 1: Data cleaning & optimization
+│   ├── eda.ipynb                               # Phase 2: Exploratory data analysis
+│   └── modeling.ipynb                          # Phase 3: ML model development
 │
 ├── reports/
-│   └── Phase4-Clinical Outcomes & Cost Prediction Dashboard.pbix
+│   └── Phase4-Clinical Outcomes & Cost Prediction Dashboard.pbix  # Power BI file
 │
 ├── results/
 │   ├── calculated_kpis.md              # Verified KPI reference
 │   └── model_performance.json          # Model metrics
 │
-├── requirements.txt                     # Python dependencies
-├── README.md                           # This file
-└── LICENSE                             # MIT License
+├── visuals/
+│   ├── Executive_Page_Dashboard.PNG
+│   ├── Readmissions_Page_Dashboard.PNG
+│   ├── Cost_Drivers_Page_Dashboard.PNG
+│   ├── Satisfaction_Page_Dashboard.PNG
+│   ├── Patient_Drill_Down_Page_Dashboard.PNG
+│   └── Phase4-Clinical Outcomes & Cost Prediction Dashboard.pdf
+│
+└── README.md
 ```
 
 ### Quick Links to Key Files
