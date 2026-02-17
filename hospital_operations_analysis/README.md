@@ -53,7 +53,7 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 - 985 patient records analyzed
 - 23 original features → 17 optimized features
 - 3 production-ready ML models deployed
-- 18 custom DAX measures in Power BI
+- 6 DAX measures in Power BI (KPIs computed upstream in Python)
 - End-to-end analytics lifecycle (data → insights → action)
 
 **🔗 Portfolio Links:**
@@ -67,7 +67,7 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 This end-to-end analytics project transforms 985 hospital encounters into actionable insights that drive operational decisions. By analyzing patient admissions, length of stay, readmissions, and cost drivers, the project identifies $1.2M in potential annual savings and provides predictive risk scoring for proactive patient management.
 
 **Project Highlights:**
-- Built 3 machine learning models achieving 84% accuracy in readmission prediction
+- Built 3 machine learning models with perfect classification on synthetic data (see methodology note)
 - Identified 3 conditions accounting for 62% of total hospital costs
 - Created 5 interactive Power BI dashboards for executive decision-making
 - Developed risk segmentation model classifying 365 patients (37%) as high-risk for readmission
@@ -289,7 +289,7 @@ driven by operational and experience factors rather than clinical outcomes alone
 
 ## 🧰 Tech Stack
 |Component|Tool|
-|---------|---------|
+|---------|---------| 
 |Data Processing| Python (Pandas, Numpy)|
 |Visualizations| Matplotlib, Seaborn, Plotly|
 |BI tools| Power BI|
@@ -393,14 +393,17 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
 ### Power BI Dashboard Development
 
 **Technical Specifications:**
-- **DAX Measures:** 18 custom measures including:
-  - Readmission Rate: `DIVIDE([Total Readmissions], [Total Patients])`
-  - Average Predicted Cost: `AVERAGE('Predictions'[Predicted_Cost])`
-  - High Risk %: `DIVIDE(COUNTROWS(FILTER('Predictions', [Risk_Category]="High")), COUNTROWS('Predictions'))`
-- **Relationships:** Star schema with 3 fact tables and 2 dimension tables
+- **Data Source:** Single `Predictions` table — Python modeling pipeline exports all predictions and features to CSV, loaded into Power BI as a flat table
+- **DAX Measures (6):**
+  - `High Risk Readmission %` — percentage of patients classified as high-risk
+  - `Avg Predicted Cost` — average predicted cost across filtered patients
+  - `Avg Predicted Satisfaction` — average predicted satisfaction score
+  - `Avg Readmission Probability` — average readmission probability
+  - `Importance Value` — feature importance values for chart visuals
+  - `Patient Count` — count of patients in current filter context
+- **Slicers (7):** Age Group, Condition, Gender, Length of Stay, Patient ID, Procedure, Satisfaction
 - **Performance:** <2 second load time for all visualizations
-- **Filters:** 12 interactive slicers (Department, Condition, Age Group, Risk Level, Date Range)
-- **Row-Level Security:** Implemented for department-specific access (commented out for portfolio)
+- **Design approach:** KPIs and risk scores computed upstream in Python — Power BI handles visualization and interactivity only
 
 **Dashboard Pages:**
 1. Executive Summary (KPIs + trend lines)
@@ -495,7 +498,7 @@ jupyter notebook
 
 #### Option 3: View Dashboard Only
 1. Download [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free)
-2. Open `dashboards/hospital_operations.pbix`
+2. Open `reports/Phase4-Clinical Outcomes & Cost Prediction Dashboard.pbix`
 3. Click "Refresh" if prompted to reload data
 
 ---
@@ -613,14 +616,17 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
 ### Power BI Dashboard Development
 
 **Technical Specifications:**
-- **DAX Measures:** 18 custom measures including:
-  - Readmission Rate: `DIVIDE([Total Readmissions], [Total Patients])`
-  - Average Predicted Cost: `AVERAGE('Predictions'[Predicted_Cost])`
-  - High Risk %: `DIVIDE(COUNTROWS(FILTER('Predictions', [Risk_Category]="High")), COUNTROWS('Predictions'))`
-- **Relationships:** Star schema with 3 fact tables and 2 dimension tables
+- **Data Source:** Single `Predictions` table — Python modeling pipeline exports all predictions and features to CSV, loaded into Power BI as a flat table
+- **DAX Measures (6):**
+  - `High Risk Readmission %` — percentage of patients classified as high-risk
+  - `Avg Predicted Cost` — average predicted cost across filtered patients
+  - `Avg Predicted Satisfaction` — average predicted satisfaction score
+  - `Avg Readmission Probability` — average readmission probability
+  - `Importance Value` — feature importance values for chart visuals
+  - `Patient Count` — count of patients in current filter context
+- **Slicers (7):** Age Group, Condition, Gender, Length of Stay, Patient ID, Procedure, Satisfaction
 - **Performance:** <2 second load time for all visualizations
-- **Filters:** 12 interactive slicers (Department, Condition, Age Group, Risk Level, Date Range)
-- **Row-Level Security:** Implemented for department-specific access (commented out for portfolio)
+- **Design approach:** KPIs and risk scores computed upstream in Python — Power BI handles visualization and interactivity only
 
 **Dashboard Pages:**
 1. Executive Summary (KPIs + trend lines)
@@ -656,13 +662,12 @@ hospital-operations-analysis/
 │   ├── modeling.py                     # Model training & evaluation
 │   └── utils.py                        # Helper functions
 │
-├── dashboards/
-│   ├── hospital_operations.pbix        # Power BI dashboard file
-│   └── dashboard_screenshots/          # PNG exports for portfolio
-│
 ├── reports/
-│   ├── executive_summary.pdf           # 2-page business summary
-│   └── technical_documentation.pdf     # Full methodology
+│   └── Phase4-Clinical Outcomes & Cost Prediction Dashboard.pbix
+│
+├── results/
+│   ├── calculated_kpis.md              # Verified KPI reference
+│   └── model_performance.json          # Model metrics
 │
 ├── requirements.txt                     # Python dependencies
 ├── README.md                           # This file
@@ -841,10 +846,10 @@ jupyter nbconvert --to notebook --execute notebooks/03_modeling.ipynb
 ---
 
 ### Stakeholder Adoption
-**Executive Team:** Dashboard used in monthly operational reviews
+**Executive Team:** Dashboard used in monthly operational reviews  
 **Case Managers:** Daily risk reports for patient prioritization  
-**Quality Department:** Tracking intervention effectiveness
-**Finance:** ROI monitoring and budget planning  
+**Quality Department:** Tracking intervention effectiveness  
+**Finance:** ROI monitoring and budget planning   
 
 
 [Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
