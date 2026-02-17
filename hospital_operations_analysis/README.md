@@ -328,12 +328,14 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
   - n_estimators: 200
   - max_depth: 15
   - min_samples_split: 20
-- **Performance Metrics:**
-  - AUC-ROC: 0.84
-  - Precision: 0.79
-  - Recall: 0.73
-  - F1-Score: 0.76
-- **Cross-Validation:** 5-fold CV with 82% average accuracy
+- **Performance Metrics:** *
+  - AUC-ROC: 1.0
+  - Precision: 1.0
+  - Recall: 1.0
+  - F1-Score: 1.0
+  - Accuracy: 1.0
+- **Baseline Comparison:** Logistic Regression baseline achieved AUC: 0.959
+- **Note:** Perfect performance reflects the synthetic dataset structure (see methodology note)
 
 **Top 5 Feature Importance (SHAP values):**
 1. Previous readmissions (0.31)
