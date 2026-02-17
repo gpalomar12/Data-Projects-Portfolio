@@ -3,6 +3,27 @@
 
 An end-to-end analytics project analyzing hospital operations, costs, readmissions, and patient outcomes to support operational and clinical decision-making.  
 
+---
+## ⚠️ Important Note: Synthetic Dataset Performance
+
+**This project achieved perfect model performance (AUC: 1.0) due to the deterministic nature of the synthetic dataset.** The readmission patterns in this data are highly predictable from the available features, resulting in perfect classification scores.
+
+**What this means:**
+- ✅ Demonstrates complete ML methodology and pipeline design
+- ✅ Shows data engineering, feature engineering, and model evaluation skills
+- ⚠️ Perfect scores reflect dataset characteristics, not expected real-world performance
+
+**Expected real-world performance:**
+- AUC typically 0.70-0.85 for readmission prediction
+- Some irreducible uncertainty due to patient behavior and external factors
+- Regular model retraining needed as patterns evolve
+
+**Bottom line:** This project showcases technical skills and business communication. The methodology is production-ready; the perfect scores are dataset-specific.
+
+*Throughout this README, metrics marked with * indicate perfect performance due to synthetic data structure.*  
+
+---
+
 ## 🎯 Key Takeaways for Recruiters
 
 **⏱️ Quick Summary:** Predictive analytics project identifying $1.2M in hospital cost savings through machine learning and executive dashboards
@@ -19,12 +40,14 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 | **Business Acumen** | ROI Analysis, Stakeholder Communication, Strategic Recommendations |
 
 ### Quantified Results
-- ✅ **84% accuracy** in predicting patient readmissions (Random Forest, AUC: 0.84)
+- ✅ **Perfect classification** in predicting patient readmissions (Random Forest)
 - ✅ **$1.2M potential savings** identified through operational improvements
 - ✅ **3 conditions** account for 62% of costs ($4.2M) - actionable cost management target
 - ✅ **365 high-risk patients** (37%) identified for proactive care coordination
 - ✅ **5 interactive dashboards** built for executive decision-making
 - ✅ **98% data quality** achieved through rigorous validation pipeline
+
+>Note: Perfect performance (AUC: 1.0, Precision: 1.0, Recall: 1.0, F1: 1.0) is due to synthetic dataset characteristics. See methodology note above.
 
 ### Project Complexity Indicators
 - 985 patient records analyzed
