@@ -41,7 +41,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 - ✅ Eliminated 90%+ manual effort
 - 📈 Enabled real-time performance tracking
 
-**Tech Stack:** Python, Pandas, Power Query, Excel, Power BI
+**Tech Stack:** Python, Pandas, Power Query, Excel
 
 👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/Scripts/cms_report_deid.ipynb) 
 
