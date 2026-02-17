@@ -714,9 +714,9 @@ hospital-operations-analysis/
 
 **Models Developed:**
 1. **Readmission Prediction** (Classification)
-   - Random Forest (selected): AUC 0.84, Precision 0.79
-   - Logistic Regression: AUC 0.76
-   - XGBoost: AUC 0.82
+   - Random Forest (selected): AUC 1.0, Precision 1.0, Recall 1.0, F1 1.0
+   - Gradient Boosting: AUC 1.0
+   - Logistic Regression (baseline): AUC 0.959, Precision 0.72
 
 2. **Cost Prediction** (Regression)
    - XGBoost (selected): RMSE $1,189, R² 0.82
