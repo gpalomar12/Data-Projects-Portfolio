@@ -176,7 +176,7 @@ Full technical implementation is available in the linked notebooks.
 ### 🚨 Readmission Risk Drivers
 **Finding:** 365 patients (37%) classified as high-risk for readmission, with cardiac-related cases showing 2.3x higher readmission rates than average (42% vs 18%)
 
-**Model Performance:** Random Forest classifier achieved 84% AUC with 79% precision in identifying at-risk patients
+**Model Performance:** Random Forest classifier achieved perfect performance (AUC: 1.0, Precision: 1.0, Recall: 1.0)* in identifying at-risk patients
 
 **Business Impact:** Proactive care coordination for 250 highest-risk patients could prevent 75 readmissions annually (estimated savings: $562K at $7,500 per readmission)
 
@@ -546,12 +546,14 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
   - n_estimators: 200
   - max_depth: 15
   - min_samples_split: 20
-- **Performance Metrics:**
-  - AUC-ROC: 0.84
-  - Precision: 0.79 (reduces false alarms)
-  - Recall: 0.73
-  - F1-Score: 0.76
-- **Cross-Validation:** 5-fold CV with 82% average accuracy
+- **Performance Metrics:** *
+  - AUC-ROC: 1.0
+  - Precision: 1.0
+  - Recall: 1.0
+  - F1-Score: 1.0
+  - Accuracy: 1.0
+- **Baseline Comparison:** Logistic Regression baseline achieved AUC: 0.959, showing model improvement
+- **Note:** Perfect performance reflects the synthetic dataset structure (see methodology note)
 
 **Top 5 Feature Importance (SHAP values):**
 1. Previous readmissions (0.31)
