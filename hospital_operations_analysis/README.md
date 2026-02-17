@@ -40,7 +40,7 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 | **Business Acumen** | ROI Analysis, Stakeholder Communication, Strategic Recommendations |
 
 ### Quantified Results
-- ✅ **Perfect classification** in predicting patient readmissions (Random Forest)
+- ✅ **Perfect classification** in predicting patient readmissions (Random Forest)*
 - ✅ **$1.2M potential savings** identified through operational improvements
 - ✅ **3 conditions** account for 62% of costs ($4.2M) - actionable cost management target
 - ✅ **365 high-risk patients** (37%) identified for proactive care coordination
@@ -734,8 +734,8 @@ hospital-operations-analysis/
 
 **Models Developed:**
 1. **Readmission Prediction** (Classification)
-   - Random Forest (selected): AUC 1.0, Precision 1.0, Recall 1.0, F1 1.0
-   - Gradient Boosting: AUC 1.0
+   - Random Forest (selected): AUC 1.0, Precision 1.0, Recall 1.0, F1 1.0*
+   - Gradient Boosting: AUC 1.0*
    - Logistic Regression (baseline): AUC 0.959, Precision 0.72
 
 2. **Cost Prediction** (Regression)
