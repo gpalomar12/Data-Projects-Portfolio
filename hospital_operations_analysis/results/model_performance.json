@@ -1,160 +1,147 @@
 {
   "project_metadata": {
     "project_name": "Hospital Operations Analysis",
-    "analysis_date": "2026-01",
+    "analysis_date": "2026-02",
     "objective": "Predict patient readmissions, costs, and satisfaction to support operational decision-making",
-    "note": "Metrics documented from project README. Validation pending notebook re-execution."
+    "dataset_note": "Synthetic dataset — deterministic patterns produce perfect/near-perfect scores. Expected real-world performance noted per model."
   },
   "data_quality": {
     "total_records": 985,
     "incomplete_records_removed": 18,
     "removal_percentage": 0.018,
-    "data_quality_percentage": 0.98,
-    "source": "hospital_operations_optimization.ipynb - data cleaning section"
+    "clean_records": 967,
+    "data_quality_rate": 0.982,
+    "source": "hospital_operations_optimization.ipynb"
   },
   "readmission_prediction_model": {
     "algorithm": "Random Forest Classifier",
-    "training_approach": "70/30 stratified train-test split with 5-fold cross-validation",
-    "performance_metrics": {
-      "auc_roc": 0.84,
-      "precision": 0.79,
-      "recall": 0.73,
-      "f1_score": 0.76,
-      "cross_validation_accuracy": 0.82
-    },
-    "risk_segmentation": {
-      "high_risk_count": 365,
-      "total_patients": 985,
-      "high_risk_percentage": 0.3706,
-      "high_risk_percentage_display": "37%",
-      "note": "Landing page shows 37% (365÷985=37.06%), previously incorrectly stated as 35%"
-    },
+    "training_approach": "70/30 stratified train-test split",
+    "features": 17,
     "hyperparameters": {
       "n_estimators": 200,
       "max_depth": 15,
       "min_samples_split": 20
     },
-    "feature_importance_top_5": [
-      {
-        "rank": 1,
-        "feature": "Previous readmissions",
-        "importance": 0.31
+    "model_comparison": {
+      "random_forest": {
+        "auc_roc": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "accuracy": 1.0
       },
-      {
-        "rank": 2,
-        "feature": "Length of stay",
-        "importance": 0.24
+      "gradient_boosting": {
+        "auc_roc": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "accuracy": 1.0
       },
-      {
-        "rank": 3,
-        "feature": "Comorbidity count",
-        "importance": 0.18
-      },
-      {
-        "rank": 4,
-        "feature": "Age",
-        "importance": 0.12
-      },
-      {
-        "rank": 5,
-        "feature": "Procedure complexity",
-        "importance": 0.09
+      "logistic_regression_baseline": {
+        "auc_roc": 0.959,
+        "precision": 0.720,
+        "recall": 1.0,
+        "f1_score": 0.837,
+        "accuracy": 0.883
       }
+    },
+    "production_expectation": "AUC 0.70–0.85 expected with real-world data",
+    "risk_segmentation": {
+      "high_risk_count": 365,
+      "total_patients": 985,
+      "high_risk_percentage": 0.3706
+    },
+    "feature_importance_top_5": [
+      { "rank": 1, "feature": "Age", "importance": 0.361 },
+      { "rank": 2, "feature": "Cost", "importance": 0.147 },
+      { "rank": 3, "feature": "Heart Disease", "importance": 0.100 },
+      { "rank": 4, "feature": "Heart Attack", "importance": 0.063 },
+      { "rank": 5, "feature": "Gender (Male)", "importance": 0.058 }
     ],
-    "source": "modeling.ipynb - readmission prediction section"
+    "source": "modeling.ipynb — execution_count 14 (model comparison) and 16 (feature importance)"
   },
   "cost_prediction_model": {
-    "algorithm": "XGBoost Regressor",
-    "performance_metrics": {
-      "rmse": 1189,
-      "mae": 847,
-      "r_squared": 0.82,
-      "mape": 12.4,
-      "prediction_accuracy": "79% of predictions within ±15%"
-    },
-    "cost_breakdown": {
-      "base_cost_range": {
-        "min": 3200,
-        "max": 24500,
-        "note": "Base cost varies by procedure type"
+    "algorithm": "Random Forest / Gradient Boosting",
+    "dataset_note": "Cost values are fixed per condition/procedure in synthetic data, producing near-perfect regression scores",
+    "model_comparison": {
+      "random_forest": {
+        "rmse": 0,
+        "mae": 0,
+        "r_squared": 1.0
       },
-      "los_multiplier": 1800,
-      "los_multiplier_note": "+$1,800 per additional day",
-      "complication_adjustment": 4200,
-      "complication_note": "+$4,200 average for complications"
+      "gradient_boosting": {
+        "rmse": 91082,
+        "mae": 261,
+        "r_squared": 0.999
+      },
+      "linear_regression": {
+        "rmse": 0,
+        "mae": 0,
+        "r_squared": 1.0
+      }
     },
-    "source": "modeling.ipynb - cost prediction section"
+    "feature_importance_top_5": [
+      { "rank": 1, "feature": "Surgery & Chemotherapy", "importance": 0.169 },
+      { "rank": 2, "feature": "Cancer", "importance": 0.166 },
+      { "rank": 3, "feature": "Heart Disease", "importance": 0.117 },
+      { "rank": 4, "feature": "Prostate Cancer", "importance": 0.105 },
+      { "rank": 5, "feature": "Heart Attack", "importance": 0.099 }
+    ],
+    "source": "modeling.ipynb — execution_count 14"
   },
   "satisfaction_prediction_model": {
     "algorithm": "Gradient Boosting Regressor",
-    "performance_metrics": {
-      "mae": 0.31,
-      "mae_note": "0.31 on 1-5 scale",
-      "rmse": 0.43,
-      "r_squared": 0.68
-    },
-    "key_drivers": [
-      {
-        "rank": 1,
-        "driver": "Communication quality",
-        "importance": 0.35
+    "model_comparison": {
+      "gradient_boosting": {
+        "mae": 0.036,
+        "rmse": 0.002,
+        "r_squared": 0.997
       },
-      {
-        "rank": 2,
-        "driver": "Wait time",
-        "importance": 0.28
+      "linear_regression": {
+        "mae": 0.093,
+        "rmse": 0.027,
+        "r_squared": 0.966
       },
-      {
-        "rank": 3,
-        "driver": "Staff responsiveness",
-        "importance": 0.22
+      "random_forest": {
+        "mae": 0,
+        "rmse": 0,
+        "r_squared": 1.0
       }
+    },
+    "feature_importance_top_5": [
+      { "rank": 1, "feature": "Age", "importance": 0.680 },
+      { "rank": 2, "feature": "Stroke", "importance": 0.037 },
+      { "rank": 3, "feature": "CT Scan & Medication", "importance": 0.030 },
+      { "rank": 4, "feature": "Prostate Cancer", "importance": 0.027 },
+      { "rank": 5, "feature": "Delivery & Postnatal Care", "importance": 0.026 }
     ],
-    "source": "modeling.ipynb - satisfaction prediction section"
+    "source": "modeling.ipynb — execution_count 14"
   },
-  "business_impact_calculations": {
+  "business_impact": {
     "total_annual_savings": 1200000,
     "breakdown": {
       "readmission_reduction": {
         "amount": 687500,
-        "calculation": "75 prevented readmissions × $7,500 avg cost + $125K CMS penalty avoidance",
-        "components": {
-          "direct_savings": 562500,
-          "cms_penalty_avoidance": 125000
-        }
+        "calculation": "75 prevented readmissions x $7,500 + $125K CMS penalty avoidance"
       },
       "los_optimization": {
         "amount": 520000,
-        "calculation": "15 freed beds × 85% occupancy × 365 days × $4,000 revenue/day",
-        "freed_beds": 15,
-        "current_avg_los": 4.2,
-        "target_avg_los": 3.8,
-        "reduction": "9.5%"
+        "calculation": "15 freed beds annually, LOS reduced 4.2 -> 3.8 days"
       },
       "cost_management": {
         "amount": 400000,
-        "calculation": "8-12% cost reduction on $4.2M (3 high-cost conditions)",
-        "target_conditions": ["Cardiac Arrest", "Pneumonia", "Sepsis"],
-        "cost_concentration": "62% of total costs ($4.2M of $6.8M)"
+        "calculation": "10% reduction on $4.2M concentrated in top 3 conditions"
       },
       "resource_optimization": {
         "amount": 150000,
-        "calculation": "12% overtime reduction in labor costs"
+        "calculation": "12% overtime reduction from data-driven staffing"
       }
     }
   },
   "key_findings": {
-    "cost_concentration": "3 conditions account for 62% of total hospital costs ($4.2M of $6.8M)",
-    "readmission_risk": "365 patients (37%) classified as high-risk",
-    "cardiac_readmission_rate": "42% vs 18% average (2.3x higher)",
-    "los_variation": "23% of patients exceed expected LOS by 2+ days",
-    "satisfaction_age_gap": "18% variation across age groups (65+ at 3.8/5 vs 18-44 at 4.5/5)"
-  },
-  "validation_status": {
-    "metrics_source": "Project README and documentation",
-    "notebook_outputs": "Not re-executed for this validation",
-    "verification_approach": "Documented claims from comprehensive project analysis",
-    "recommendation": "Re-run notebooks to regenerate outputs for full verification",
-    "audit_date": "February 2026"
+    "cost_concentration": "3 conditions account for 62% of total costs ($4.2M of $6.8M)",
+    "high_risk_patients": "365 patients (37.1%) classified as high-risk for readmission",
+    "cardiac_readmission_multiplier": "2.3x higher readmission rate vs average (42% vs 18%)",
+    "satisfaction_age_gap": "18% score variation across age groups (3.8 vs 4.5 out of 5)"
   }
 }
