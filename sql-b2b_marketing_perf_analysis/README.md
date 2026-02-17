@@ -255,13 +255,6 @@ This project intentionally emphasizes SQL-based analysis and data modeling to de
 - Skills that translate directly to modern data stack roles (analytics engineering, data analysis, business intelligence)
 
 This approach proves capability to work in resource-constrained environments, legacy systems, or greenfield projects where infrastructure decisions are still being made.
-**SQL-first approach demonstrates:**
-- Ability to derive insights without dependency on visualization tools
-- Deep understanding of data relationships and transformation logic
-- Production-level analytical thinking: data modeling, validation, and query optimization
-- Skills that translate directly to modern data stack roles (analytics engineering, data analysis, business intelligence)
-
-This approach proves capability to work in resource-constrained environments, legacy systems, or greenfield projects where infrastructure decisions are still being made.
 
 ## Design Decisions & Tradeoffs
 
