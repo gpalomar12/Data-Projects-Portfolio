@@ -34,7 +34,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 **Problem:** Clinicians manually consolidated hundreds of files, requiring 3-4 weeks per cycle
 
-**Solution:** Python automation pipeline + Power BI dashboards
+**Solution:** Python automation pipeline 
 
 **Impact:**
 - ⏱️ Reduced reporting from weeks to hours
