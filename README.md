@@ -102,13 +102,15 @@ This portfolio showcases my work in analytics automation, operational reporting,
   
 **Problem:** Limited visibility into hospital cost drivers, readmissions, and operational bottlenecks made it difficult for leadership to prioritize improvement efforts.  
 
-**Solution:** Comprehensive data analysis using Python and SQL, with Power BI dashboards to visualize key operational metrics and trends.  
+**Solution:** Comprehensive data analysis using Python(Pandas, Scikit-learn) and Power BI dashboards to visualize key operational metrics and trends.  
 
 **Impact:**
-- 🎯 Identified high-risk readmission patterns representing 37% of total readmissions
-- 💰 Uncovered key cost drivers saving $750K+ annually in operational expenses
+- 🎯 Identified 37% of patients as high-risk for readmission
+- 💰 Uncovered key cost drivers identified $1.2M in potential annual savings
 - 📊 Revealed utilization patterns supporting data-driven capacity planning
-- ⚡ Reduced decision-making time by 70% through interactive dashboards
+- ⚡ 5 interactive dashboards for executive decision-making and reduce reactive crisis management by 40%
+
+- 📋 Built on a synthetic dataset methodology is production-ready; see project README for real-world performance expectations
 
 
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
