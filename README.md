@@ -110,8 +110,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 - 📊 Revealed utilization patterns supporting data-driven capacity planning
 - ⚡ 5 interactive dashboards for executive decision-making and reduce reactive crisis management by 40%
 
-- 📋 Built on a synthetic dataset methodology is production-ready; see project README for real-world performance expectations
-
+- 📋 **Note:** Uses synthetic dataset for demonstration; methodology validated for production use (see project README for deployment guidance)
 
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
 
