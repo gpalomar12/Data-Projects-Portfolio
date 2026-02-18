@@ -25,7 +25,8 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 ### ⭐ Featured Projects 
 
-#### 📊 Clinical Reporting Automation  
+#### 📊 CMS Gaps in Care Dashboard
+*Clinical reporting automation reducing weeks of work to hours*
 
 <img width="475" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/b042aba2-3053-48b7-ab4e-cf6c455fe3a0" />  
 
