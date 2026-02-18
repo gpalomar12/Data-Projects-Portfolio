@@ -116,7 +116,6 @@ This portfolio showcases my work in analytics automation, operational reporting,
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
 
 
-
 ---
 ## 💻 Technical Capabilities
 - Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
