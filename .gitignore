@@ -218,3 +218,8 @@ __marimo__/
 !*/results/*.md
 !*/results/*.xlsx
 
+venv_312/
+__pycache__/
+*.pyc
+
+
