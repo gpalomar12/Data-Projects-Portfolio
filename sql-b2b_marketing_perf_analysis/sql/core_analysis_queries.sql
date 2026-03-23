@@ -21,11 +21,7 @@ SELECT
     revenue_month,
     total_revenue,
     total_revenue - LAG(total_revenue) OVER (ORDER BY revenue_month) AS mom_revenue_change,
-    ROUND(
-        (total_revenue - LAG(total_revenue) OVER (ORDER BY revenue_month))
-        / NULLIF(LAG(total_revenue) OVER (ORDER BY revenue_month), 0) * 100,
-        2
-    ) AS mom_growth_pct
+    ROUND((total_revenue - LAG(total_revenue) OVER (ORDER BY revenue_month)) / NULLIF(LAG(total_revenue) OVER (ORDER BY revenue_month), 0) * 100,2) AS mom_growth_pct
 FROM monthly_revenue
 ORDER BY revenue_month;
 
@@ -54,11 +50,7 @@ ORDER BY avg_order_value DESC;
 SELECT
     a.account_name,
     COUNT(o.order_id) AS total_orders,
-    ROUND(
-        COUNT(o.order_id)::NUMERIC
-        / COUNT(DISTINCT DATE_TRUNC('month', o.occurred_at)),
-        2
-    ) AS avg_orders_per_month
+    ROUND(COUNT(o.order_id)::NUMERIC / COUNT(DISTINCT DATE_TRUNC('month', o.occurred_at)),2) AS avg_orders_per_month
 FROM fact_orders o
 JOIN dim_accounts a ON o.account_id = a.account_id
 GROUP BY account_name
@@ -82,11 +74,7 @@ ORDER BY total_revenue DESC;
 SELECT
     r.region_name,
     SUM(o.total_amt_usd) AS region_revenue,
-    ROUND(
-        SUM(o.total_amt_usd)
-        / SUM(SUM(o.total_amt_usd)) OVER () * 100,
-        2
-    ) AS pct_of_total_revenue
+    ROUND(SUM(o.total_amt_usd) / SUM(SUM(o.total_amt_usd)) OVER () * 100, 2) AS pct_of_total_revenue
 FROM fact_orders o
 JOIN dim_accounts a ON o.account_id = a.account_id
 JOIN dim_sales_reps s ON a.sales_rep_id = s.sales_rep_id
@@ -157,12 +145,7 @@ first_orders AS (
     GROUP BY account_id
 )
 SELECT
-    ROUND(
-        AVG(
-            EXTRACT(EPOCH FROM (first_order_time - first_event_time)) / 86400
-        ),
-        2
-    ) AS avg_days_to_first_order
+    ROUND(AVG(EXTRACT(EPOCH FROM (first_order_time - first_event_time)) / 86400), 2) AS avg_days_to_first_order
 FROM first_events e
 JOIN first_orders o
   ON e.account_id = o.account_id;
@@ -172,10 +155,7 @@ JOIN first_orders o
 SELECT
     DATE_TRUNC('month', occurred_at) AS revenue_month,
     SUM(total_amt_usd) AS monthly_revenue,
-    SUM(SUM(total_amt_usd)) OVER (
-        ORDER BY DATE_TRUNC('month', occurred_at)
-        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
-    ) AS rolling_3_month_revenue
+    SUM(SUM(total_amt_usd)) OVER (ORDER BY DATE_TRUNC('month', occurred_at) ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS rolling_3_month_revenue
 FROM fact_orders
 GROUP BY revenue_month
 ORDER BY revenue_month;
@@ -187,10 +167,7 @@ SELECT
     r.region_name,
     a.account_name,
     SUM(o.total_amt_usd) AS total_revenue,
-    RANK() OVER (
-        PARTITION BY r.region_name
-        ORDER BY SUM(o.total_amt_usd) DESC
-    ) AS revenue_rank
+    RANK() OVER (PARTITION BY r.region_name ORDER BY SUM(o.total_amt_usd) DESC) AS revenue_rank
 FROM fact_orders o
 JOIN dim_accounts a ON o.account_id = a.account_id
 JOIN dim_sales_reps s ON a.sales_rep_id = s.sales_rep_id
