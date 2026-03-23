@@ -172,11 +172,7 @@ This query demonstrates window function mastery for calculating percentage contr
 SELECT
     r.region_name,
     SUM(o.total_amt_usd) AS region_revenue,
-    ROUND(
-        SUM(o.total_amt_usd)
-        / SUM(SUM(o.total_amt_usd)) OVER () * 100,
-        2
-    ) AS pct_of_total_revenue
+    ROUND(SUM(o.total_amt_usd) / SUM(SUM(o.total_amt_usd)) OVER () * 100, 2) AS pct_of_total_revenue
 FROM fact_orders o
 JOIN dim_accounts a ON o.account_id = a.account_id
 JOIN dim_sales_reps s ON a.sales_rep_id = s.sales_rep_id
