@@ -217,14 +217,10 @@ first_orders AS (
     GROUP BY account_id
 )
 SELECT
-    ROUND(
-        AVG(
-            EXTRACT(EPOCH FROM (first_order_time - first_event_time)) / 86400
-        ),
-        2
-    ) AS avg_days_to_first_order
+    ROUND(AVG(EXTRACT(EPOCH FROM (first_order_time - first_event_time)) / 86400),2) AS avg_days_to_first_order
 FROM first_events e
-JOIN first_orders o ON e.account_id = o.account_id;
+JOIN first_orders o
+ON e.account_id = o.account_id;
 ```
 
 **What this demonstrates:**
