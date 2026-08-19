@@ -179,7 +179,7 @@ data_df.describe().T.round(2)
 
 ```
 
-<img width="780" height="753" alt="descibe_data" src="https://github.com/user-attachments/assets/dc9582a6-a616-45bb-ba74-75331e7321b7" />
+<img width="780" height="753" alt="describe_data" src="https://github.com/user-attachments/assets/dc9582a6-a616-45bb-ba74-75331e7321b7" />
 
 **Observation:**  
 Continuous variables such as screen time, sleep hours, and physical activity exhibit wide variation, suggesting diverse behavioral patterns across participants. This diversity is essential for regression analysis—sufficient variance in predictors enables the model to identify meaningful relationships with mental health outcomes.
