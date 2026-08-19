@@ -28,7 +28,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 #### 📊 CMS Gaps in Care Dashboard
 *Clinical reporting automation reducing weeks of work to hours*
 
-<img width="475" height="794" alt="dashboard_overview" src="https://github.com/user-attachments/assets/b042aba2-3053-48b7-ab4e-cf6c455fe3a0" />  
+<img width="475" alt="dashboard_overview" src="https://github.com/user-attachments/assets/b042aba2-3053-48b7-ab4e-cf6c455fe3a0" />  
 
   
 *Interactive Power BI dashboard reducing reporting time by 90%*
@@ -50,7 +50,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 #### 📈 B2B Sales & Marketing Performance Analysis (SQL)
 
-<img width="475" height="794" alt="database_diagram" src="./sql-b2b_marketing_perf_analysis/visuals/db_diagram.png" />  
+<img width="475" alt="database_diagram" src="./sql-b2b_marketing_perf_analysis/visuals/db_diagram.png" />  
 
 *PostgreSQL analysis revealing revenue concentration risks and 164% regional performance gaps*  
 
@@ -73,7 +73,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 #### 🧠 Digital Wellness Behavioral Analysis
 
-<img width="475" height="794" alt="dashboard_overview" src="./digital_wellness_behavioral_analysis/visuals/overall_dashboard_view_page1.png" />  
+<img width="475" alt="dashboard_overview" src="./digital_wellness_behavioral_analysis/visuals/overall_dashboard_view_page1.png" />  
 
   
 *Looker dashboards revealing user engagement patterns and wellness trends*  
@@ -97,7 +97,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 #### 🏥 Hospital Operations Analysis
 
-<img width="475" height="794" alt="dashboard_overview" src="./hospital_operations_analysis/visuals/Executive_Page_Dashboard.PNG" />  
+<img width="475" alt="dashboard_overview" src="./hospital_operations_analysis/visuals/Executive_Page_Dashboard.PNG" />  
 
 *Power BI dashboard identifying cost drivers and readmission patterns*  
   
