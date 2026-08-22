@@ -153,7 +153,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 ## 🎯 What I'm Looking For
 
-I'm seeking **Data Analyst**, **Senior Data Analyst**, or **Business Analyst** roles where I can:
+I'm seeking **Analytics Manager**, **Senior Data Analyst**, **Data Analyst**, or **Business Analyst** roles where I can:
 - Build scalable analytics solutions that eliminate manual processes
 - Create executive-level dashboards driving strategic decisions
 - Apply healthcare/operational domain expertise
