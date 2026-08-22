@@ -1,6 +1,6 @@
 <div align="center">
-# 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
 
+# 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
 <img src="./assets/gp_head_shot.png" width="150" style="border-radius: 50%;" alt="Gabriel Palomarez"/>
 
 **[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **gpalo23@icloud.com** • **[Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)**
