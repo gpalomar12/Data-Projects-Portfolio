@@ -6,7 +6,7 @@
 **[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **gpalo23@icloud.com** • **[Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)**
 
 
-## Data Analyst | Business Intelligence Specialist | Healthcare Analytics   
+## 📊 Data Analyst | Business Intelligence Specialist | Healthcare Analytics
 *Transforming complex operational data into automated solutions that drive measurable business value*
 
 </div>
@@ -47,8 +47,6 @@ This portfolio showcases my work in analytics automation, operational reporting,
 **Tech Stack:** Python, Pandas, Power Query, Excel
 
 👉 [**View Full Project**](./CMS_Gaps_Dashboard/) | [**See Code**](./CMS_Gaps_Dashboard/Scripts/cms_report_deid.ipynb) 
-
-
 
 #### 📈 B2B Sales & Marketing Performance Analysis (SQL)
 
@@ -119,6 +117,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 
 ---
+
 ## 💻 Technical Capabilities
 - Python (Pandas, NumPy, Seaborn, Sci-kit Learn)
 - SQL (PostgreSQL, MySQL, SQL Server)
@@ -181,7 +180,6 @@ If you are interested in discussing analytics, automation, or operational improv
 - **sql-b2b_marketing_perf_analysis/** - B2B marketing SQL analytics
 - **README.md** - This file
 
----
 ---
 
 <div align="center">
