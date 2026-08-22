@@ -56,7 +56,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 **Problem:** Sales leadership lacked visibility into account concentration risks, regional performance drivers, and the relationship between digital engagement and revenue conversion.
 
-**Solution:** Built PostgreSQL data warehouse (fact/dimension model) analyzing $10.4M in revenue across 10,428 orders, 351 accounts, and 9,273 web events using advanced SQL (CTEs, window functions, time-series analysis).
+**Solution:** Built PostgreSQL data warehouse (fact/dimension model) analyzing $10.4M in revenue across 4,050 orders, 351 accounts, and 8,273 web events using advanced SQL (CTEs, window functions, time-series analysis).  
 
 **Impact:**
 
