@@ -4,7 +4,7 @@
 
 SQL-first analysis of US-based B2B sales, customers, and digital engagement data spanning 2013-2017. This project focuses on data modeling, analytical SQL, and business-driven insights without reliance on cloud data warehouses or BI publishing tools.
 
-**Dataset Scale:** ~10.4M in total revenue across 10,428+ orders from 351 accounts with 9,273 web engagement events
+**Dataset Scale:** ~$10.4M in total revenue across 4,050 orders from 351 accounts with 8,273 web engagement events  
 
 ## Key Skills Demonstrated
 - PostgreSQL data modeling. Fact and dimension design
@@ -100,8 +100,8 @@ These findings enable several actionable strategies:
 The schema was designed to support scalable analytical queries and mirrors real-world enterprise data models.
 
 **Fact Tables:**
-- `fact_orders`: Order-level transaction records with product quantities and revenue amounts (10,428+ rows)
-- `fact_web_events`: Digital engagement events by account and channel (9,273 rows)
+- `fact_orders`: Order-level transaction records with product quantities and revenue amounts (4,050 rows)
+- `fact_web_events`: Digital engagement events by account and channel (8,273 rows)
 
 **Dimension Tables:**
 - `dim_accounts`: Account master data with sales rep assignment (351 accounts)
@@ -304,7 +304,7 @@ This approach proves capability to work in resource-constrained environments, le
 
 - **Database**: PostgreSQL 14+
 - **SQL Features Used**: Window functions, CTEs, date arithmetic, aggregations, UNION operations
-- **Data Volume**: 10,428 orders | 351 accounts | 9,273 web events | 4 regions
+- **Data Volume**: 4,050 orders | 351 accounts | 8,273 web events | 4 regions
 - **Total Revenue Analyzed**: $10.43M across 3+ years (2013-2017)
 - **Query Performance**: All queries execute in <500ms on standard hardware
 
