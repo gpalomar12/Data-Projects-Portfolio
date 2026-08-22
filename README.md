@@ -110,8 +110,8 @@ This portfolio showcases my work in analytics automation, operational reporting,
 - 💰 Uncovered key cost drivers identified $1.2M in potential annual savings
 - 📊 Revealed utilization patterns supporting data-driven capacity planning
 - ⚡ 5 interactive dashboards for executive decision-making and reduce reactive crisis management by 40%
-
-- 📋 **Note:** Uses synthetic dataset for demonstration; methodology validated for production use (see project README for deployment guidance)
+  
+> 📋 **Note:** Uses synthetic dataset for demonstration; methodology validated for production use (see project README for deployment guidance)
 
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
 
