@@ -1,5 +1,5 @@
-# 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
 <div align="center">
+# 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
 
 <img src="./assets/gp_head_shot.png" width="150" style="border-radius: 50%;" alt="Gabriel Palomarez"/>
 
