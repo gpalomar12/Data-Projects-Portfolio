@@ -18,7 +18,7 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 - Some irreducible uncertainty due to patient behavior and external factors
 - Regular model retraining needed as patterns evolve
 
-**Bottom line:** This project showcases technical skills and business communication. The methodology is production-ready; the perfect scores are dataset-specific.
+**Bottom line:** This project showcases technical skills and business communication. The methodology is transferable to real data; the perfect scores are dataset-specific.
 
 *Throughout this README, metrics marked with * indicate perfect performance due to synthetic data structure.*  
 
@@ -26,7 +26,7 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 
 ## 🎯 Key Takeaways for Recruiters
 
-**⏱️ Quick Summary:** Predictive analytics project identifying $1.2M in hospital cost savings through machine learning and executive dashboards
+**⏱️ Quick Summary:** Predictive analytics project on a synthetic hospital dataset: models readmission, cost, and satisfaction, and sizes a ~$1.2M projected annual savings scenario (assumption-based) with a 5-page Power BI report.
 
 ### Skills Demonstrated
 | Category | Technologies & Methods |
@@ -41,10 +41,10 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 
 ### Quantified Results
 - ✅ **Perfect classification** in predicting patient readmissions (Random Forest)*
-- ✅ **$1.2M potential savings** identified through operational improvements
+- ✅ **~$1.2M projected annual savings** (scenario model: readmission reduction + length of stay; assumptions listed under Business Impact)
 - ✅ **3 conditions** account for 62% of costs ($4.2M) - actionable cost management target
 - ✅ **365 high-risk patients** (37%) identified for proactive care coordination
-- ✅ **5 interactive dashboards** built for executive decision-making
+- ✅ **5-page Power BI report** built for executive decision-making
 - ✅ **98% data quality** achieved through rigorous validation pipeline
 
 >Note: Perfect performance (AUC: 1.0, Precision: 1.0, Recall: 1.0, F1: 1.0) is due to synthetic dataset characteristics. See methodology note above.
@@ -52,8 +52,8 @@ An end-to-end analytics project analyzing hospital operations, costs, readmissio
 ### Project Complexity Indicators
 - 985 patient records analyzed
 - 23 original features → 17 optimized features
-- 3 production-ready ML models deployed
-- 6 DAX measures in Power BI (KPIs computed upstream in Python)
+- 3 ML models trained and evaluated (synthetic data; not deployed)
+- DAX measures in Power BI (KPIs computed upstream in Python)
 - End-to-end analytics lifecycle (data → insights → action)
 
 **🔗 Portfolio Links:**
@@ -69,7 +69,7 @@ This end-to-end analytics project transforms 985 hospital encounters into action
 **Project Highlights:**
 - Built 3 machine learning models with perfect classification on synthetic data (see methodology note)
 - Identified 3 conditions accounting for 62% of total hospital costs
-- Created 5 interactive Power BI dashboards for executive decision-making
+- Created a 5-page Power BI report for executive decision-making
 - Developed risk segmentation model classifying 365 patients (37%) as high-risk for readmission
 
 **Skills Demonstrated:** Python (Pandas, Scikit-learn, XGBoost), Power BI, DAX, Statistical Modeling, Healthcare Analytics, Executive Communication
@@ -165,9 +165,9 @@ Full technical implementation is available in the linked notebooks.
 ## 📈 Key Insights  
 
 ### 💰 Cost Concentration
-**Finding:** 3 conditions (Cardiac Arrest, Pneumonia, Sepsis) account for 62% of total hospital costs ($4.2M of $6.8M annual spend)
+**Finding:** 3 conditions (Cardiac Arrest, Pneumonia, Sepsis) account for 62% of total hospital costs ($4.2M of $6.8M annual spend; figure from the `modeling.ipynb` output. The raw dataset is not committed, so it cannot be re-computed from this repo, see VERIFICATION.md)
 
-**Business Impact:** Targeted care pathway optimization for these 3 conditions could reduce costs by 15-20% ($630K-$840K annually)
+**Business Impact:** Care-pathway optimization for these 3 conditions could reduce costs 8-12% ($336K-$504K annually; $400K used as the conservative case). *Scenario assumption.*
 
 **Recommendation:** Implement specialized care protocols and negotiate bundled payment contracts
 
@@ -178,7 +178,7 @@ Full technical implementation is available in the linked notebooks.
 
 **Model Performance:** Random Forest classifier achieved perfect performance (AUC: 1.0, Precision: 1.0, Recall: 1.0)* in identifying at-risk patients
 
-**Business Impact:** Proactive care coordination for 250 highest-risk patients could prevent 75 readmissions annually (estimated savings: $562K at $7,500 per readmission)
+**Business Impact:** Proactive care coordination for 250 highest-risk patients could prevent 75 readmissions annually (scenario assumption: 75 prevented × $7,500 per readmission = $562,500)
 
 ---
 
@@ -201,13 +201,13 @@ Full technical implementation is available in the linked notebooks.
 ---
 
 ### 🎯 Predictive Model Value
-**Capability:** Real-time risk scoring enables:
+**Capability (proposed):** Risk scoring from the model would enable:
 - Daily identification of discharge-ready patients
 - Prioritized case management resources
 - Proactive intervention scheduling
 - Capacity forecasting for next 7-30 days
 
-**Operational Impact:** Reduces reactive crisis management by 40% and improves resource allocation efficiency
+**Operational Impact (proposed):** Supports a shift from reactive to proactive resource allocation. No effect was measured; the data is synthetic.
 
 
 ## 📊 Power BI Dashboard Overview
@@ -394,7 +394,7 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
 
 **Technical Specifications:**
 - **Data Source:** Single `Predictions` table — Python modeling pipeline exports all predictions and features to CSV, loaded into Power BI as a flat table
-- **DAX Measures (6):**
+- **DAX Measures:**
   - `High Risk Readmission %` — percentage of patients classified as high-risk
   - `Avg Predicted Cost` — average predicted cost across filtered patients
   - `Avg Predicted Satisfaction` — average predicted satisfaction score
@@ -617,7 +617,7 @@ Raw Data (CSV) → Pandas ETL → Feature Engineering → Model Training → Pow
 
 **Technical Specifications:**
 - **Data Source:** Single `Predictions` table — Python modeling pipeline exports all predictions and features to CSV, loaded into Power BI as a flat table
-- **DAX Measures (6):**
+- **DAX Measures:**
   - `High Risk Readmission %` — percentage of patients classified as high-risk
   - `Avg Predicted Cost` — average predicted cost across filtered patients
   - `Avg Predicted Satisfaction` — average predicted satisfaction score
@@ -771,78 +771,39 @@ jupyter nbconvert --to notebook --execute notebooks/03_modeling.ipynb
 **Note:** Notebooks contain embedded outputs (charts, tables, metrics) so you can view results without running code.
 
 
-## 💼 Business Impact & ROI
+## 💼 Business Impact (Scenario Model)
 
-### Projected Annual Value: $1.2M
+> **Read this first:** this project uses a **synthetic dataset**. Nothing below was realized at a hospital. These are assumption-based scenarios showing how the analysis would be translated into dollars.
 
-#### 1. Readmission Reduction Program
-**Current State:** 365 patients (37%) classified as high-risk
-**Intervention:** Proactive care coordination for top 250 highest-risk patients
-**Expected Outcome:** 
-- Reduce readmissions from 37% → 28% (25% reduction)
-- Prevent ~75 readmissions annually
+### Headline scenario: ~$1.2M projected annual value
+| Initiative | Assumptions | Projected value |
+|---|---|---|
+| Readmission reduction | Care coordination for the 250 highest-risk patients prevents ~75 readmissions (a 30% reduction within that cohort) × $7,500 per readmission = $562,500, plus $125,000 assumed CMS penalty avoidance | $687,500 |
+| Length-of-stay optimization | Average LOS 4.2 → 3.8 days; assumes ~130 bed-days made available per year × $4,000 revenue per bed-day | $520,000 |
+| **Headline total** | | **~$1.2M** ($1,207,500) |
 
-**Financial Impact:** $562,500 savings
-- Calculation: 75 readmissions × $7,500 avg cost
-- CMS penalty avoidance: Additional $125K
+### Additional scenarios (not in the headline)
+| Initiative | Assumptions | Projected value |
+|---|---|---|
+| Targeted cost management | 8-12% cost reduction on the 3 highest-cost conditions ($4.2M) via care pathways and bundled payments | $336,000-$504,000 ($400,000 conservative) |
+| Resource and staffing optimization | Illustrative labor-cost assumption | $150,000 |
 
-**Total Readmission Savings: $687,500**
+Including these two brings the four-initiative total to ~$1.76M. They are excluded from the headline because they depend on the least-verifiable inputs.
 
----
+### Corrections made during verification
+- The earlier LOS calculation (15 beds, 85% occupancy, 365 days, $4,000 per day) equals about $18.6M, not $520K, so it was replaced with an explicit bed-day assumption.
+- The earlier "~$1.2M total" summed only two of the four listed initiatives; the labels now say which.
+- "Readmission rate 37% → 28%" mixed up two metrics: 37% is the *high-risk share* of patients, while the overall readmission rate in the notebook is 18%. The target is now stated for the 250-patient cohort.
+- Claims of dashboard deployment, monthly review meetings, and a 12% overtime reduction were removed: this is a demonstration project, not a deployment.
 
-#### 2. Length of Stay Optimization
-**Current State:** 4.2 days average LOS, 23% of patients exceed expected LOS
-**Opportunity:** Standardize discharge protocols and reduce variation
-**Expected Outcome:**
-- Reduce average LOS from 4.2 → 3.8 days (9.5% reduction)
-- Free up 15 beds annually for additional admissions
+### Proposed 12-month targets
+- Readmissions within the targeted 250-patient cohort: -30% (~75 prevented)
+- Average LOS: 4.2 → 3.9 days (stretch: 3.8)
+- Patient satisfaction: 4.1 → 4.5 average score
+- Cost per admission: -6% to -8%
 
-**Financial Impact:** $520,000 revenue opportunity
-- Calculation: 15 beds × 85% occupancy × 365 days × $4,000 avg revenue per day
-- Improved patient throughput and satisfaction
-
----
-
-#### 3. Targeted Cost Management
-**Current State:** 3 conditions account for 62% of costs ($4.2M)
-**Intervention:** Implement condition-specific care pathways and bundled payments
-**Expected Outcome:**
-- 8-12% cost reduction through protocol standardization
-- Negotiate better rates with payers
-
-**Financial Impact:** $336,000 - $504,000 savings
-- Conservative estimate: $400,000 annually
-
----
-
-#### 4. Resource Allocation Optimization
-**Current Impact:**
-- Dashboard deployed to 5 hospital administrators
-- Monthly review meetings established
-- Data-driven staffing decisions reduce overtime by 12%
-**Operational Value:** $150,000 in labor cost savings
-
----
-
-### Implementation Timeline
-- **Month 1-2:** Deploy predictive models and dashboard
-- **Month 3-4:** Pilot readmission coordination program (50 patients)
-- **Month 5-6:** Expand to 250 patients, implement LOS protocols
-- **Month 7-12:** Full rollout and continuous improvement
-
-### Success Metrics (12-month targets)
-- ✅ Readmission rate: 37% → 28%
-- ✅ Average LOS: 4.2 → 3.9 days (stretch goal: 3.8)
-- ✅ Patient satisfaction: 4.1 → 4.5 average score
-- ✅ Cost per admission: Reduce by 6-8%
-
----
-
-### Stakeholder Adoption
-**Executive Team:** Dashboard used in monthly operational reviews  
-**Case Managers:** Daily risk reports for patient prioritization  
-**Quality Department:** Tracking intervention effectiveness  
-**Finance:** ROI monitoring and budget planning   
+### Intended stakeholder use (proposed)
+**Executive team:** monthly operational reviews | **Case managers:** daily risk lists | **Quality:** intervention tracking | **Finance:** budget planning
 
 
 [Home](https://github.com/gpalomar12/Data-Projects-Portfolio/blob/main/README.md)
