@@ -25,7 +25,7 @@
     "stress_level": {
       "rank": 1,
       "coefficient": -2.971,
-      "standardized_coefficient": -8.824,
+      "standardized_coefficient": -8.724,
       "interpretation": "Each 1-point stress increase → -3.0 point mental health decline",
       "impact_category": "Strongest negative predictor",
       "statistical_significance": "p < 0.001"
