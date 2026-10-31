@@ -47,7 +47,7 @@ print(f"R²: {r2:.3f}, RMSE: {rmse:.3f}")
 
 | Rank | Feature | β Coefficient | Standardized β | Impact Description |
 |------|---------|---------------|----------------|-------------------|
-| **1** | **Stress Level** | **-2.971** | **-8.824** | Each +1 stress → -3.0 mental health points |
+| **1** | **Stress Level** | **-2.971** | **-8.724** | Each +1 stress → -3.0 mental health points |
 | **2** | **Physical Activity** | **+1.506** | **+3.472** | Each +1 hour/week → +1.5 points |
 | **3** | **Sleep Quality** | **+1.840** | **+1.195** | Each +1 quality point → +1.8 points |
 | 4 | Health Behavior Score | -0.742 | -0.185 | Composite metric (multicollinearity issue) |
@@ -73,7 +73,7 @@ print(f"R²: {r2:.3f}, RMSE: {rmse:.3f}")
 
 **Clarification:** The "3x" claim in README refers to comparing stress's negative impact to sleep quality's positive impact:
 - |-2.971| ÷ 1.840 = **1.61x** (not 3x)
-- Or comparing absolute standardized coefficients: 8.824 ÷ 3.472 = **2.54x** (closest to 3x claim)
+- Or comparing absolute standardized coefficients: 8.724 ÷ 3.472 = **2.51x** (closest to 3x claim)
 
 **Status:** ⚠️ Slightly overstated but directionally accurate (stress is 2-2.5x more impactful)
 
@@ -125,7 +125,7 @@ Based on standardized coefficients (absolute value = priority):
 
 | Priority | Feature | Standardized β | Product Action |
 |----------|---------|----------------|----------------|
-| 🔴 **Highest** | Stress Management | 8.824 | Build stress reduction tools, mindfulness exercises, breathing techniques |
+| 🔴 **Highest** | Stress Management | 8.724 | Build stress reduction tools, mindfulness exercises, breathing techniques |
 | 🟠 **High** | Physical Activity | 3.472 | Activity tracking, goal-setting, movement reminders |
 | 🟡 **Medium** | Sleep Quality | 1.195 | Sleep hygiene tips, bedroom environment optimization, quality metrics |
 | 🟢 **Low** | Sleep Duration | 0.090 | Sleep duration tracking (de-prioritize vs. quality) |
@@ -143,7 +143,7 @@ Based on standardized coefficients (absolute value = priority):
 ### Coefficient Interpretation
 - **β coefficient:** Change in mental health score for 1-unit change in predictor
 - **Standardized β:** Allows cross-variable comparison (accounts for different scales)
-- Example: Stress standardized β of -8.824 means stress has 8.824 standard deviation impact on mental health
+- Example: Stress standardized β of -8.724 means stress has 8.724 standard deviation impact on mental health
 
 ### Rounding Conventions
 - Coefficients rounded to 3 decimal places (e.g., 1.506 not 1.50632)
