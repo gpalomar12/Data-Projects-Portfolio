@@ -86,24 +86,26 @@ All metrics sourced directly from notebook outputs (`modeling.ipynb`) and valida
 
 ---
 
-## 💼 Business Impact
+## 💼 Business Impact (scenario model, synthetic data)
 
-| Initiative | Projected Savings |
-|-----------|------------------|
-| Readmission Reduction (75 prevented × $7,500 + CMS penalties) | $687,500 |
-| Length of Stay Optimization (15 freed beds annually) | $520,000 |
-| Targeted Cost Management (10% reduction on top 3 conditions) | $400,000 |
-| Resource & Staffing Optimization | $150,000 |
-| **Total Annual Savings** | **~$1.2M** |
+| Initiative | Projected Savings | In headline? |
+|-----------|------------------|--------------|
+| Readmission Reduction (75 prevented × $7,500 = $562,500, plus $125,000 CMS penalties) | $687,500 | Yes |
+| Length of Stay Optimization (~130 bed-days × $4,000) | $520,000 | Yes |
+| **Headline total** | **$1,207,500 (~$1.2M)** | |
+| Targeted Cost Management (8-12% on top 3 conditions; $400K conservative) | $336,000-$504,000 | No |
+| Resource & Staffing Optimization (illustrative) | $150,000 | No |
+| Four-initiative total | ~$1.76M | No |
 
 ---
+
 
 ## 🔍 Key Insight Verification
 
 | Claim | Calculation | Result |
 |-------|-------------|--------|
 | 37% high-risk | 365 ÷ 985 | 37.06% ✓ |
-| 62% of costs from 3 conditions | $4.2M ÷ $6.8M | 61.8% ✓ |
+| 62% of costs from 3 conditions | $4.2M ÷ $6.8M | 61.8% (arithmetic ✓; inputs come from the notebook, raw data not committed) |
 | Cardiac 2.3x readmission rate | 42% ÷ 18% | 2.33x ✓ |
 
 ---
