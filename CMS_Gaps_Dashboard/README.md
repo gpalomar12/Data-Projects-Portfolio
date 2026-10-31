@@ -1,5 +1,5 @@
 # 🩺 CMS Gaps in Care Dashboard
-## Automating Clinical Performance Reporting for ACOs  
+## Automated CMS Gaps-in-Care reporting for an ACO: cut analysis from 4-5 weeks to 2-3 days, then productized it as a monthly module, moving reviews from twice a year to monthly.
 
 ***
 
