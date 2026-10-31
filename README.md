@@ -3,7 +3,7 @@
 # 👨‍💻 Gabriel Palomarez | Data Analytics Portfolio
 <img src="./assets/gp_head_shot_2.png" width="150" style="border-radius: 50%;" alt="Gabriel Palomarez"/>
 
-**[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **gpalo23@icloud.com** • **[Resume](./resume/Gabriel-Palomarez-Healthcare-Data-Analyst.docx)**
+**[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **gpalo23@icloud.com** • **[Resume](./resume/Gabriel-Palomarez-Healthcare-Data-Analyst.pdf)**
 
 
 ## 📊 Data Analyst | Business Intelligence Specialist | Healthcare Analytics
@@ -166,7 +166,7 @@ I'm seeking **Analytics Manager**, **Senior Data Analyst**, **Data Analyst**, or
 
 If you are interested in discussing analytics, automation, or operational improvement initiatives, please don't hesitate to connect.
 
-📄 [Resume](./resume/Gabriel-Palomarez-Healthcare-Data-Analyst.docx)  
+📄 [Resume](./resume/Gabriel-Palomarez-Healthcare-Data-Analyst.pdf)  
 💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
 📧 gpalo23@icloud.com
 
