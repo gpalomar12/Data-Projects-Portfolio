@@ -230,7 +230,7 @@ def fake_map(series, generator_func):
 - Training sessions (2 hours, 15 attendees)
 
 **Phase 3: Enterprise Migration (Months 3-5)**
-- Migrated to KPN Optimize platform (SQL Server backend)
+- Migrated to Commercial platform (SQL Server backend)
 - Converted Excel pivot tables to Power BI visuals
 - Connected to live data warehouse (eliminating file consolidation)
 - Deployed to 50+ users across the organization
@@ -406,7 +406,7 @@ To replicate this pipeline with your own CMS data:
   analytics tool for clinicians to monitor **"CMS Gaps in Care"** metrics.
 - Automated manual data aggregation and visualization, reducing reporting time from weeks to hours.
 - Collaborated with clinicians to refine KPIs through iterative feedback over three weeks.
-- Supported the migration of the dashboard into the **"KPN Optimize Platform"**, connecting to our
+- Supported the migration of the dashboard into the **"Commercial Platform"**, connecting to our
   warehoused data for real-time insights.
 
 ***
@@ -902,7 +902,7 @@ overall compliance with CMS quality measures.
 
 **Downstream Impact:**
 - Dashboard served as template for **5 additional clinical analytics modules**
-- KPN Optimize platform now supports 200+ users organization-wide
+- Commercial platform now supports 200+ users organization-wide
 - Estimated **$500K+ in avoided consulting costs** by building in-house capability
 
 ---
