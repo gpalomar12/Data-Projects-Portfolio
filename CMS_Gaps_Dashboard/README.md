@@ -5,7 +5,7 @@
 
 ## 🎯 Key Takeaways for Recruiters
 
-**⏱️ Quick Summary:** Data engineering project that automated CMS reporting, reducing clinician workload from 3+ weeks to 4 hours (98% time reduction) through Python ETL and Excel dashboard development.
+**⏱️ Quick Summary:** Automated CMS Gaps-in-Care analysis for an ACO. A Python consolidation pipeline and Excel dashboard cut clinician analysis from 4-5 weeks to 2-3 days (~90%). Productizing it as a monthly module moved reviews from twice a year to monthly (~30-day data lag), so the ACO could support providers trending below CMS goals before the next reporting deadline.
 
 ### Skills Demonstrated
 | Category | Technologies & Methods |
@@ -18,11 +18,15 @@
 | **Process Automation** | Workflow Optimization, Manual Process Elimination |
 
 ### Quantified Results
-- ✅ **96% time reduction** - 200 → 8 hours per cycle
-- ✅ **Processed 450+ Excel files** containing 10,347 practice-measure records per cycle
-- ✅ **85 practices with 271 provider locations** gained real-time visibility into 34 CMS quality measures
-- ✅ **5-month deployment** from proof-of-concept to enterprise production
-- ✅ **100% HIPAA compliance** through automated de-identification
+- ✅ **~90% faster analysis:** 4-5 weeks → 2-3 days per cycle (reviews ran twice a year) *(author-reported)*
+- ✅ **Monthly visibility after productization:** twice-yearly reviews → monthly, with ~30-day data lag *(author-reported)*
+- ✅ **450+ Excel files consolidated** into 10,347 practice-measure records *(record count verified from data)*
+- ✅ **85 practices, 271 provider locations, 34 CMS measures, 12 patient groups** *(verified from data)*
+- ✅ **64,631 patients** still needing gap closure in the de-identified snapshot *(verified from data)*
+- ✅ **5-month deployment** from proof-of-concept to enterprise production *(author-reported)*
+- ✅ **Automated de-identification** with consistent entity mapping (no PHI in this repo)
+
+> Figures marked *verified* are re-computed by [`verification/verify_claims.py`](../verification/verify_claims.py). *Author-reported* figures come from the original KPN Health work and cannot be reproduced from this repo's de-identified data.
 
 ### Project Complexity Indicators
 - 450+ fragmented Excel files consolidated per reporting cycle
@@ -38,14 +42,14 @@
 - [Dashboard Screenshots](#-dashboard-visuals)
 - [Technical Implementation](#-technical-implementation)
 - [Python Code](#-data-preparation-and-de-identification)
-- [Business Impact](#-business-impact--roi)
+- [Business Impact](#-business-impact)
 
 *** 
 
 | Challenges | Descriptions |
 | :--- | :--- |
 | Manual Consolidation | Hundreds of XLS files were merged manually every reporting cycle |
-| Time Intensive | The Process took several weeks to complete |
+| Time Intensive | Each twice-yearly cycle took clinicians 4-5 weeks to analyze and compile |
 | Static Insights | Clinicians relied on filters and pivot tables with limited interactivity |
 | Delayed Action | Leadership lacked timely insights into Measure Performance |
 
@@ -212,7 +216,7 @@ def fake_map(series, generator_func):
 | Patient Groups | 12 |
 | Date Range | Q3-Q4 2019 |
 | Total Patients Needing Gaps Closed | 64,631 |
-| Records Meeting Goal | 4,368 (42.2%) |
+| Records with No Remaining Gap (PNTRG ≤ 0) | 4,368 (42.2%) |
 | Records with Gaps | 5,979 (57.8%) |
 | Average PNTRG per Record | 6.2 patients |
 ---
@@ -237,7 +241,7 @@ def fake_map(series, generator_func):
 
 **Current State:**
 - Excel version: Still used for ad-hoc analysis
-- Enterprise version: Primary reporting tool with automated daily refresh
+- Enterprise version: Primary reporting tool with automated monthly data refresh (~30-day data lag)
 - Users: 50+ (clinicians, care coordinators, executives, quality analysts)
 
 
@@ -404,10 +408,10 @@ To replicate this pipeline with your own CMS data:
 ### 👨‍🔬 Role & Contribution
 - Led development of a dashboard that consolidated hundreds of Excel reports into an interactive
   analytics tool for clinicians to monitor **"CMS Gaps in Care"** metrics.
-- Automated manual data aggregation and visualization, reducing reporting time from weeks to hours.
+- Automated manual data aggregation and visualization, reducing analysis time from 4-5 weeks to 2-3 days.
 - Collaborated with clinicians to refine KPIs through iterative feedback over three weeks.
 - Supported the migration of the dashboard into the **"Commercial Platform"**, connecting to our
-  warehoused data for real-time insights.
+  warehoused data, enabling monthly insights (~30-day data lag) instead of twice-yearly reviews.
 
 ***
 
@@ -463,15 +467,16 @@ HEDIS  | Group fno     | ★Adult BMI Assessment (ABA)   | Walter, Ed... | Smith
 ```
 
 ### Top 10 CMS Measures by Record Count
+*(Avg Rate = simple mean of record-level rates)*
 | Rank | Measure Name | Records | Avg Rate | Category |
 |------|--------------|---------|----------|----------|
-| 1 | ★Colorectal Cancer Screening (COL) | 931 | 55.0% | Cancer Screening |
+| 1 | ★Colorectal Cancer Screening (COL) | 931 | 51.6% | Cancer Screening |
 | 2 | ★Adult BMI Assessment (ABA) | 912 | 78.5% | Preventive Care |
-| 3 | ★Breast Cancer Screening (BCS) | 845 | 63.1% | Cancer Screening |
-| 4 | ★Diabetes: Eye exam (retinal) performed | 691 | 68.4% | Diabetes |
+| 3 | ★Breast Cancer Screening (BCS) | 845 | 50.0% | Cancer Screening |
+| 4 | ★Diabetes: Eye exam (retinal) performed | 691 | 31.9% | Diabetes |
 | 5 | ★Diabetes: Medical attention for nephropathy | 691 | 90.0% | Diabetes |
 | 6 | ★Controlling High Blood Pressure (CBP) | 689 | 80.5% | Cardiovascular |
-| 7 | ★Diabetes: HbA1c control <8.0% | 615 | 65.7% | Diabetes |
+| 7 | ★Diabetes: HbA1c control <8.0% | 615 | 54.0% | Diabetes |
 | 8 | ★Medication Adherence for Hypertension | 575 | 83.5% | Medication Adherence |
 | 9 | ★Medication Adherence for Oral Diabetes Meds | 517 | 81.6% | Medication Adherence |
 | 10 | ★Medication Adherence for Cholesterol (Statins) | 401 | 83.0% | Medication Adherence |
@@ -728,9 +733,9 @@ Command center providing at-a-glance visibility into CMS performance across 85 p
 
 **Key Metrics Displayed:**
 - **Total PNTRG:** 64,631 patients still needing care gap closure
-- **Average Rate:** 61.0% across all measures
+- **Average Rate:** 61.3% (simple mean of record-level rates; 65.1% patient-weighted)
 - **Measures Tracked:** 34 CMS quality measures
-- **Records Meeting Goal:** 4,368 (42.2%)
+- **Records with No Remaining Gap (PNTRG ≤ 0):** 4,368 (42.2%)
 - **Records with Gaps:** 5,979 (57.8%)
 - **Top Priority Practice:** Walter, Edwards and Rios (1,761 measure records)
 - **Highest Volume Measure:** Colorectal Cancer Screening (931 records)
@@ -740,9 +745,6 @@ Command center providing at-a-glance visibility into CMS performance across 85 p
 - Drill down from organization → location → measure level
 - Export filtered data to CSV for care coordinator outreach lists
 - View historical trends by quarter
-
-**User Impact:**  
-Clinicians can identify their highest-priority gaps in <2 minutes, compared to 4+ hours of manual spreadsheet analysis previously.
 
 **Business Value:**  
 Leadership can immediately see which practices need support, enabling targeted resource allocation and intervention planning before CMS reporting deadlines.
@@ -760,7 +762,7 @@ into a single, dynamic workbook.
 Users can quickly identify:
 - Underperforming measures that need improvement before CMS Reporting deadlines
 - Providers or Locations with the largest gaps in care
-- Progress toward CMS goals in real time
+- Progress toward CMS goals (refreshed monthly)
 - Review their current Quality Scores
 
 This visualization serves as a **command center** for performance tracking, enabling leadership to make data-driven
@@ -776,19 +778,16 @@ decisions and prioritize outreach efforts.
 Ranks provider locations by total PNTRG (Patients Needed To Reach Goal) to prioritize intervention efforts.
 
 **Key Insights:**
-- **#1 Location:** Downtown Primary Care - 3,842 patients (8.1% of total gaps)
-- **Top 5 locations** account for 14,250 patients (30% of all gaps)
-- **Top 20 locations** account for 32,100 patients (68% of all gaps)
-- Clear long-tail distribution: Focusing on top 10 locations addresses 45% of gaps
+- **#1 Location:** 'Smith-Bell Medical Group' (de-identified name) - 5,361 patients (8.3% of total gaps)
+- **Top 5 locations** account for 14,461 patients (22.4% of all gaps)
+- **Top 20 locations** account for 35,058 patients (54.2% of all gaps)
+- Gaps are concentrated but not extreme: the top 10 locations hold 35.9% of all gaps
 
 **Actionable Intelligence:**
 Care coordinators use this view to:
 1. Schedule targeted outreach campaigns to high-gap locations
 2. Allocate additional care management resources
 3. Identify locations needing process improvement or training
-
-**Real-World Example:**  
-After identifying "Downtown Primary Care" as #1, leadership deployed 2 additional care coordinators, resulting in a 35% gap reduction over 3 months (3,842 → 2,497 patients).
 
 **Filter Capability:**  
 Users can filter by specific patient groups or measures to see top locations for each dimension (e.g., "Top 20 for Diabetes Screening in Group ABC").
@@ -839,107 +838,23 @@ overall compliance with CMS quality measures.
 
 ---
 
-## 💼 Business Impact & ROI
+## 💼 Business Impact
 
-### Quantified Value: $75K Annual Savings + Improved CMS Performance
+### What changed (author-reported)
+| | Before | After |
+|---|---|---|
+| **Analysis effort per cycle** | 4-5 weeks for clinicians to analyze and compile | 2-3 days with the Python + Excel dashboard (~90% faster) |
+| **Review frequency** | Twice a year (insight lag up to ~6 months) | Monthly after productization (~30-day data lag) |
+| **Action window** | Gaps found long after they formed | ACO could start outreach to providers trending below CMS goals before reporting deadlines |
 
-#### 1. Time Savings & Labor Cost Reduction
-**Before:** 21 days per reporting cycle (3 cycles/year)
-- 2 clinicians × 8 hours/day × 21 days × 3 cycles = 1,008 hours annually
-- At $145/hour (clinician hourly rate) = **$146,160 in labor cost**
+### How the numbers were derived
+- Time per cycle comes from clinician workload before and after the tool (calendar time).
+- Review frequency comes from the reporting schedule: two cycles a year before, monthly data after.
+- **Not claimed here:** dollar savings, ROI, star-rating changes, gap-closure rates, or user-satisfaction quotes. Those were not measured in a form that can be shown in this repo, so they were removed.
 
-**After:** 4 hours per reporting cycle (automated)
-- Python consolidation: 3.5 minutes
-- Dashboard refresh: 30 seconds  
-- Analysis and reporting: 3.5 hours
-- Total: 4 hours × 3 cycles = 12 hours annually
-- At $145/hour = **$1,740 in labor cost**
+### Adoption
+Started with 3 clinicians as a proof-of-concept and grew to 50+ users (clinicians, care coordinators, quality analysts, practice administrators, executives) on the enterprise platform *(author-reported)*.
 
-**Net Savings:** $144,420/year
-**Conservative Estimate (accounting for one-time setup):** **$75,000 annual recurring savings**
-
----
-
-#### 2. Improved CMS Performance & Shared Savings
-**Baseline Performance (Pre-Dashboard):** Average 2.8 stars across measures
-**Current Performance (Post-Dashboard):** Average 3.4 stars across measures
-**Improvement:** +0.6 stars (+21% improvement)
-
-**Estimated Financial Impact:**
-- ACOs earn shared savings based on CMS star ratings
-- Improvement from 2.8 → 3.4 stars = higher quality bonus tier
-- Estimated additional shared savings: **$250K - $400K annually** (organization-wide)
-- Attribution to dashboard: 30% (other initiatives also contributed)
-- **Dashboard-attributable impact: $75K - $120K**
-
----
-
-#### 3. Proactive Intervention Efficiency
-**Before Dashboard:**
-- Gaps identified after end of quarter (reactive)
-- Limited ability to target highest-impact patients
-- Care coordinators spent 60% of time on data prep, 40% on patient outreach
-
-**After Dashboard:**
-- Real-time gap visibility enables proactive outreach
-- Care coordinators spend 5% time on data, 95% on patient outreach
-- **12x increase in patient contact capacity** (from ~200 to 2,400 patients/quarter)
-
-**Measurable Outcomes:**
-- **Gap closure rate improved from 15% → 28%** (87% increase)
-- **Average time to close gap reduced from 45 days → 18 days** (60% reduction)
-
----
-
-#### 4. Enterprise Platform Adoption
-**Initial Users:** 3 clinicians (proof-of-concept)
-**Current Users:** 50+ across organization
-- 12 physicians
-- 18 care coordinators
-- 8 quality analysts
-- 6 practice administrators
-- 8 executives
-
-**Downstream Impact:**
-- Dashboard served as template for **5 additional clinical analytics modules**
-- Commercial platform now supports 200+ users organization-wide
-- Estimated **$500K+ in avoided consulting costs** by building in-house capability
-
----
-
-### Total Economic Impact Summary
-
-| Impact Category | Annual Value |
-|----------------|--------------|
-| Direct Labor Savings | $75,000 |
-| CMS Performance Improvement | $75,000 - $120,000 |
-| Increased Intervention Efficiency | $50,000 (estimated) |
-| **Total Recurring Annual Value** | **$200,000 - $245,000** |
-| **One-Time Avoided Consulting Costs** | **$500,000+** |
-
-**ROI Calculation:**
-- Development time: 120 hours @ $80/hour = $9,600
-- **First-year ROI: 1,983%** ($200K value / $9.6K cost)
-- **Payback period: 18 days**
-
----
-
-### Qualitative Impact
-
-**Clinician Satisfaction:**
-> "This dashboard cut my reporting time from 3 weeks to 3 hours. I can finally focus on patient care instead of spreadsheet wrangling." - Lead Clinician
-
-**Leadership Visibility:**
-> "For the first time, we can see exactly where we stand on CMS measures in real-time. This has transformed how we manage quality performance." - VP of Clinical Operations
-
-**Operational Transformation:**
-- Transformed from reactive (post-quarter gap identification) to proactive (real-time monitoring)
-- Enabled data-driven resource allocation decisions
-- Established in-house analytics capability (reducing vendor dependence)
-- Created a foundation for an enterprise analytics platform serving 200+ users
-
-
-***
 
 ### 🔒 Compliance Notice
 All data showcased in this project has been fully de-identified in accordance with HIPAA compliance. No protected health information (PHI) is used or displayed.
