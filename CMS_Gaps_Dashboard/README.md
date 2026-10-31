@@ -18,9 +18,8 @@
 | **Process Automation** | Workflow Optimization, Manual Process Elimination |
 
 ### Quantified Results
-- ✅ **98% time reduction** - reporting cycle from 21 days → 4 hours
+- ✅ **96% time reduction** - 200 → 8 hours per cycle
 - ✅ **Processed 450+ Excel files** containing 10,347 practice-measure records per cycle
-- ✅ **$75K annual savings** in clinician time (equivalent to 520 hours at $145/hr)
 - ✅ **85 practices with 271 provider locations** gained real-time visibility into 34 CMS quality measures
 - ✅ **5-month deployment** from proof-of-concept to enterprise production
 - ✅ **100% HIPAA compliance** through automated de-identification
