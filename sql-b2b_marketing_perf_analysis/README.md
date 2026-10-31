@@ -4,7 +4,9 @@
 
 SQL-first analysis of US-based B2B sales, customers, and digital engagement data spanning 2013-2017. This project focuses on data modeling, analytical SQL, and business-driven insights without reliance on cloud data warehouses or BI publishing tools.
 
-**Dataset Scale:** ~$10.4M in total revenue across 4,050 orders from 351 accounts with 8,273 web engagement events  
+**Dataset Scale:** ~$10.4M in total revenue across 4,050 orders from 351 accounts with 8,273 web engagement events
+
+**Data source:** public sample sales dataset (`data/archive/archive.zip`; it appears to be the Parch & Posey training dataset, so add the original source link). Results demonstrate method and are not a real company's performance.  
 
 ## Key Skills Demonstrated
 - PostgreSQL data modeling. Fact and dimension design
@@ -37,21 +39,21 @@ Based on the analytical queries, this analysis revealed the following business-c
 - Performance variation within regions suggests execution and strategy differences, not just market opportunity
 
 ### Customer Engagement Patterns
-- **Direct traffic dominates web engagement with 5,149 events (55.5%)**, more than the next 4 channels combined
+- **Direct traffic dominates web engagement with 5,149 of 8,273 events (62.2%)**, more than all other channels combined
 - Accounts typically engage through web channels multiple times before making their first purchase
 - Direct channel's dominance (5,149 events vs 809 Facebook events) suggests strong brand recognition or existing customer behavior rather than new customer acquisition
-- Conversion timing analysis reveals a predictable window between first digital interaction and first order, enabling targeted follow-up strategies
+- Conversion timing analysis shows an account's first order follows its first recorded web event by well under a day on average (mean 0.5 days; median under an hour). Both tables begin on the same date (Dec 2013), so early-account lags are censored; treat this as exploratory.
 
 ### Product & Order Composition
-- **Standard paper products drive 73.2% of revenue** ($7.60M of $10.43M total), with Gloss and Poster combining for just 26.8%
-- This 3:1 revenue ratio (Standard vs. other products combined) indicates significant opportunity cost if product mix could be shifted
+- **Standard paper products drive 72.9% of revenue** ($7.60M of $10.43M total), with Gloss and Poster combining for 27.1%
+- This ~2.7:1 revenue ratio (Standard vs. other products combined) indicates significant opportunity cost if product mix could be shifted
 - Average order composition shows bundling behavior rather than single-product purchases
 - Revenue sensitivity to product mix suggests that small shifts toward higher-value product categories could materially impact total revenue without increasing order volume
 
 ### Growth & Seasonality
-- Revenue grew from **$177K (Dec 2013)** to **$916K (Dec 2016)**, representing a **416% increase** over 3 years
-- December 2016 peak ($916K) was 72% higher than the previous December ($532K), indicating accelerating year-end seasonality
-- Month-over-month volatility ranges from **-30.67%** (largest decline) to **+25.31%** (largest increase)
+- Revenue grew from **$177K (Dec 2013)** to **$916K (Dec 2016)**, representing a **417% increase** over 3 years
+- December 2016 ($916K) was 72% above November 2016 ($532K) and 3.4x December 2015 ($267K), indicating accelerating year-end seasonality
+- Month-over-month change ranged from **-30.7%** (May 2015, largest decline excluding partial January 2017) to **+103.9%** (March 2015)
 - Rolling 3-month revenue peaked at **$2.06M** in December 2016, confirming sustained momentum rather than temporary spikes
 - March 2015 showed anomalous spike (+104% MoM growth to $307K), worth investigating for causal factors
 
@@ -62,7 +64,7 @@ These findings enable several actionable strategies:
 ### Account Risk Management
 - **Immediate action:** Develop retention programs for the top 10 accounts representing $1.59M in revenue
 - Monitor Pacific Life ($252.7K) relationship closely given its outsized contribution
-- Create executive relationship mapping for accounts exceeding $150K annual revenue
+- Create executive relationship mapping for accounts exceeding $150K lifetime revenue (4 accounts)
 - Consider diversification strategy to reduce concentration among top 20% of accounts
 
 ### Sales Territory Optimization
@@ -79,8 +81,8 @@ These findings enable several actionable strategies:
 
 ### Marketing Investment
 - **Capitalize on direct traffic dominance** (5,149 events) by optimizing website conversion paths
-- Allocate resources to the measurable conversion window; prioritize channels that precede orders
-- Investigate why direct traffic (55.5%) so heavily outweighs paid channels (Facebook: 8.7%, AdWords: 8.0%)
+- Prioritize the channels that precede first orders (median 2 web events before an account's first order)
+- Investigate why direct traffic (62.2%) so heavily outweighs paid channels (Facebook: 9.8%, AdWords: 9.0%)
 - Consider whether paid channel underinvestment is leaving growth on the table
 
 ### Product Strategy
