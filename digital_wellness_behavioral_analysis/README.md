@@ -69,7 +69,7 @@ This portfolio piece demonstrates a **complete data science workflow** from busi
 - Scaled numeric fields to normalize behavior metrics
 
 ### Data Source & Limitations
-**Dataset:** [Tech Use and Stress Wellness Dataset](link_to_kaggle) from Kaggle  
+**Dataset:** [Tech Use and Stress Wellness Dataset](https://www.kaggle.com/datasets/nagpalprabhavalkar/tech-use-and-stress-wellness) from Kaggle  
 **Sample Size:** 5,000 participants  
 **Data Type:** Cross-sectional survey data (self-reported)  
 **Time Period:** Single-point-in-time snapshot (not longitudinal)
@@ -402,8 +402,8 @@ The dashboard includes dynamic filters enabling users to:
   
 ## Key Takeaways
 
-1) **Stress Management is Critical (3x more impactful than any positive factor)**
-Stress Level has the strongest effect on mental health (β = -2.97, standardized = -8.72), with an impact 2.5x larger than physical activity and 6x larger than sleep quality. Wellness interventions targeting stress reduction offer the highest potential ROI.
+1) **Stress Management is Critical (2.5x the standardized effect of the strongest positive factor)**
+Stress Level has the strongest effect on mental health (β = -2.97, standardized = -8.72), with an impact 2.5x larger than physical activity and 7x larger than sleep quality. Wellness interventions targeting stress reduction offer the highest potential ROI.
 2) **Physical Activity Delivers the Strongest Positive Impact**
 Each additional hour of weekly physical activity improves mental health scores by +1.51 points (standardized = +3.47). A person increasing activity from 2 to 5 hours/week could expect a ~4.5-point mental health improvement, assuming other factors remain constant.
 3) **Sleep Quality Matters More Than Sleep Duration**
