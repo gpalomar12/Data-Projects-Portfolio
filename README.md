@@ -6,7 +6,7 @@
 **[LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)** • **gpalo23@icloud.com** • **[Resume](./resume/Gabriel-Palomarez-Healthcare-Data-Analyst.pdf)**
 
 
-## 📊 Data Analyst | Business Intelligence Specialist | Healthcare Analytics
+## Data & Analytics Leader | Healthcare, Operations & Reporting Automation
 *Transforming complex operational data into automated solutions that drive measurable business value*
 
 </div>
@@ -18,31 +18,32 @@
 This portfolio showcases my work in analytics automation, operational reporting, and data-driven decision support across healthcare and enterprise environments. Each project demonstrates end-to-end analytical capability from problem identification through solution deployment.
 
 **What you'll find here:**
-- 📊 **Interactive dashboards** reducing reporting time by 90%+
+- 📊 **Interactive dashboards** and automated pipelines that cut multi-week analysis to days
 - 🐍 **Python automation scripts** eliminating manual workflows
 - 📈 **SQL analytics** uncovering operational insights
 - 💡 **Business impact** with quantified results
+- ✅ **Every number here is re-computed from data in this repo** by [`verification/verify_claims.py`](./verification/verify_claims.py); see [VERIFICATION.md](./VERIFICATION.md)
 
 ---
 
 ### ⭐ Featured Projects 
 
 #### 📊 CMS Gaps in Care Dashboard
-*Clinical reporting automation reducing weeks of work to hours*
+*Clinical reporting automation reducing weeks of work to days*
 
 <img width="475" alt="dashboard_overview" src="https://github.com/user-attachments/assets/b042aba2-3053-48b7-ab4e-cf6c455fe3a0" />  
 
   
-*Interactive Power BI dashboard reducing reporting time by 90%*
+*Python consolidation pipeline + Excel/Power Query dashboard cutting analysis from 4-5 weeks to 2-3 days (~90%)*
 
-**Problem:** Clinicians manually consolidated hundreds of files, requiring 3-4 weeks per cycle
+**Problem:** Clinicians manually consolidated hundreds of files, requiring 4-5 weeks per cycle (reviews ran twice a year)
 
-**Solution:** Python automation pipeline 
+**Solution:** Python consolidation pipeline and Excel/Power Query dashboard, later productized as a monthly module
 
 **Impact:**
-- ⏱️ Reduced reporting from weeks to hours
-- ✅ Eliminated 90%+ manual effort
-- 📈 Enabled real-time performance tracking
+- ⏱️ Cut analysis from 4-5 weeks to 2-3 days (~90%)
+- 📈 Moved ACO reviews from twice a year to monthly (~30-day data lag)
+- ✅ Consolidated 450+ files: 85 practices, 271 provider locations, 34 CMS measures
 
 **Tech Stack:** Python, Pandas, Power Query, Excel
 
@@ -62,9 +63,9 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 - 🎯 **Identified concentration risk:** Top 10 accounts represent 15.3% of revenue ($1.59M), with #1 account at $252.7K
 - 📊 **Revealed regional gaps:** Northeast ($3.60M) outperforms Midwest ($1.36M) by 164%, enabling territory optimization
-- 💰 **Quantified growth:** 416% revenue increase over 3 years ($177K → $916K), with predictable Q4 seasonality
-- 📈 **Uncovered product opportunity:** Standard drives 73.2% of revenue; 5-10% mix shift worth $380K-$760K annually
-- 🎯 **Mapped conversion patterns:** Direct traffic dominates (55.5%) with measurable lag between engagement and purchase
+- 💰 **Quantified growth:** 417% December-over-December revenue growth ($177K in Dec 2013 → $916K in Dec 2016), with year-end peaks
+- 📈 **Uncovered product opportunity:** Standard drives 72.9% of revenue ($7.60M); each 5-10% of Standard revenue equals $380K-$760K, a sizing benchmark for mix-shift scenarios
+- 🎯 **Mapped conversion patterns:** Direct traffic is 62.2% of 8,273 web events; accounts typically show web activity before their first order (median 2 events)
 
 **Tech Stack:** PostgreSQL, SQL (CTEs, Window Functions, Temporal Analysis), Data Modeling
 
@@ -84,10 +85,10 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 **Impact:**
   
-- 📊 Analyzed behavioral patterns from 5,000 participants (125,000+ data points across 25 variables)
-- 🎯 Revealed engagement trends to inform product strategy decisions
-- 💡 Provided actionable insights for wellness program optimization
-- 📈 Enabled data-driven product development and feature prioritization
+- 📊 Analyzed 5,000 participants (public Kaggle dataset, 25 variables); regression model explains ~86% of mental health score variance (R² = 0.856)
+- 🎯 Stress level was the strongest predictor (~2.5x the standardized effect of physical activity)
+- 💡 Translated findings into feature-prioritization recommendations for wellness platforms
+- ⚠️ Cross-sectional data: results show correlation, not causation
 
 **Tech Stack:** Python, Pandas, Looker, Data Visualization, Statistical Analysis  
   
@@ -107,11 +108,11 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 **Impact:**
 - 🎯 Identified 37% of patients as high-risk for readmission
-- 💰 Uncovered key cost drivers identified $1.2M in potential annual savings
+- 💰 Modeled ~$1.2M in projected annual savings (readmission reduction + length of stay; scenario assumptions)
 - 📊 Revealed utilization patterns supporting data-driven capacity planning
-- ⚡ 5 interactive dashboards for executive decision-making and reduce reactive crisis management by 40%
+- ⚡ 5-page Power BI report for executive decision-making
   
-> 📋 **Note:** Uses synthetic dataset for demonstration; methodology validated for production use (see project README for deployment guidance)
+> 📋 **Note:** Uses a synthetic dataset for demonstration. Model scores are perfect because the data is deterministic (expect AUC 0.70-0.85 on real data). Savings are scenario estimates, not realized results.
 
 👉 [**View Full Project**](./hospital_operations_analysis/README.md) | [**See Code**](./hospital_operations_analysis/notebooks/)
 
@@ -138,7 +139,7 @@ This portfolio showcases my work in analytics automation, operational reporting,
 - Requirements gathering
 
 ### What I Build
-- **Automation Pipelines:** Eliminate 90%+ of manual reporting effort
+- **Automation Pipelines:** Cut multi-week reporting cycles to days
 - **Executive Dashboards:** Power BI/Tableau solutions for C-suite decision-making  
 - **Operational Analytics:** KPI development, performance tracking, process optimization  
 - **Predictive Models:** Readmission risk, cost forecasting, capacity planning
@@ -152,14 +153,14 @@ This portfolio showcases my work in analytics automation, operational reporting,
 
 ## 🎯 What I'm Looking For
 
-I'm seeking **Analytics Manager**, **Senior Data Analyst**, **Data Analyst**, or **Business Analyst** roles where I can:
+I'm seeking **Analytics Manager**, **Data Analyst**, **BI Analyst**, or **Business Analyst** roles where I can:
 - Build scalable analytics solutions that eliminate manual processes
 - Create executive-level dashboards driving strategic decisions
 - Apply healthcare/operational domain expertise
 - Lead cross-functional analytics initiatives
 
 **Work Preferences:** Remote | Hybrid   
-**Availability:** [Immediate]
+**Availability:** Immediate
 
 ---
 ### 📫 Let’s Connect
