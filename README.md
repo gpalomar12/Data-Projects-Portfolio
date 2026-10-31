@@ -166,7 +166,7 @@ I'm seeking **Analytics Manager**, **Senior Data Analyst**, **Data Analyst**, or
 
 If you are interested in discussing analytics, automation, or operational improvement initiatives, please don't hesitate to connect.
 
-📄 [Resume](./resume/Gabriel_Palomarez_Analytics_Manager_2026.pdf)  
+📄 [Resume](./resume/Gabriel-Palomarez-Healthcare-Data-Analyst.docx)  
 💼 [LinkedIn](https://www.linkedin.com/in/gabrielpalomarez)  
 📧 gpalo23@icloud.com
 
